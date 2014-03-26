@@ -1,0 +1,12 @@
+Demonstrate new Features
+Comment on Burn-down Chart
+
+
+For next sprint:
+Sprint Goal:
+Sprint Backlog from Product Backlog
+Team-members Select Item to become responsible
+
+
+Students should print the mark sheet for their role and fill in their name, student number, workshop and team numbers.  
+Bring it to the Sprint Meeting and give it to your tutor at the start of your team’s Sprint Meeting.
