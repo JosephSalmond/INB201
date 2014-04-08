@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Q_Medic {
     static class Program {
@@ -10,18 +11,27 @@ namespace Q_Medic {
         /// </summary>
         [STAThread]
         enum querieType { LOGIN, DERP, AUTH };
-        enum userType { DOCTOR, NURSE}
+        enum userType {Luser, DOCTOR, NURSE}
         private bool authenticated = false;
+        private userType thisUser = userType.Luser;
+        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=; connection timeout=30;");
+        SqlCommand sqlCmd = new SqlCommand();
+        SqlDataReader reader;
 
         static void Main() {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+           
+            
         }
+
         // queries the database
         private string[] DatabaseQuerie(string querie, querieType type) {
             string username = "Admin";
             string password = "password";
+            sqlCmd.CommandText = "SELECT * FROM Customers";
+
+            string[] dummy = DatabaseGet(sqlCmd.CommandText);
+
+
             // authenticate user
             if (type == querieType.AUTH) {
                 authenticated = DatabaseAuth(querie, username, password);
@@ -32,21 +42,13 @@ namespace Q_Medic {
 
             // other querie's
 
-            string dummyString = "im a querie";
-            string[] dummy = DatabaseGet(dummyString);
+            
 
 
             return dummy;
             }
 
-        
-
-
-        // queries database and returns results
-        private string[] DatabaseGet(string querie) {
-            string[] dummyCheck = { querie };
-            return dummyCheck;
-        }
+       
         // authenticates against the database
         private bool DatabaseAuth(string querie, string username, string password) {
             string[] dummyCheck = DatabaseGet(querie);
@@ -59,15 +61,39 @@ namespace Q_Medic {
             }
         }
 
+        // queries database and returns results
+        private string[] DatabaseGet(string querie) {
+            OpenConnection();
+
+            reader = sqlCmd.ExecuteReader();
+            string[] dummyCheck = null;
+            int i = 0;
+
+                    while (reader.Read())
+        {
+            dummyCheck[i] = reader[0].ToString();
+            i++;
+        }
+
+            CloseConnection();
+            return dummyCheck;
+        }
+
         //opens connection
         private void OpenConnection() {
-
+            try {
+                databaseConnection.Open();
+            }
+            catch (SqlException ex) {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //closes connection
         private void CloseConnection() {
-
+            databaseConnection.Close();
         }
+
         // hashes password
         private string soHigh(string password){
             string hashedPassword = null;
