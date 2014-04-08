@@ -54,6 +54,7 @@ namespace Q_Medic {
             if ((username == dummyCheck[0]) && (password == dummyCheck[1])) {
                 return true;
             } else {
+
                 return false;
             }
         }
