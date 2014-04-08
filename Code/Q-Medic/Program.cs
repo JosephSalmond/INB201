@@ -10,6 +10,7 @@ namespace Q_Medic {
         /// </summary>
         [STAThread]
         enum querieType { LOGIN, DERP, AUTH };
+        enum userType { DOCTOR, NURSE}
         private bool authenticated = false;
 
         static void Main() {
