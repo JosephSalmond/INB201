@@ -14,6 +14,8 @@ namespace Q_Medic {
         enum userType {Luser, DOCTOR, NURSE}
         private bool authenticated = false;
         private userType thisUser = userType.Luser;
+        private userType user = userType.Luser;
+
         SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=; connection timeout=30;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
@@ -27,17 +29,18 @@ namespace Q_Medic {
         private string[] DatabaseQuerie(string querie, querieType type) {
             string username = "Admin";
             string password = "password";
-            sqlCmd.CommandText = "SELECT * FROM Customers";
+            string authenticationQuerie = "Select user {0} user type";
 
-            string[] dummy = DatabaseGet(sqlCmd.CommandText);
+            string[] dummy = DatabaseGet(querie);
 
 
             // authenticate user
             if (type == querieType.AUTH) {
-                authenticated = DatabaseAuth(querie, username, password);
+                authenticated = DatabaseAuth(dummy, username, password);
             } else if (authenticated == true) {
-            } else {
-                // not authenticates
+            } else{
+                string[] failure = {"-1", "Access Denied"};
+                return failure ;
             }
 
             // other querie's
@@ -50,10 +53,9 @@ namespace Q_Medic {
 
        
         // authenticates against the database
-        private bool DatabaseAuth(string querie, string username, string password) {
-            string[] dummyCheck = DatabaseGet(querie);
+        private bool DatabaseAuth(string[] querieResults, string username, string password) {
 
-            if ((username == dummyCheck[0]) && (password == dummyCheck[1])) {
+            if ((username == querieResults[0]) && (password == querieResults[1])) {
                 return true;
             } else {
 
@@ -64,7 +66,7 @@ namespace Q_Medic {
         // queries database and returns results
         private string[] DatabaseGet(string querie) {
             OpenConnection();
-
+            sqlCmd.CommandText = querie;
             reader = sqlCmd.ExecuteReader();
             string[] dummyCheck = null;
             int i = 0;
