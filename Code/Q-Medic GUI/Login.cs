@@ -8,9 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Q_Medic_GUI {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class Login : Form {
+        public Login() {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
