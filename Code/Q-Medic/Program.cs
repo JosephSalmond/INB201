@@ -16,7 +16,7 @@ namespace Q_Medic {
         private userType thisUser = userType.Luser;
         private userType user = userType.Luser;
 
-        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
+        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
@@ -25,11 +25,27 @@ namespace Q_Medic {
             
         }
 
-        // queries the database
-        private string[] DatabaseQuerie(string querie, querieType type) {
+        /* 
+         * - Need forms for "Registry", then hospital admin should confirm them, before they are INSERTed in DB.
+         * - Some example inserts.
+         * - Better move these into a new class file.
+         */
+        String firstName, lastName, email; // Received from the forms.
+        // Doctor registry
+        SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
+                                     "Values ('firstName', 'lastName', 'email')", dbConnection);
+        // Nurse registry
+        SqlCommand registerDoc = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
+                                     "Values ('firstName', 'lastName', 'email')", dbConnection);
+        // Receptionist registry
+        SqlCommand registerDoc = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
+            "Values ('firstName', 'lastName', 'email')", dbConnection);
+
+        // Queries the database
+        private string[] DatabaseQuery(string query, queryType type) {
             string username = "Admin";
             string password = "password";
-            string authenticationQuerie = "Select user {0} user type";
+            string authenticationQuerie = "SELECT user {0} user type";
 
             string[] dummy = DatabaseGet(querie);
 
