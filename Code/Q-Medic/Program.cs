@@ -11,12 +11,12 @@ namespace Q_Medic {
         /// </summary>
         
         enum querieType { LOGIN, DERP, AUTH };
-        enum userType {Luser, DOCTOR, NURSE}
+        enum userType {ADMIN, DOCTOR, NURSE, RECEPTIONIST}
         private bool authenticated = false;
         private userType thisUser = userType.Luser;
         private userType user = userType.Luser;
 
-        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=; connection timeout=30;");
+        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
