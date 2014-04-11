@@ -5,11 +5,11 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Q_Medic {
-    static class Program {
+    class Program {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        
         enum querieType { LOGIN, DERP, AUTH };
         enum userType {Luser, DOCTOR, NURSE}
         private bool authenticated = false;

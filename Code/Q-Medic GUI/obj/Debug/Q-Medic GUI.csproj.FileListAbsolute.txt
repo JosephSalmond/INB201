@@ -1,0 +1,8 @@
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q_Medic_GUI.Login.resources
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q_Medic_GUI.Properties.Resources.resources
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.csproj.GenerateResource.Cache
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.exe
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.pdb
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.exe
+C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.pdb

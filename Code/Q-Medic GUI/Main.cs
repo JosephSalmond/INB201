@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 namespace Q_Medic_GUI {
-    static class Main {
+    static class MainGui {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -13,6 +13,7 @@ namespace Q_Medic_GUI {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+
         }
     }
 }
