@@ -13,38 +13,39 @@ namespace Q_Medic
         /// </summary>
 
         enum querieType { LOGIN, DERP, AUTH };
-        enum userType { ADMIN, DOCTOR, NURSE, RECEPTIONIST }
+        enum userType { ADMIN, DOCTOR, NURSE, RECEPTIONIST, LUSER }
         private bool authenticated = false;
-        private userType thisUser = userType.Luser;
-        private userType user = userType.Luser;
+        private userType thisUser = userType.LUSER;
+        private userType user = userType.LUSER;
 
-        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
+        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
-        static void Main(){
+        void Main() {
             //
-
         }
 
-        /* 
-         * - Need forms for "Registry", then hospital admin should confirm them, before they are INSERTed in DB.
-         * - Some example inserts.
-         * - Better move these into a new class file.
-         */
-        String firstName, lastName, email; // Received from the forms.
-        // Doctor registry
-        SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
-                                     "Values ('firstName', 'lastName', 'email')", dbConnection);
-        // Nurse registry
-        SqlCommand registerDoc = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
-                                     "Values ('firstName', 'lastName', 'email')", dbConnection);
-        // Receptionist registry
-        SqlCommand registerDoc = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
-            "Values ('firstName', 'lastName', 'email')", dbConnection);
+        private void Register() {
 
+            /* 
+             * - Need forms for "Registry", then hospital admin should confirm them, before they are INSERTed in DB.
+             * - Some example inserts.
+             * - Better move these into a new class file.
+             */
+            String firstName, lastName, email; // Received from the forms.
+            // Doctor registry
+            SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
+                                         "Values ('firstName', 'lastName', 'email')", databaseConnection);
+            // Nurse registry
+            SqlCommand registerNuse = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
+                                         "Values ('firstName', 'lastName', 'email')", databaseConnection);
+            // Receptionist registry
+            SqlCommand registerRecept = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
+                "Values ('firstName', 'lastName', 'email')", databaseConnection);
+        }
         // Queries the database
-        private string[] DatabaseQuery(string query, queryType type)
+        private string[] DatabaseQuery(string querie, querieType type)
         {
             string username = "Admin";
             string password = "password";
