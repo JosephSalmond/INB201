@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Q_Medic
+namespace Q_Medic_Hospital
 {
     class Program
     {
@@ -18,12 +18,12 @@ namespace Q_Medic
         private userType thisUser = userType.LUSER;
         private userType user = userType.LUSER;
 
-        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
+        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
        static void Main() {
-           Test();
+           Application.Run(new Q_Medic_Hospital.Login());
 
         }
 
@@ -43,13 +43,13 @@ namespace Q_Medic
             String firstName, lastName, email; // Received from the forms.
             // Doctor registry
             SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
-                                         "Values ('firstName', 'lastName', 'email')", databaseConnection);
+                                         "Values ('firstName', 'lastName', 'email')", dbConnection);
             // Nurse registry
             SqlCommand registerNuse = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
-                                         "Values ('firstName', 'lastName', 'email')", databaseConnection);
+                                         "Values ('firstName', 'lastName', 'email')", dbConnection);
             // Receptionist registry
             SqlCommand registerRecept = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
-                "Values ('firstName', 'lastName', 'email')", databaseConnection);
+                "Values ('firstName', 'lastName', 'email')", dbConnection);
         }
         // Queries the database
         private string[] DatabaseQuery(string querie, querieType type)
@@ -123,7 +123,7 @@ namespace Q_Medic
         {
             try
             {
-                databaseConnection.Open();
+                dbConnection.Open();
             }
             catch (SqlException ex)
             {
@@ -134,7 +134,7 @@ namespace Q_Medic
         //closes connection
         private void CloseConnection()
         {
-            databaseConnection.Close();
+            dbConnection.Close();
         }
 
         // hashes password

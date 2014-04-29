@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Q_Medic_GUI
+namespace Q_Medic_Hospital
 {
     public partial class Doctor : Form
     {

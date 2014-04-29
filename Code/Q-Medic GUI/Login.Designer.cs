@@ -1,4 +1,4 @@
-﻿namespace Q_Medic_GUI {
+﻿namespace Q_Medic_Hospital {
     partial class Login
     {
         /// <summary>

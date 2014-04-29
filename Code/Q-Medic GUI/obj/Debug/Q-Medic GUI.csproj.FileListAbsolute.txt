@@ -6,3 +6,11 @@ C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.exe
 C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.pdb
 C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.exe
 C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.pdb
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.exe
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\bin\Debug\Q-Medic GUI.pdb
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.csprojResolveAssemblyReference.cache
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q_Medic_Hospital.Login.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q_Medic_Hospital.Properties.Resources.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.csproj.GenerateResource.Cache
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.exe
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic GUI\obj\Debug\Q-Medic GUI.pdb
