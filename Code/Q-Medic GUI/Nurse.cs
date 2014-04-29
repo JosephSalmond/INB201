@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace Q_Medic_GUI
 {
-    public partial class Doctor : Form
+    public partial class Nurse : Form
     {
-        public Doctor()
+        public Nurse()
         {
             InitializeComponent();
-        }
-
-        private void Doctor_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
