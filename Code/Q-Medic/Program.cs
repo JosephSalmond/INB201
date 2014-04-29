@@ -18,15 +18,22 @@ namespace Q_Medic
         private userType thisUser = userType.LUSER;
         private userType user = userType.LUSER;
 
-        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=30;");
+        SqlConnection databaseConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
-        void Main() {
-            //
+       static void Main() {
+           Test();
+
         }
 
-        private void Register() {
+       private void Test() {
+           sqlCmd.CommandText = "select * from Auth";
+           reader = sqlCmd.ExecuteReader();
+           Console.WriteLine(reader);
+       }
+
+        private void Register(userType user) {
 
             /* 
              * - Need forms for "Registry", then hospital admin should confirm them, before they are INSERTed in DB.

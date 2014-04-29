@@ -8,18 +8,18 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Q_Medic_GUI {
-	private void init(){
-		InitializeComponent(); // ?
-		this.menuStrip0 = new System.Windows.Forms.MenuStrip();
-	}
 
-	private void button1_Click(object sender, EventArgs e)
-	{
-		//
-	}
+    public partial class Login : Form {
+        public Login() {
+            InitializeComponent();
+        }
 
+        private void button1_Click(object sender, EventArgs e) {
+            //
+        }
+    }
 
-
+/*
 	// Form types
 	private SystemAdminRegistryForm sysadminRegistry; // seperate for system admin = our tutor
 	private StaffRegistryForm staffRegistry;
@@ -42,5 +42,5 @@ namespace Q_Medic_GUI {
 
 
 		
-	}
+	}*/
 }

@@ -7,3 +7,6 @@ C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic\obj\Debug\Q-Medic.exe
 C:\Users\Ali\Documents\INB201\Master\Code\Q-Medic\obj\Debug\Q-Medic.pdb
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic\obj\Debug\Q-Medic.exe
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic\obj\Debug\Q-Medic.pdb
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic\obj\Debug\Q-Medic.csprojResolveAssemblyReference.cache
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic\obj\Debug\Q_Medic.Properties.Resources.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic\obj\Debug\Q-Medic.csproj.GenerateResource.Cache
