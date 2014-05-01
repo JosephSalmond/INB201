@@ -56,5 +56,10 @@ namespace Q_Medic_Hospital
         {
 
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
