@@ -68,6 +68,11 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
 
         }
 
+
+
+
+
+
         private void Register(userType user) {
 
             /* 
