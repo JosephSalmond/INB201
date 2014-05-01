@@ -23,7 +23,7 @@ namespace Q_Medic_Hospital
         SqlDataReader reader;
 
        static void Main() {
-           Application.Run(new Q_Medic_Hospital.Login());
+           Application.Run(new Q_Medic_Hospital.Doctor());
 
         }
 
