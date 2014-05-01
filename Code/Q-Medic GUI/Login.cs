@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Q_Medic_Hospital.
 
 namespace Q_Medic_Hospital {
 
@@ -15,7 +16,7 @@ namespace Q_Medic_Hospital {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            //
+            
         }
     }
 

@@ -1,5 +1,7 @@
-﻿namespace Q_Medic {
-    partial class Form1 {
+﻿namespace Q_Medic_Hospital
+{
+    partial class Doctor
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,13 +26,24 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Doctor
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(664, 381);
+            this.Name = "Doctor";
+            this.Text = "Doctor";
+            this.Load += new System.EventHandler(this.Doctor_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+
     }
 }
-
