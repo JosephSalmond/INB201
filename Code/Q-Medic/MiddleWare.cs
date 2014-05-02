@@ -13,8 +13,7 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
         enum querieType { LOGIN, DERP, AUTH };
         
         private bool authenticated = false;
-        private userType thisUser = userType.LUSER;
-        private userType user = userType.LUSER;
+
 
         SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
         SqlCommand sqlCmd = new SqlCommand();
@@ -35,6 +34,7 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
                 if ((username == reader.GetString(0)) && (password == reader.GetString(1))) {
                     theUser = (userType)Array.IndexOf(stringUser, reader.GetString(2));
                     autorised = true;
+                    
                 }
             }
               Console.WriteLine("{0} {1}", username, password);
