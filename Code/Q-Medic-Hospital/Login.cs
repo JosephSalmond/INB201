@@ -29,7 +29,7 @@ namespace Q_Medic_Hospital {
             if (authorised) {
                 
                 if (theUser == userType.DOCTOR) {
-                   // mainForm = new Q_Medic_Hospital.Doctor();
+                    mainForm = new Q_Medic_Hospital.Doctor();
                 }else if (theUser == userType.NURSE){
                     textBox1.Text = "Welcom Nurse";
                 } else if (theUser == userType.ADMIN) {
