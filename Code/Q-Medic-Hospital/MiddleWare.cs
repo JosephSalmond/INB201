@@ -19,6 +19,7 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
+<<<<<<< HEAD:Code/Q-Medic-Hospital/MiddleWare.cs
         public MiddleWare() {
         }
 
@@ -65,6 +66,10 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
             CloseConnection();
 
             return autorised;
+=======
+       static void Main() {
+           Application.Run(new Q_Medic_Hospital.Doctor());
+>>>>>>> origin/Graphical_User_Interface:Code/Q-Medic/Program.cs
 
         }
 
