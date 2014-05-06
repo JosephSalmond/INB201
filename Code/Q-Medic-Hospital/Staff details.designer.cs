@@ -1,4 +1,4 @@
-﻿namespace Hospitals
+﻿namespace Q_Medic_Hospital
 {
     partial class Staff_details
     {

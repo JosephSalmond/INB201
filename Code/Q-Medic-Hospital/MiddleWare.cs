@@ -6,10 +6,10 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Q_Medic_Hospital {
-public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
+public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
 
    public class MiddleWare {
-        public string[] stringUser = {"Luser", "Admin", "Doctor", "Nurse", "Receptionist"};
+        public string[] stringUser = {"Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech"};
         enum querieType { LOGIN, DERP, AUTH };
         
         private bool authenticated = false;
@@ -19,7 +19,14 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
-<<<<<<< HEAD:Code/Q-Medic-Hospital/MiddleWare.cs
+        static void Main() {
+            Form login = new Q_Medic_Hospital.Login();
+            login.Show();
+            Application.Run();
+            
+        }
+
+
         public MiddleWare() {
         }
 
@@ -30,16 +37,16 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
             sqlCmd.CommandText = string.Format("select * from Auth WHERE UserName='{0}' AND Password='{1}';", username, password);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
-              if (reader.HasRows) {
+            if (reader.HasRows) {
                 reader.Read();
                 if ((username == reader.GetString(0)) && (password == reader.GetString(1))) {
                     theUser = (userType)Array.IndexOf(stringUser, reader.GetString(2));
                     autorised = true;
-                    
+
                 }
             }
-              Console.WriteLine("{0} {1}", username, password);
-            
+            Console.WriteLine("{0} {1}", username, password);
+
             if (reader.HasRows) {
                 while (reader.Read()) {
                     if (reader.GetString(0) == username) {
@@ -54,7 +61,7 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
                     }
                 }
             }
-            
+
             if (reader.HasRows) {
                 while (reader.Read()) {
                     Console.WriteLine("{0} {1} {2}", reader.GetString(0),
@@ -66,13 +73,7 @@ public enum userType {LUSER = 0, ADMIN, DOCTOR, NURSE, RECEPTIONIST }
             CloseConnection();
 
             return autorised;
-=======
-       static void Main() {
-           Application.Run(new Q_Medic_Hospital.Doctor());
->>>>>>> origin/Graphical_User_Interface:Code/Q-Medic/Program.cs
-
         }
-
 
 
 

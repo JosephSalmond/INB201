@@ -10,29 +10,29 @@ using System.Windows.Forms;
 
 namespace Q_Medic_Hospital
 {
-    public partial class PaitentProfile : Form
+    public partial class PaitentHistorys : Form
     {
-        public PaitentProfile()
+        public PaitentHistorys()
         {
             InitializeComponent();
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox15_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void PaitentProfile_Load(object sender, EventArgs e)
+        private void PaitentHistorys_Load(object sender, EventArgs e)
         {
 
         }

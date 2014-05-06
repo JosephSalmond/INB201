@@ -15,8 +15,9 @@ namespace Q_Medic_Hospital {
         public Login() {
 
             InitializeComponent();
-            
+            this.AcceptButton = loginButton;
         }
+
 
         private void button1_Click(object sender, EventArgs e) {
             string username = this.textBox1.Text;
@@ -31,22 +32,36 @@ namespace Q_Medic_Hospital {
                 if (theUser == userType.DOCTOR) {
                     mainForm = new Q_Medic_Hospital.Doctor();
                 }else if (theUser == userType.NURSE){
-                    textBox1.Text = "Welcom Nurse";
-                } else if (theUser == userType.ADMIN) {
-                    textBox1.Text = "Welcome Admin";
+                    mainForm = new Q_Medic_Hospital.Nurse();
+                } else if (theUser == userType.SYSADMIN) {
+                    textBox1.Text = "Welcome sysAdmin";
                 } else if (theUser == userType.RECEPTIONIST) {
                     mainForm = new Q_Medic_Hospital.Receptionist();
-                } else if (theUser == userType.LUSER) {
+                } else if (theUser == userType.HOSPITALADMIN){
+                    textBox1.Text = "Welcom Hospital Admin";
+                } else if (theUser == userType.MEDTECH){
+                    textBox1.Text = "Welcome Med Tech";
+                }else if (theUser == userType.LUSER) {
                     textBox1.Text = "What are you doing Dave";
                 }
                 if (mainForm != null) {
                     this.Hide();
                     mainForm.Show();
+                    this.Close();
                 }
             } else {
                 textBox2.Text = "";
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            MessageBox.Show("Please Contact System Administrator", "Warning", MessageBoxButtons.OK);
+        }
+
+        private void Login_Load(object sender, EventArgs e) {
+
+        }
+
     }
 
 /*
