@@ -32,7 +32,7 @@ namespace Q_Medic_Hospital {
                 if (theUser == userType.DOCTOR) {
                     mainForm = new Q_Medic_Hospital.Doctor();
                 }else if (theUser == userType.NURSE){
-                    mainForm = new Q_Medic_Hospital.Nurse();
+                    mainForm = new Q_Medic_Hospital.PatientHistoryMain();
                 } else if (theUser == userType.SYSADMIN) {
                     textBox1.Text = "Welcome sysAdmin";
                 } else if (theUser == userType.RECEPTIONIST) {

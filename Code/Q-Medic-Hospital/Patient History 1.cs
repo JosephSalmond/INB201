@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Q_Medic_Hospital
 {
-    public partial class PaitentHistorys : Form
+    public partial class PatientHistorys1 : Form
     {
-        public PaitentHistorys()
+        public PatientHistorys1()
         {
+            ControlBox = false;
             InitializeComponent();
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

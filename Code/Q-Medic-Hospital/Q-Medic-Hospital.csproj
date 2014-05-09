@@ -52,29 +52,29 @@
     <Compile Include="Doctor.Designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nurse Checklist2.cs">
+    <Compile Include="Patient History 3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nurse Checklist2.designer.cs">
-      <DependentUpon>Nurse Checklist2.cs</DependentUpon>
+    <Compile Include="Patient History 3.designer.cs">
+      <DependentUpon>Patient History 3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nurse Checklist1.cs">
+    <Compile Include="Patient History 2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nurse Checklist1.designer.cs">
-      <DependentUpon>Nurse Checklist1.cs</DependentUpon>
+    <Compile Include="Patient History 2.designer.cs">
+      <DependentUpon>Patient History 2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nurse.cs">
+    <Compile Include="Patient History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nurse.Designer.cs">
-      <DependentUpon>Nurse.cs</DependentUpon>
+    <Compile Include="Patient History.Designer.cs">
+      <DependentUpon>Patient History.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paitent History.cs">
+    <Compile Include="Patient History 1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paitent History.designer.cs">
-      <DependentUpon>Paitent History.cs</DependentUpon>
+    <Compile Include="Patient History 1.designer.cs">
+      <DependentUpon>Patient History 1.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -99,7 +99,7 @@
     <Compile Include="Receptionist.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Receptionist.Designer.cs">
+    <Compile Include="Receptionist.designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff details.cs">
@@ -111,17 +111,17 @@
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nurse Checklist2.resx">
-      <DependentUpon>Nurse Checklist2.cs</DependentUpon>
+    <EmbeddedResource Include="Patient History 3.resx">
+      <DependentUpon>Patient History 3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nurse Checklist1.resx">
-      <DependentUpon>Nurse Checklist1.cs</DependentUpon>
+    <EmbeddedResource Include="Patient History 2.resx">
+      <DependentUpon>Patient History 2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nurse.resx">
-      <DependentUpon>Nurse.cs</DependentUpon>
+    <EmbeddedResource Include="Patient History.resx">
+      <DependentUpon>Patient History.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paitent History.resx">
-      <DependentUpon>Paitent History.cs</DependentUpon>
+    <EmbeddedResource Include="Patient History 1.resx">
+      <DependentUpon>Patient History 1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

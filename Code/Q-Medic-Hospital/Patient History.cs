@@ -8,13 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Q_Medic_Hospital {
-    public partial class Nurse : Form {
-        private Form[] formation = { new Q_Medic_Hospital.PaitentHistorys(), new Q_Medic_Hospital.NurseCheckilst1(), new Q_Medic_Hospital.NurseCheckilst2() };
+    public partial class PatientHistoryMain : Form {
+        private Form[] formation = { new Q_Medic_Hospital.PatientHistoryMain(), new Q_Medic_Hospital.PatientHistorys1(), new Q_Medic_Hospital.PatientHistorys2(), new Q_Medic_Hospital.PatientHistorys3() };
         private Form SubForm;
         private int formIndex;
         private int totalForms;
 
-        public Nurse() {
+        public PatientHistoryMain() {
             InitializeComponent();
             formIndex = 0;
             totalForms = 3;
@@ -22,11 +22,12 @@ namespace Q_Medic_Hospital {
             SubForm.WindowState = FormWindowState.Maximized;
             SubForm.MdiParent = this;
             SubForm.Show();
+            PreviousSub.Enabled = false;
         }
 
 
         private void Previous_Click_1(object sender, EventArgs e) {
-formIndex--;
+            formIndex--;
             if (formIndex > -1) {
                 SubForm.Hide();
                 SubForm = formation[formIndex];
@@ -35,6 +36,11 @@ formIndex--;
                 SubForm.Show();
             } else {
                 formIndex++;
+            }
+            if (formIndex == 0) {
+                PreviousSub.Enabled = false;
+            } else {
+                NextSub.Enabled = true;
             }
         }
 
@@ -49,6 +55,15 @@ formIndex--;
             } else {
                 formIndex--;
             }
+            if (formIndex == totalForms - 1) {
+               NextSub.Enabled = false;
+            } else {
+                PreviousSub.Enabled = true;
+            }
+        }
+
+        private void Nurse_Load(object sender, EventArgs e) {
+
         }
     }
 }

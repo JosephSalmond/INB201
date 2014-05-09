@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace Q_Medic_Hospital
 {
-    public partial class NurseCheckilst1 : Form
+    public partial class PatientHistorys2 : Form
     {
-        public NurseCheckilst1()
+        public PatientHistorys2()
         {
+            ControlBox = false;
             InitializeComponent();
         }
 
