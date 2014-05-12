@@ -30,6 +30,17 @@ public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITAL
         public MiddleWare() {
         }
 
+       /* 
+        * Creates the SYSTEM ADMIN 
+        */
+        public bool createAdmin(string adminUsername, string adminPassword, string adminEmail)
+        {
+            OpenConnection();
+            Console.WriteLine("Debugging createAdmin(): ");
+            sqlCmd.CommandText = string.Format("INSERT INTO Auth VALUES (" + adminUsername + ", " + adminPassword + ", " + adminEmail + ")");
+            sqlCmd.Connection = dbConnection;
+            return sqlCmd.ExecuteNonQuery() > 0;
+        }
         public bool AuthTest(string username, string password, ref userType theUser) {
             bool autorised = false;
             OpenConnection();
@@ -80,13 +91,7 @@ public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITAL
 
 
         private void Register(userType user) {
-
-            /* 
-             * - Need forms for "Registry", then hospital admin should confirm them, before they are INSERTed in DB.
-             * - Some example inserts.
-             * - Better move these into a new class file.
-             */
-            String firstName, lastName, email; // Received from the forms.
+            String firstName, lastName, email;
             // Doctor registry
             SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
                                          "Values ('firstName', 'lastName', 'email')", dbConnection);
