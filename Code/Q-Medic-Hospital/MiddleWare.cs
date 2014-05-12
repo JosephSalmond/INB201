@@ -6,12 +6,12 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Q_Medic_Hospital {
-public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
+    public enum userType { LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
 
-   public class MiddleWare {
-        public string[] stringUser = {"Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech"};
+    public class MiddleWare {
+        public string[] stringUser = { "Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech" };
         enum querieType { LOGIN, DERP, AUTH };
-        
+
         private bool authenticated = false;
 
 
@@ -23,18 +23,17 @@ public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITAL
             Form login = new Q_Medic_Hospital.Login();
             login.Show();
             Application.Run();
-            
+
         }
 
 
         public MiddleWare() {
         }
 
-       /* 
-        * Creates the SYSTEM ADMIN 
-        */
-        public bool createAdmin(string adminUsername, string adminPassword, string adminEmail)
-        {
+        /* 
+         * Creates the SYSTEM ADMIN 
+         */
+        public bool createAdmin(string adminUsername, string adminPassword, string adminEmail) {
             OpenConnection();
             Console.WriteLine("Debugging createAdmin(): ");
             sqlCmd.CommandText = string.Format("INSERT INTO Auth VALUES (" + adminUsername + ", " + adminPassword + ", " + adminEmail + ")");
@@ -103,30 +102,30 @@ public enum userType {LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITAL
                 "Values ('firstName', 'lastName', 'email')", dbConnection);
         }
         // Queries the database
-      /*  public string[] DatabaseQuery(string querie, querieType type) {
-            string username = "Admin";
-            string password = "password";
-            string authenticationQuerie = "select * from Auth WHERE UserName='8823928' AND Password='thepassword';";
+        /*  public string[] DatabaseQuery(string querie, querieType type) {
+              string username = "Admin";
+              string password = "password";
+              string authenticationQuerie = "select * from Auth WHERE UserName='8823928' AND Password='thepassword';";
 
-            string[] dummy = DatabaseGet(querie);
-
-
-            // authenticate user
-            if (type == querieType.AUTH) {
-                this.authenticated = DatabaseAuth(dummy, username, password);
-            } else if (this.authenticated == true) {
-            } else {
-                string[] failure = { "-1", "Access Denied" };
-                return failure;
-            }
-
-            // other querie's
+              string[] dummy = DatabaseGet(querie);
 
 
+              // authenticate user
+              if (type == querieType.AUTH) {
+                  this.authenticated = DatabaseAuth(dummy, username, password);
+              } else if (this.authenticated == true) {
+              } else {
+                  string[] failure = { "-1", "Access Denied" };
+                  return failure;
+              }
+
+              // other querie's
 
 
-            return dummy;
-        }*/
+
+
+              return dummy;
+          }*/
 
 
         // authenticates against the database
