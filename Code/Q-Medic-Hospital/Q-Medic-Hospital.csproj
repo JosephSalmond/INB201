@@ -102,12 +102,6 @@
     <Compile Include="Receptionist.designer.cs">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registry.Designer.cs">
-      <DependentUpon>Registry.cs</DependentUpon>
-    </Compile>
     <Compile Include="Staff details.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,9 +144,6 @@
     </Compile>
     <EmbeddedResource Include="Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registry.resx">
-      <DependentUpon>Registry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Staff details.resx">
       <DependentUpon>Staff details.cs</DependentUpon>
