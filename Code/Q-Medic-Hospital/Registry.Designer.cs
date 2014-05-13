@@ -51,13 +51,16 @@
             // 
             this.userTypeSelector.FormattingEnabled = true;
             this.userTypeSelector.Items.AddRange(new object[] {
-            "System Administrator",
             "Doctor",
+            "HospitalAdmin",
+            "Luser",
             "Nurse",
-            "Receptionist"});
+            "Receptionist",
+            "SysAdmin"});
             this.userTypeSelector.Location = new System.Drawing.Point(399, 91);
             this.userTypeSelector.Name = "userTypeSelector";
             this.userTypeSelector.Size = new System.Drawing.Size(167, 21);
+            this.userTypeSelector.Sorted = true;
             this.userTypeSelector.TabIndex = 3;
             this.userTypeSelector.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -101,7 +104,6 @@
             this.PasswordText.PasswordChar = '*';
             this.PasswordText.Size = new System.Drawing.Size(152, 20);
             this.PasswordText.TabIndex = 16;
-
             // 
             // UsernameText
             // 
@@ -183,7 +185,6 @@
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(152, 20);
             this.textBox2.TabIndex = 16;
-
             // 
             // textBox8
             // 

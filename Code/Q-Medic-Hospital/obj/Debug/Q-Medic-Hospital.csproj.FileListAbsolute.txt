@@ -17,3 +17,4 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospi
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys1.resources
 C:\Users\qweqwe\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe
 C:\Users\qweqwe\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Registry.resources

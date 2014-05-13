@@ -15,6 +15,7 @@ namespace Q_Medic_Hospital
         public Registry()
         {
             InitializeComponent();
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace Q_Medic_Hospital
 
         private void Registry_Load(object sender, EventArgs e)
         {
-
+            userTypeSelector.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Q_Medic_Hospital
         }
 
         private void UsernameText_TextChanged(object sender, EventArgs e) {
-
+ 
         }
 
         private void textBox2_TextChanged()

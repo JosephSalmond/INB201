@@ -13,7 +13,7 @@ namespace Q_Medic_Hospital {
         public string[] stringUser = { "Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech" };
         enum querieType { LOGIN, DERP, AUTH };
 
-        private bool authenticated = false;
+
 
 
         SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
@@ -21,7 +21,7 @@ namespace Q_Medic_Hospital {
         SqlDataReader reader;
 
         static void Main() {
-            Form login = new Q_Medic_Hospital.Login();
+            Form login = new Q_Medic_Hospital.Registry();
             login.Show();
             Application.Run();
 
@@ -41,10 +41,14 @@ namespace Q_Medic_Hospital {
             sqlCmd.Connection = dbConnection;
             return sqlCmd.ExecuteNonQuery() > 0;
         }
+
+
         public bool AuthTest(string username, string password, ref userType theUser) {
             bool autorised = false;
             OpenConnection();
             Console.WriteLine("Debugging:");
+            soHigh(username, ref password);
+
             sqlCmd.CommandText = string.Format("select * from Auth WHERE UserName='{0}' AND Password='{1}';", username, password);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
@@ -93,34 +97,59 @@ namespace Q_Medic_Hospital {
         public bool Register(userType user, string username, string password, string firstName, string lastName, string Email) {
 
             bool succsess = false;
+            bool usernameExists = false;
             firstName = "First";
             lastName = "Last";
+            SqlCommand registerUser = null;
+            SqlCommand registerAuth = null;
+            OpenConnection();
 
-            // if username not exist in DB
-            if (true) {
+            soHigh(username, ref password);
+            sqlCmd.CommandText = string.Format("select * from Auth WHERE UserName='{0};'", username);
+            sqlCmd.Connection = dbConnection;
+            reader = sqlCmd.ExecuteReader();
 
-                // find valid id
-
-                // create user/password/usertype in table.auth
+            if (reader.HasRows) {
+                reader.Read();
+                if (username == reader.GetString(0)) {
+                }
+                usernameExists = true;
+            }
+            CloseConnection();
+            if (!usernameExists && (int)user != -1) {
+                
+                registerAuth = new SqlCommand(string.Format("INSERT Auth (UserName, Password, UserType)" +
+                "Values('{0}','{1}','{2}')",username, password, stringUser[(int)user]),dbConnection);
 
                 if (user == userType.DOCTOR) {
                     // Doctor registry
-                    SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
+                    registerUser = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
                                                  "Values ('firstName', 'lastName', 'email')", dbConnection);
                 } else if (user == userType.NURSE) {
                     // Nurse registry
-                    SqlCommand registerNuse = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
+                    registerUser = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
                                                  "Values ('firstName', 'lastName', 'email')", dbConnection);
                 } else if (user == userType.RECEPTIONIST) {
                     // Receptionist registry
-                    SqlCommand registerRecept = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
+                    registerUser = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
                         "Values ('firstName', 'lastName', 'email')", dbConnection);
+                } else if (user == userType.LUSER) {
+                    registerUser = new SqlCommand("",dbConnection);
                 }
-                return succsess;
+                OpenConnection();
+                registerAuth.ExecuteNonQuery();
+                CloseConnection();
             } else {
                 // user already exists error
-                return succsess;
+                Console.WriteLine("user already exists");
             }
+            
+
+
+
+
+            CloseConnection();
+            return succsess;
         }
         // Queries the database
         /*  public string[] DatabaseQuery(string querie, querieType type) {
@@ -193,20 +222,16 @@ namespace Q_Medic_Hospital {
         }
 
         // hashes password
-        private string soHigh(string userName, string password) {
-            string hashedPassword;
+        private void soHigh(string userName, ref string password) {
 
             var salt = System.Text.Encoding.UTF8.GetBytes(userName);
-            var pass = System.Text.Encoding.UTF8.GetBytes(password);
+            var pepper = System.Text.Encoding.UTF8.GetBytes(password);
 
             var hmacSHA256 = new HMACSHA256(salt);
-            var saltedPassword = hmacSHA256.ComputeHash(pass);
+            var saltedPassword = hmacSHA256.ComputeHash(pepper);
 
-            hashedPassword = Convert.ToBase64String(saltedPassword);
-            // hashing method
+            password = Convert.ToBase64String(saltedPassword);
 
-
-            return hashedPassword;
         }
     }
 }
