@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace Q_Medic_Hospital {
     public enum userType { LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
@@ -89,17 +90,37 @@ namespace Q_Medic_Hospital {
 
 
 
-        private void Register(userType user) {
-            String firstName, lastName, email;
-            // Doctor registry
-            SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
-                                         "Values ('firstName', 'lastName', 'email')", dbConnection);
-            // Nurse registry
-            SqlCommand registerNuse = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
-                                         "Values ('firstName', 'lastName', 'email')", dbConnection);
-            // Receptionist registry
-            SqlCommand registerRecept = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
-                "Values ('firstName', 'lastName', 'email')", dbConnection);
+        public bool Register(userType user, string username, string password, string firstName, string lastName, string Email) {
+
+            bool succsess = false;
+            firstName = "First";
+            lastName = "Last";
+
+            // if username not exist in DB
+            if (true) {
+
+                // find valid id
+
+                // create user/password/usertype in table.auth
+
+                if (user == userType.DOCTOR) {
+                    // Doctor registry
+                    SqlCommand registerDoc = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
+                                                 "Values ('firstName', 'lastName', 'email')", dbConnection);
+                } else if (user == userType.NURSE) {
+                    // Nurse registry
+                    SqlCommand registerNuse = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
+                                                 "Values ('firstName', 'lastName', 'email')", dbConnection);
+                } else if (user == userType.RECEPTIONIST) {
+                    // Receptionist registry
+                    SqlCommand registerRecept = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
+                        "Values ('firstName', 'lastName', 'email')", dbConnection);
+                }
+                return succsess;
+            } else {
+                // user already exists error
+                return succsess;
+            }
         }
         // Queries the database
         /*  public string[] DatabaseQuery(string querie, querieType type) {
@@ -172,10 +193,18 @@ namespace Q_Medic_Hospital {
         }
 
         // hashes password
-        private string soHigh(string password) {
-            string hashedPassword = null;
+        private string soHigh(string userName, string password) {
+            string hashedPassword;
+
+            var salt = System.Text.Encoding.UTF8.GetBytes(userName);
+            var pass = System.Text.Encoding.UTF8.GetBytes(password);
+
+            var hmacSHA256 = new HMACSHA256(salt);
+            var saltedPassword = hmacSHA256.ComputeHash(pass);
+
+            hashedPassword = Convert.ToBase64String(saltedPassword);
             // hashing method
-            hashedPassword = password;
+
 
             return hashedPassword;
         }
