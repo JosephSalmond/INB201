@@ -1,0 +1,2 @@
+c:\users\dell\documents\visual studio 2012\Projects\Nurses Main page\Nurses Main page\bin\Debug\Nurses Main page.exe.config
+C:\Users\JEGO\Documents\QUT\github\Code\Nurses Main page\Nurses Main page\bin\Debug\Nurses Main page.exe.config

@@ -7,3 +7,6 @@ C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsForms
 C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.exe
 C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.pdb
 C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\obj\Release\Patients Rooms.csprojResolveAssemblyReference.cache
+C:\Users\JEGO\Documents\QUT\github\Code\Patients Rooms\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe.config
+C:\Users\JEGO\Documents\QUT\github\Code\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.exe
+C:\Users\JEGO\Documents\QUT\github\Code\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.pdb
