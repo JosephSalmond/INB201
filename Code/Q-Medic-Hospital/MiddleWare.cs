@@ -21,7 +21,7 @@ namespace Q_Medic_Hospital {
         SqlDataReader reader;
 
         static void Main() {
-            Form login = new Q_Medic_Hospital.Registry();
+            Form login = new Q_Medic_Hospital.NurseMaster();
             login.Show();
             Application.Run();
 

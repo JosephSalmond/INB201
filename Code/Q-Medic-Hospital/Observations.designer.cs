@@ -1,4 +1,4 @@
-﻿namespace Nurses_Main_page
+﻿namespace Q_Medic_Hospital
 {
     partial class Observations
     {
@@ -76,6 +76,7 @@
             this.observationPageToolStripMenuItem.Name = "observationPageToolStripMenuItem";
             this.observationPageToolStripMenuItem.Size = new System.Drawing.Size(129, 23);
             this.observationPageToolStripMenuItem.Text = "Observation Page";
+            this.observationPageToolStripMenuItem.Click += new System.EventHandler(this.observationPageToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 

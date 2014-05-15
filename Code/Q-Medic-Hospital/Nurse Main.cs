@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nurses_Main_page
+namespace Q_Medic_Hospital
 {
     public partial class NurseMainPage : Form
     {
+        Form NextForm;
         public NurseMainPage()
         {
+            ControlBox = false;
             InitializeComponent();
         }
 
@@ -33,15 +35,21 @@ namespace Nurses_Main_page
         }
 
         private void Observations_Click(object sender, EventArgs e) {
-            // swap to observation
+            NextForm = new Q_Medic_Hospital.Observations(this);
+            this.Hide();
+            NextForm.Show();
         }
 
         private void HospitalBedAllocation_Click(object sender, EventArgs e) {
-            // sap to hospital bed allocation
+            NextForm = new Q_Medic_Hospital.PatientRooms(this);
+            this.Hide();
+            NextForm.Show();
         }
 
         private void PatientActivites_Click(object sender, EventArgs e) {
-            // switch to patien activitys
+            NextForm = new Q_Medic_Hospital.Patient_Activities(this);
+            this.Hide();
+            NextForm.Show();
         }
     }
 }

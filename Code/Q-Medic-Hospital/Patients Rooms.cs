@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication2
+namespace Q_Medic_Hospital
 {
-    public partial class PatiemtRooms : Form
+    public partial class PatientRooms : Form
     {
-        public PatiemtRooms()
+        Form main;
+        public PatientRooms(Form main)
         {
+            this.main = main;
             InitializeComponent();
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -105,6 +108,11 @@ namespace WindowsFormsApplication2
         private void textBox22_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e) {
+            main.Show();
+            this.Close();
         }
     }
 }

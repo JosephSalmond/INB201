@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nurses_Main_page
+namespace Q_Medic_Hospital
 {
     public partial class Patient_Activities : Form
     {
-        public Patient_Activities()
+        Form main;
+        public Patient_Activities(Form main)
         {
+            this.main = main;
+            ControlBox = false;
             InitializeComponent();
+            
         }
 
         private void Patient_Activities_Load(object sender, EventArgs e)
@@ -29,7 +33,8 @@ namespace Nurses_Main_page
 
         private void nurseProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            main.Show();
+            this.Close();
         }
     }
 }

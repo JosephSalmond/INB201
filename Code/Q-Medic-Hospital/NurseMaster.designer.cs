@@ -1,4 +1,4 @@
-﻿namespace Nurses_Main_page
+﻿namespace Q_Medic_Hospital
 {
     partial class NurseMaster
     {
@@ -37,7 +37,6 @@
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.IsMdiContainer = true;
             this.Name = "NurseMaster";
-            this.Text = "Form2";
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication2
+﻿namespace Q_Medic_Hospital
 {
-    partial class PatiemtRooms
+    partial class PatientRooms
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatiemtRooms));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientRooms));
             this.RoomId = new System.Windows.Forms.TextBox();
             this.RoomNumber = new System.Windows.Forms.TextBox();
             this.NumberOfBedsInTheRoom = new System.Windows.Forms.TextBox();
@@ -338,6 +338,7 @@
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.updateToolStripMenuItem.Text = "Update ";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // updateTheRoomInformationsToolStripMenuItem
             // 
@@ -859,7 +860,7 @@
             this.Vip2Photo.TabIndex = 114;
             this.Vip2Photo.TabStop = false;
             // 
-            // Form1
+            // PatientRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -942,7 +943,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "PatientRooms";
             this.Text = "Patients Rooms";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

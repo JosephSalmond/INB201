@@ -1,4 +1,4 @@
-﻿namespace Nurses_Main_page
+﻿namespace Q_Medic_Hospital
 {
     partial class NurseMainPage
     {

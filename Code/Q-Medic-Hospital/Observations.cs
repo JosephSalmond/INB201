@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nurses_Main_page
+namespace Q_Medic_Hospital
 {
     public partial class Observations : Form
     {
-        public Observations()
+        Form main;
+        public Observations(Form main)
         {
+            this.main = main;
+            ControlBox = false;
             InitializeComponent();
         }
 
@@ -25,6 +28,11 @@ namespace Nurses_Main_page
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void observationPageToolStripMenuItem_Click(object sender, EventArgs e) {
+            main.Show();
+            this.Close();
         }
     }
 }
