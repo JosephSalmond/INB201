@@ -21,7 +21,9 @@ namespace Q_Medic_Hospital {
         SqlDataReader reader;
 
         static void Main() {
-            Form login = new Q_Medic_Hospital.NurseMaster();
+            //Form login = new Q_Medic_Hospital.Login();
+            Form login = new Q_Medic_Hospital.Registry();
+            //Form login = new Q_Medic_Hospital.NurseMaster();
             login.Show();
             Application.Run();
 
@@ -105,15 +107,16 @@ namespace Q_Medic_Hospital {
             OpenConnection();
 
             soHigh(username, ref password);
-            sqlCmd.CommandText = string.Format("select * from Auth WHERE UserName='{0};'", username);
+            sqlCmd.CommandText = string.Format("select UserName from Auth WHERE UserName='{0}';", username);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
 
             if (reader.HasRows) {
                 reader.Read();
+
                 if (username == reader.GetString(0)) {
+                    usernameExists = true;
                 }
-                usernameExists = true;
             }
             CloseConnection();
             if (!usernameExists && (int)user != -1) {
@@ -226,8 +229,7 @@ namespace Q_Medic_Hospital {
 
             var salt = System.Text.Encoding.UTF8.GetBytes(userName);
             var pepper = System.Text.Encoding.UTF8.GetBytes(password);
-
-            var hmacSHA256 = new HMACSHA256(salt);
+                        var hmacSHA256 = new HMACSHA256(salt);
             var saltedPassword = hmacSHA256.ComputeHash(pepper);
 
             password = Convert.ToBase64String(saltedPassword);
