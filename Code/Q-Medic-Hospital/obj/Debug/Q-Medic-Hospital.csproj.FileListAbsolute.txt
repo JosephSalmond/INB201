@@ -1,4 +1,3 @@
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csprojResolveAssemblyReference.cache
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Login.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Properties.Resources.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csproj.GenerateResource.Cache
