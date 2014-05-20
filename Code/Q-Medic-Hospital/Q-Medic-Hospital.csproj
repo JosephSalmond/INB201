@@ -72,6 +72,12 @@
     <Compile Include="Doctor.Designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hospital Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hospital Admin.designer.cs">
+      <DependentUpon>Hospital Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="HospitalDataSet.cs">
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -173,8 +179,17 @@
     <Compile Include="Staff details.designer.cs">
       <DependentUpon>Staff details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Systems Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems Admin.designer.cs">
+      <DependentUpon>Systems Admin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hospital Admin.resx">
+      <DependentUpon>Hospital Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse Main.resx">
       <DependentUpon>Nurse Main.cs</DependentUpon>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Staff details.resx">
       <DependentUpon>Staff details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems Admin.resx">
+      <DependentUpon>Systems Admin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HospitalDataSet.xsc">
       <DependentUpon>HospitalDataSet.xsd</DependentUpon>
