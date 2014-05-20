@@ -22,8 +22,9 @@ namespace Q_Medic_Hospital {
 
         static void Main() {
             //Form login = new Q_Medic_Hospital.Login();
-            Form login = new Q_Medic_Hospital.Registry();
+            //Form login = new Q_Medic_Hospital.Registry();
             //Form login = new Q_Medic_Hospital.NurseMaster();
+            Form login = new Q_Medic_Hospital.Doctor();
             login.Show();
             Application.Run();
 

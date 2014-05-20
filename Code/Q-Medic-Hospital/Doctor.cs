@@ -18,6 +18,8 @@ namespace Q_Medic_Hospital
 
         private void Doctor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hospitalDataSet.Auth' table. You can move, or remove it, as needed.
+            this.authTableAdapter.Fill(this.hospitalDataSet.Auth);
 
 
         }
