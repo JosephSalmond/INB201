@@ -33,3 +33,36 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.R
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp-WPF.resources.dll
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp.Charting-WPF.resources.dll
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.exe
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.pdb
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.DocumentObjectModel-WPF.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.Rendering-WPF.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.RtfRendering-WPF.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\PdfSharp-WPF.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\PdfSharp.Charting-WPF.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.DocumentObjectModel-WPF.resources.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.Rendering-WPF.resources.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.RtfRendering-WPF.resources.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp-WPF.resources.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp.Charting-WPF.resources.dll
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csprojResolveAssemblyReference.cache
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Doctor.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.NurseMainPage.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.NurseMaster.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Observations.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_Activities.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys3.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys2.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistoryMain.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys1.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Login.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Staff_form.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PaitentProfile.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientRooms.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Properties.Resources.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Receptionist.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Registry.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Staff_details.resources
+C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csproj.GenerateResource.Cache

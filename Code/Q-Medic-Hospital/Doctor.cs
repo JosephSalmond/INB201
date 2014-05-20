@@ -18,8 +18,11 @@ namespace Q_Medic_Hospital
 
         private void Doctor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitalDataSet.Auth' table. You can move, or remove it, as needed.
-            this.authTableAdapter.Fill(this.hospitalDataSet.Auth);
+            // TODO: This line of code loads data into the 'hospitalDataSet1.PatientTable' table. You can move, or remove it, as needed.
+            this.patientTableTableAdapter.Fill(this.hospitalDataSet1.PatientTable);
+            // TODO: This line of code loads data into the 'hospitalDataSet.Primary' table. You can move, or remove it, as needed.
+            this.primaryTableAdapter.Fill(this.hospitalDataSet.Primary);
+
 
 
         }
@@ -60,6 +63,16 @@ namespace Q_Medic_Hospital
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
