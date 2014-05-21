@@ -42,33 +42,19 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.primaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hospitalDataSet = new Q_Medic_Hospital.HospitalDataSet();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.authTableAdapter = new Q_Medic_Hospital.HospitalDataSetTableAdapters.AuthTableAdapter();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.primaryTableAdapter = new Q_Medic_Hospital.HospitalDataSetTableAdapters.PrimaryTableAdapter();
-            this.hospitalDataSet1 = new Q_Medic_Hospital.HospitalDataSet();
-            this.patientTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientTableTableAdapter = new Q_Medic_Hospital.HospitalDataSetTableAdapters.PatientTableTableAdapter();
-            this.doctorIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.appointmentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roomIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bedIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diagnosisIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nurseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expr2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.doctorsAppointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNB201DataSet = new Q_Medic_Hospital.INB201DataSet();
+            this.doctorsAppointmentsTableAdapter = new Q_Medic_Hospital.INB201DataSetTableAdapters.DoctorsAppointmentsTableAdapter();
+            this.treatmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.primaryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientTableBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsAppointmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNB201DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -183,122 +169,17 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.doctorIdDataGridViewTextBoxColumn,
-            this.patientIdDataGridViewTextBoxColumn,
-            this.appointmentIdDataGridViewTextBoxColumn,
-            this.roomIdDataGridViewTextBoxColumn,
-            this.bedIdDataGridViewTextBoxColumn,
-            this.diagnosisIdDataGridViewTextBoxColumn,
-            this.nurseIdDataGridViewTextBoxColumn,
-            this.expr1DataGridViewTextBoxColumn,
-            this.expr2DataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.patientTableBindingSource;
+            this.treatmentIDDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.staffIDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.doctorsAppointmentsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(23, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(544, 291);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // primaryBindingSource
-            // 
-            this.primaryBindingSource.DataMember = "Primary";
-            this.primaryBindingSource.DataSource = this.hospitalDataSet;
-            // 
-            // hospitalDataSet
-            // 
-            this.hospitalDataSet.DataSetName = "HospitalDataSet";
-            this.hospitalDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Auth";
-            this.bindingSource1.DataSource = this.hospitalDataSet;
-            // 
-            // authTableAdapter
-            // 
-            this.authTableAdapter.ClearBeforeFill = true;
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataMember = "Auth";
-            this.bindingSource2.DataSource = this.hospitalDataSet;
-            // 
-            // primaryTableAdapter
-            // 
-            this.primaryTableAdapter.ClearBeforeFill = true;
-            // 
-            // hospitalDataSet1
-            // 
-            this.hospitalDataSet1.DataSetName = "HospitalDataSet";
-            this.hospitalDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientTableBindingSource
-            // 
-            this.patientTableBindingSource.DataMember = "PatientTable";
-            this.patientTableBindingSource.DataSource = this.hospitalDataSet1;
-            // 
-            // patientTableTableAdapter
-            // 
-            this.patientTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // doctorIdDataGridViewTextBoxColumn
-            // 
-            this.doctorIdDataGridViewTextBoxColumn.DataPropertyName = "doctorId";
-            this.doctorIdDataGridViewTextBoxColumn.HeaderText = "doctorId";
-            this.doctorIdDataGridViewTextBoxColumn.Name = "doctorIdDataGridViewTextBoxColumn";
-            this.doctorIdDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.doctorIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // patientIdDataGridViewTextBoxColumn
-            // 
-            this.patientIdDataGridViewTextBoxColumn.DataPropertyName = "patientId";
-            this.patientIdDataGridViewTextBoxColumn.HeaderText = "Patient No.";
-            this.patientIdDataGridViewTextBoxColumn.Name = "patientIdDataGridViewTextBoxColumn";
-            // 
-            // appointmentIdDataGridViewTextBoxColumn
-            // 
-            this.appointmentIdDataGridViewTextBoxColumn.DataPropertyName = "appointmentId";
-            this.appointmentIdDataGridViewTextBoxColumn.HeaderText = "Appointment No.";
-            this.appointmentIdDataGridViewTextBoxColumn.Name = "appointmentIdDataGridViewTextBoxColumn";
-            // 
-            // roomIdDataGridViewTextBoxColumn
-            // 
-            this.roomIdDataGridViewTextBoxColumn.DataPropertyName = "roomId";
-            this.roomIdDataGridViewTextBoxColumn.HeaderText = "Room No.";
-            this.roomIdDataGridViewTextBoxColumn.Name = "roomIdDataGridViewTextBoxColumn";
-            // 
-            // bedIdDataGridViewTextBoxColumn
-            // 
-            this.bedIdDataGridViewTextBoxColumn.DataPropertyName = "bedId";
-            this.bedIdDataGridViewTextBoxColumn.HeaderText = "Bed No.";
-            this.bedIdDataGridViewTextBoxColumn.Name = "bedIdDataGridViewTextBoxColumn";
-            // 
-            // diagnosisIdDataGridViewTextBoxColumn
-            // 
-            this.diagnosisIdDataGridViewTextBoxColumn.DataPropertyName = "diagnosisId";
-            this.diagnosisIdDataGridViewTextBoxColumn.HeaderText = "Diagnosis";
-            this.diagnosisIdDataGridViewTextBoxColumn.Name = "diagnosisIdDataGridViewTextBoxColumn";
-            // 
-            // nurseIdDataGridViewTextBoxColumn
-            // 
-            this.nurseIdDataGridViewTextBoxColumn.DataPropertyName = "nurseId";
-            this.nurseIdDataGridViewTextBoxColumn.HeaderText = "nurseId";
-            this.nurseIdDataGridViewTextBoxColumn.Name = "nurseIdDataGridViewTextBoxColumn";
-            this.nurseIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // expr1DataGridViewTextBoxColumn
-            // 
-            this.expr1DataGridViewTextBoxColumn.DataPropertyName = "Expr1";
-            this.expr1DataGridViewTextBoxColumn.HeaderText = "Expr1";
-            this.expr1DataGridViewTextBoxColumn.Name = "expr1DataGridViewTextBoxColumn";
-            this.expr1DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // expr2DataGridViewTextBoxColumn
-            // 
-            this.expr2DataGridViewTextBoxColumn.DataPropertyName = "Expr2";
-            this.expr2DataGridViewTextBoxColumn.HeaderText = "Expr2";
-            this.expr2DataGridViewTextBoxColumn.Name = "expr2DataGridViewTextBoxColumn";
-            this.expr2DataGridViewTextBoxColumn.Visible = false;
             // 
             // button1
             // 
@@ -308,6 +189,51 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "GO";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // doctorsAppointmentsBindingSource
+            // 
+            this.doctorsAppointmentsBindingSource.DataMember = "DoctorsAppointments";
+            this.doctorsAppointmentsBindingSource.DataSource = this.iNB201DataSet;
+            // 
+            // iNB201DataSet
+            // 
+            this.iNB201DataSet.DataSetName = "INB201DataSet";
+            this.iNB201DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // doctorsAppointmentsTableAdapter
+            // 
+            this.doctorsAppointmentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // treatmentIDDataGridViewTextBoxColumn
+            // 
+            this.treatmentIDDataGridViewTextBoxColumn.DataPropertyName = "TreatmentID";
+            this.treatmentIDDataGridViewTextBoxColumn.HeaderText = "TreatmentID";
+            this.treatmentIDDataGridViewTextBoxColumn.Name = "treatmentIDDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PatientID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "PatientID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // staffIDDataGridViewTextBoxColumn
+            // 
+            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
+            this.staffIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // Doctor
             // 
@@ -330,12 +256,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.primaryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hospitalDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientTableBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorsAppointmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNB201DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,25 +279,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private HospitalDataSet hospitalDataSet;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private HospitalDataSetTableAdapters.AuthTableAdapter authTableAdapter;
-        private System.Windows.Forms.BindingSource bindingSource2;
-        private System.Windows.Forms.BindingSource primaryBindingSource;
-        private HospitalDataSetTableAdapters.PrimaryTableAdapter primaryTableAdapter;
-        private HospitalDataSet hospitalDataSet1;
-        private System.Windows.Forms.BindingSource patientTableBindingSource;
-        private HospitalDataSetTableAdapters.PatientTableTableAdapter patientTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn doctorIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn bedIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doctorIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn appointmentIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diagnosisIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nurseIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expr2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientIdDataGridViewTextBoxColumn;
+        private INB201DataSet iNB201DataSet;
+        private System.Windows.Forms.BindingSource doctorsAppointmentsBindingSource;
+        private INB201DataSetTableAdapters.DoctorsAppointmentsTableAdapter doctorsAppointmentsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn treatmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
 
     }
 }

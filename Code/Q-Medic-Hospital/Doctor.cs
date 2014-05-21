@@ -18,10 +18,8 @@ namespace Q_Medic_Hospital
 
         private void Doctor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'hospitalDataSet1.PatientTable' table. You can move, or remove it, as needed.
-            this.patientTableTableAdapter.Fill(this.hospitalDataSet1.PatientTable);
-            // TODO: This line of code loads data into the 'hospitalDataSet.Primary' table. You can move, or remove it, as needed.
-            this.primaryTableAdapter.Fill(this.hospitalDataSet.Primary);
+            // TODO: This line of code loads data into the 'iNB201DataSet.DoctorsAppointments' table. You can move, or remove it, as needed.
+            this.doctorsAppointmentsTableAdapter.Fill(this.iNB201DataSet.DoctorsAppointments);
 
 
 

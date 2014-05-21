@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,33 +17,23 @@ namespace Q_Medic_Hospital {
 
 
 
-        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=hospital; connection timeout=60;");
+        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;");
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
         static void Main() {
             //Form login = new Q_Medic_Hospital.Login();
-            //Form login = new Q_Medic_Hospital.Registry();
+            Form login = new Q_Medic_Hospital.Registry();
             //Form login = new Q_Medic_Hospital.NurseMaster();
-            Form login = new Q_Medic_Hospital.Doctor();
+            //Form login = new Q_Medic_Hospital.Doctor();
             login.Show();
             Application.Run();
+
 
         }
 
 
         public MiddleWare() {
-        }
-
-        /* 
-         * Creates the SYSTEM ADMIN 
-         */
-        public bool createAdmin(string adminUsername, string adminPassword, string adminEmail) {
-            OpenConnection();
-            Console.WriteLine("Debugging createAdmin(): ");
-            sqlCmd.CommandText = string.Format("INSERT INTO Auth VALUES (" + adminUsername + ", " + adminPassword + ", " + adminEmail + ")");
-            sqlCmd.Connection = dbConnection;
-            return sqlCmd.ExecuteNonQuery() > 0;
         }
 
 
@@ -93,22 +84,43 @@ namespace Q_Medic_Hospital {
             return autorised;
         }
 
+        public void createPatients() {
+            Random rand = new Random();
+            IEnumerable<string> FirtName = File.ReadLines("FirstName.txt");
+            IEnumerable<string> LastName = File.ReadLines("LastName.txt");
+            
+
+            OpenConnection();
+            for (int i = 0; i < 200; i++){
+            SqlCommand register = null;
+            var FirtNameToRead = rand.Next(1, FirtName.Count());
+            var LastNameToRead = rand.Next(1, LastName.Count());
+            String FirtNameline = FirtName.Skip(FirtNameToRead - 1).First();
+            String LastNameline = LastName.Skip(LastNameToRead - 1).First();
+            String email = FirtNameline + LastNameline + "@herp.com";
+
+            register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email)" +
+                "Values('{0}','{1}','{2}')", FirtNameline, LastNameline, email), dbConnection);
+
+            register.ExecuteNonQuery();
+        }
+            CloseConnection();
+
+        }
 
 
 
-
-        public bool Register(userType user, string username, string password, string firstName, string lastName, string Email) {
+        public bool Registers(userType user, string username, string password, string firstName, string lastName, string email) {
 
             bool succsess = false;
             bool usernameExists = false;
             firstName = "First";
             lastName = "Last";
-            SqlCommand registerUser = null;
-            SqlCommand registerAuth = null;
+            SqlCommand register = null;
             OpenConnection();
 
             soHigh(username, ref password);
-            sqlCmd.CommandText = string.Format("select UserName from Auth WHERE UserName='{0}';", username);
+            sqlCmd.CommandText = string.Format("select StaffName from Staff WHERE StaffName='{0}';", username);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
 
@@ -121,27 +133,12 @@ namespace Q_Medic_Hospital {
             }
             CloseConnection();
             if (!usernameExists && (int)user != -1) {
-                
-                registerAuth = new SqlCommand(string.Format("INSERT Auth (UserName, Password, UserType)" +
-                "Values('{0}','{1}','{2}')",username, password, stringUser[(int)user]),dbConnection);
+  
+                register = new SqlCommand(string.Format("INSERT Staff (StaffName, Password, StaffTypeID, FirstName, LastName, Email)" +
+                "Values('{0}','{1}','{2}','{3}','{4}','{5}')", username, password, (int)user, firstName, lastName, email), dbConnection);
 
-                if (user == userType.DOCTOR) {
-                    // Doctor registry
-                    registerUser = new SqlCommand("INSERT INTO Doctors (firstName, lastName, email) " +
-                                                 "Values ('firstName', 'lastName', 'email')", dbConnection);
-                } else if (user == userType.NURSE) {
-                    // Nurse registry
-                    registerUser = new SqlCommand("INSERT INTO Nurses (firstName, lastName, email) " +
-                                                 "Values ('firstName', 'lastName', 'email')", dbConnection);
-                } else if (user == userType.RECEPTIONIST) {
-                    // Receptionist registry
-                    registerUser = new SqlCommand("INSERT INTO Receptionist (doctorId, firstName, lastName, email) " +
-                        "Values ('firstName', 'lastName', 'email')", dbConnection);
-                } else if (user == userType.LUSER) {
-                    registerUser = new SqlCommand("",dbConnection);
-                }
                 OpenConnection();
-                registerAuth.ExecuteNonQuery();
+                register.ExecuteNonQuery();
                 CloseConnection();
             } else {
                 // user already exists error

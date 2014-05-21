@@ -54,6 +54,7 @@
             "Doctor",
             "HospitalAdmin",
             "Luser",
+            "MedTech",
             "Nurse",
             "Receptionist",
             "SysAdmin"});

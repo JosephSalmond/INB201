@@ -66,3 +66,5 @@ C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.R
 C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Registry.resources
 C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Staff_details.resources
 C:\Users\Ali\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csproj.GenerateResource.Cache
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Hospital_Admin.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Systems_Admin.resources
