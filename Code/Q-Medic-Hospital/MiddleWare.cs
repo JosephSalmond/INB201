@@ -23,9 +23,9 @@ namespace Q_Medic_Hospital {
 
         static void Main() {
             //Form login = new Q_Medic_Hospital.Login();
-            Form login = new Q_Medic_Hospital.Registry();
+            //Form login = new Q_Medic_Hospital.Registry();
             //Form login = new Q_Medic_Hospital.NurseMaster();
-            //Form login = new Q_Medic_Hospital.Doctor();
+            Form login = new Q_Medic_Hospital.Doctor();
             login.Show();
             Application.Run();
 
@@ -89,7 +89,6 @@ namespace Q_Medic_Hospital {
             IEnumerable<string> FirtName = File.ReadLines("FirstName.txt");
             IEnumerable<string> LastName = File.ReadLines("LastName.txt");
             
-
             OpenConnection();
             for (int i = 0; i < 200; i++){
             SqlCommand register = null;
@@ -108,9 +107,36 @@ namespace Q_Medic_Hospital {
 
         }
 
+        public void CreateTreatments (){
+            SqlCommand treatMe = null;
+            SqlCommand billMe = null;
+            Random rand = new Random();
+
+            OpenConnection();
+            for (int i = 0; i < 200; i++) {
+                int der = rand.Next(2,4);
+                int pid = rand.Next(1, 199);
+                int room = rand.Next(1, 200);
+                int bed = rand.Next(1, 4);
+                float cost = (float)rand.Next(10,10000);
+                String dateString = DateTime.Now.ToString("dd/mm/yyyy");
+                String timeString = DateTime.Now.ToString("HH:mm:ss");
+
+                treatMe = new SqlCommand(string.Format("INSERT Treatment (PatientID, StaffID, FeeID, RoomNo, DoctorsNotes, NurseObservations, TreatmentDate, TreatmentTime, Admitted, BedNo)" +
+    "VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", pid, der, i, room, "Dobs", "Nobs", dateString, timeString, true, bed), dbConnection);
+                billMe = new SqlCommand(string.Format("INSERT Fees(FeeID, FeeCost, FeePaidDate,Comments)"+
+                    "VALUES('{0}','{1}','{2}','{3}')", i, cost, null, "Unpaid"), dbConnection);
+                billMe.ExecuteNonQuery();
+                treatMe.ExecuteNonQuery();
 
 
-        public bool Registers(userType user, string username, string password, string firstName, string lastName, string email) {
+            }
+            CloseConnection();
+    }
+
+
+
+        public bool Register(userType user, string username, string password, string firstName, string lastName, string email) {
 
             bool succsess = false;
             bool usernameExists = false;
