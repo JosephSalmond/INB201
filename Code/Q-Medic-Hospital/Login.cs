@@ -28,21 +28,20 @@ namespace Q_Medic_Hospital {
 
             authorised = middle.AuthTest(username, password, ref theUser);
             if (authorised) {
-                
                 if (theUser == userType.DOCTOR) {
                     mainForm = new Q_Medic_Hospital.Doctor();
                 }else if (theUser == userType.NURSE){
-                    mainForm = new Q_Medic_Hospital.PatientHistoryMain();
+                    mainForm = new Q_Medic_Hospital.NurseMaster();
                 } else if (theUser == userType.SYSADMIN) {
-                    textBox1.Text = "Welcome sysAdmin";
+                    mainForm = new Q_Medic_Hospital.Systems_Admin();
                 } else if (theUser == userType.RECEPTIONIST) {
                     mainForm = new Q_Medic_Hospital.Receptionist();
                 } else if (theUser == userType.HOSPITALADMIN){
-                    textBox1.Text = "Welcom Hospital Admin";
-                } else if (theUser == userType.MEDTECH){
+                    mainForm = new Q_Medic_Hospital.Hospital_Admin();
+                } else if (theUser == userType.MEDTECH) {
                     textBox1.Text = "Welcome Med Tech";
                 }else if (theUser == userType.LUSER) {
-                    textBox1.Text = "What are you doing Dave";
+                    textBox1.Text = "Insufficiant Privilages";
                 }
                 if (mainForm != null) {
                     this.Hide();
@@ -64,28 +63,4 @@ namespace Q_Medic_Hospital {
 
     }
 
-/*
-	// Form types
-	private SystemAdminRegistryForm sysadminRegistry; // seperate for system admin = our tutor
-	private StaffRegistryForm staffRegistry;
-	private LoginForm login;
-	private DocDiagnosisForm diagnosis;
-	private NurseObservationForm observation;
-
-	// User session - logged in.
-	private boolean isAdmin; // seperate for sysadmin because he has registry confirmations pending.
-	private boolean isLogged;
-
-	public partial class Login : Form {
-		public Login() {
-			
-			// For designer.
-			private System.ComponentModel.IContainer parts = null;
-
-		}
-	}
-
-
-		
-	}*/
 }

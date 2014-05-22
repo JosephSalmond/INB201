@@ -9,11 +9,11 @@ using System.Security.Cryptography;
 
 namespace Q_Medic_Hospital {
     public enum userType { LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
-
+    
     public class MiddleWare {
         public string[] stringUser = { "Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech" };
         enum querieType { LOGIN, DERP, AUTH };
-
+        bool debugging = false;
 
 
 
@@ -22,10 +22,10 @@ namespace Q_Medic_Hospital {
         SqlDataReader reader;
 
         static void Main() {
-            //Form login = new Q_Medic_Hospital.Login();
+            Form login = new Q_Medic_Hospital.Login();
             //Form login = new Q_Medic_Hospital.Registry();
             //Form login = new Q_Medic_Hospital.NurseMaster();
-            Form login = new Q_Medic_Hospital.Doctor();
+            //Form login = new Q_Medic_Hospital.Doctor();
             login.Show();
             Application.Run();
 
@@ -43,17 +43,27 @@ namespace Q_Medic_Hospital {
             Console.WriteLine("Debugging:");
             soHigh(username, ref password);
 
-            sqlCmd.CommandText = string.Format("select * from Auth WHERE UserName='{0}' AND Password='{1}';", username, password);
+            sqlCmd.CommandText = string.Format("select StaffName, Password, StaffTypeID from Staff WHERE StaffName='{0}' AND Password='{1}';", username, password);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
             if (reader.HasRows) {
                 reader.Read();
                 if ((username == reader.GetString(0)) && (password == reader.GetString(1))) {
-                    theUser = (userType)Array.IndexOf(stringUser, reader.GetString(2));
+                    theUser = (userType)reader.GetInt32(2);
                     autorised = true;
 
                 }
             }
+            if(debugging){
+            AuthDebugging(username, password);
+            }
+
+            CloseConnection();
+
+            return autorised;
+        }
+
+        private void AuthDebugging(string username, string password) {
             Console.WriteLine("{0} {1}", username, password);
 
             if (reader.HasRows) {
@@ -79,11 +89,8 @@ namespace Q_Medic_Hospital {
             } else if (!reader.HasRows) {
                 Console.WriteLine("no Output");
             }
-            CloseConnection();
-
-            return autorised;
         }
-
+        /*  // adds automaticly to db
         public void createPatients() {
             Random rand = new Random();
             IEnumerable<string> FirtName = File.ReadLines("FirstName.txt");
@@ -107,6 +114,7 @@ namespace Q_Medic_Hospital {
 
         }
 
+         //adds stuff automaticly to db assumes 5 staff added
         public void CreateTreatments (){
             SqlCommand treatMe = null;
             SqlCommand billMe = null;
@@ -133,7 +141,7 @@ namespace Q_Medic_Hospital {
             }
             CloseConnection();
     }
-
+        */
 
 
         public bool Register(userType user, string username, string password, string firstName, string lastName, string email) {
@@ -178,31 +186,7 @@ namespace Q_Medic_Hospital {
             CloseConnection();
             return succsess;
         }
-        // Queries the database
-        /*  public string[] DatabaseQuery(string querie, querieType type) {
-              string username = "Admin";
-              string password = "password";
-              string authenticationQuerie = "select * from Auth WHERE UserName='8823928' AND Password='thepassword';";
 
-              string[] dummy = DatabaseGet(querie);
-
-
-              // authenticate user
-              if (type == querieType.AUTH) {
-                  this.authenticated = DatabaseAuth(dummy, username, password);
-              } else if (this.authenticated == true) {
-              } else {
-                  string[] failure = { "-1", "Access Denied" };
-                  return failure;
-              }
-
-              // other querie's
-
-
-
-
-              return dummy;
-          }*/
 
 
         // authenticates against the database
@@ -211,7 +195,6 @@ namespace Q_Medic_Hospital {
             if ((username == querieResults[0]) && (password == querieResults[1])) {
                 return true;
             } else {
-
                 return false;
             }
         }
