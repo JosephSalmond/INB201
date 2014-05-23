@@ -17,7 +17,8 @@ namespace Q_Medic_Hospital {
 
 
 
-        SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;");
+        //SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;"); // SQL server
+        SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\JEGO\\Documents\\QUT\\github\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
@@ -90,58 +91,9 @@ namespace Q_Medic_Hospital {
                 Console.WriteLine("no Output");
             }
         }
-        /*  // adds automaticly to db
-        public void createPatients() {
-            Random rand = new Random();
-            IEnumerable<string> FirtName = File.ReadLines("FirstName.txt");
-            IEnumerable<string> LastName = File.ReadLines("LastName.txt");
-            
-            OpenConnection();
-            for (int i = 0; i < 200; i++){
-            SqlCommand register = null;
-            var FirtNameToRead = rand.Next(1, FirtName.Count());
-            var LastNameToRead = rand.Next(1, LastName.Count());
-            String FirtNameline = FirtName.Skip(FirtNameToRead - 1).First();
-            String LastNameline = LastName.Skip(LastNameToRead - 1).First();
-            String email = FirtNameline + LastNameline + "@herp.com";
-
-            register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email)" +
-                "Values('{0}','{1}','{2}')", FirtNameline, LastNameline, email), dbConnection);
-
-            register.ExecuteNonQuery();
-        }
-            CloseConnection();
-
-        }
-
-         //adds stuff automaticly to db assumes 5 staff added
-        public void CreateTreatments (){
-            SqlCommand treatMe = null;
-            SqlCommand billMe = null;
-            Random rand = new Random();
-
-            OpenConnection();
-            for (int i = 0; i < 200; i++) {
-                int der = rand.Next(2,4);
-                int pid = rand.Next(1, 199);
-                int room = rand.Next(1, 200);
-                int bed = rand.Next(1, 4);
-                float cost = (float)rand.Next(10,10000);
-                String dateString = DateTime.Now.ToString("dd/mm/yyyy");
-                String timeString = DateTime.Now.ToString("HH:mm:ss");
-
-                treatMe = new SqlCommand(string.Format("INSERT Treatment (PatientID, StaffID, FeeID, RoomNo, DoctorsNotes, NurseObservations, TreatmentDate, TreatmentTime, Admitted, BedNo)" +
-    "VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", pid, der, i, room, "Dobs", "Nobs", dateString, timeString, true, bed), dbConnection);
-                billMe = new SqlCommand(string.Format("INSERT Fees(FeeID, FeeCost, FeePaidDate,Comments)"+
-                    "VALUES('{0}','{1}','{2}','{3}')", i, cost, null, "Unpaid"), dbConnection);
-                billMe.ExecuteNonQuery();
-                treatMe.ExecuteNonQuery();
 
 
-            }
-            CloseConnection();
-    }
-        */
+        
 
 
         public bool Register(userType user, string username, string password, string firstName, string lastName, string email) {
@@ -179,10 +131,6 @@ namespace Q_Medic_Hospital {
                 Console.WriteLine("user already exists");
             }
             
-
-
-
-
             CloseConnection();
             return succsess;
         }
@@ -241,6 +189,71 @@ namespace Q_Medic_Hospital {
 
             password = Convert.ToBase64String(saltedPassword);
 
+        }
+        // populates database
+        public void popualteDatabase() {
+            createStaff();
+            createPatients();
+            CreateTreatments();
+        }
+
+
+        // adds default staff to db
+        private void createStaff() {
+            for (int i = 0; i < stringUser.Length; i++) {
+                Register((userType)i, stringUser[i], "password", stringUser[i], stringUser[i], stringUser[i] + "@hospital.qld.edu.au");
+            }
+        }
+        // adds patients to db
+        private void createPatients() {
+            Random rand = new Random();
+            IEnumerable<string> FirtName = File.ReadLines("FirstName.txt");
+            IEnumerable<string> LastName = File.ReadLines("LastName.txt");
+
+            OpenConnection();
+            for (int i = 0; i < 200; i++) {
+                SqlCommand register = null;
+                var FirtNameToRead = rand.Next(1, FirtName.Count());
+                var LastNameToRead = rand.Next(1, LastName.Count());
+                String FirtNameline = FirtName.Skip(FirtNameToRead - 1).First();
+                String LastNameline = LastName.Skip(LastNameToRead - 1).First();
+                String email = FirtNameline + LastNameline + "@herp.com";
+
+                register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email)" +
+                    "Values('{0}','{1}','{2}')", FirtNameline, LastNameline, email), dbConnection);
+
+                register.ExecuteNonQuery();
+            }
+            CloseConnection();
+
+        }
+
+        //adds Treatments automaticly to db
+        private void CreateTreatments() {
+            SqlCommand treatMe = null;
+            SqlCommand billMe = null;
+            Random rand = new Random();
+
+            OpenConnection();
+            for (int i = 0; i < 200; i++) {
+                int der = rand.Next(2, 4);
+                int pid = rand.Next(1, 199);
+                int room = rand.Next(1, 200);
+                int bed = rand.Next(1, 4);
+                float cost = (float)rand.Next(10, 10000);
+                String dateString = DateTime.Now.ToString("dd/mm/yyyy");
+                String timeString = DateTime.Now.ToString("HH:mm:ss");
+
+                treatMe = new SqlCommand(string.Format("INSERT Treatment (PatientID, StaffID, FeeID, RoomNo, DoctorsNotes, NurseObservations, TreatmentDate, TreatmentTime, Admitted, BedNo)" +
+    "VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", pid, der, i, room, "Dobs", "Nobs", dateString, timeString, true, bed), dbConnection);
+                billMe = new SqlCommand(string.Format("INSERT Fees(FeeID, FeeCost, FeePaidDate,Comments)" +
+                    "VALUES('{0}','{1}','{2}','{3}')", i, cost, null, "Unpaid"), dbConnection);
+                billMe.ExecuteNonQuery();
+                treatMe.ExecuteNonQuery();
+
+
+            }
+            CloseConnection();
         }
     }
 }
