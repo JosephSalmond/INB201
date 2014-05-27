@@ -37,7 +37,7 @@ namespace Q_Medic_Hospital {
         public MiddleWare() {
         }
 
-
+        
         public bool AuthTest(string username, string password, ref userType theUser) {
             bool autorised = false;
             OpenConnection();
@@ -91,9 +91,6 @@ namespace Q_Medic_Hospital {
                 Console.WriteLine("no Output");
             }
         }
-
-
-        
 
 
         public bool Register(userType user, string username, string password, string firstName, string lastName, string email) {

@@ -104,6 +104,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>INB201DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Insurance Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insurance Information.designer.cs">
+      <DependentUpon>Insurance Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Page Patient record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Page Patient record.designer.cs">
+      <DependentUpon>Main Page Patient record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medical Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical Information.designer.cs">
+      <DependentUpon>Medical Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nurse Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,12 @@
     <Compile Include="Patients Rooms.designer.cs">
       <DependentUpon>Patients Rooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personal Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal Information.designer.cs">
+      <DependentUpon>Personal Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receptionist.cs">
       <SubType>Form</SubType>
@@ -210,6 +234,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hospital Admin.resx">
       <DependentUpon>Hospital Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance Information.resx">
+      <DependentUpon>Insurance Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Page Patient record.resx">
+      <DependentUpon>Main Page Patient record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medical Information.resx">
+      <DependentUpon>Medical Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nurse Main.resx">
       <DependentUpon>Nurse Main.cs</DependentUpon>
@@ -246,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patients Rooms.resx">
       <DependentUpon>Patients Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal Information.resx">
+      <DependentUpon>Personal Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
