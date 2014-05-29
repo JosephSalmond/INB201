@@ -122,6 +122,12 @@
     <Compile Include="Medical Information.designer.cs">
       <DependentUpon>Medical Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="medical techintion .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="medical techintion .designer.cs">
+      <DependentUpon>medical techintion .cs</DependentUpon>
+    </Compile>
     <Compile Include="Nurse Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="Patient Activities.designer.cs">
       <DependentUpon>Patient Activities.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient Complaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Complaint.designer.cs">
+      <DependentUpon>Patient Complaint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient History 3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,12 @@
     </Compile>
     <Compile Include="Patient History 2.designer.cs">
       <DependentUpon>Patient History 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient History NEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient History NEW.designer.cs">
+      <DependentUpon>Patient History NEW.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient History.cs">
       <SubType>Form</SubType>
@@ -226,6 +244,18 @@
     <Compile Include="Systems Admin.designer.cs">
       <DependentUpon>Systems Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="X ray full body.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="X ray full body.designer.cs">
+      <DependentUpon>X ray full body.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xray parts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xray parts.designer.cs">
+      <DependentUpon>Xray parts.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +274,9 @@
     <EmbeddedResource Include="Medical Information.resx">
       <DependentUpon>Medical Information.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="medical techintion .resx">
+      <DependentUpon>medical techintion .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nurse Main.resx">
       <DependentUpon>Nurse Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,11 +289,17 @@
     <EmbeddedResource Include="Patient Activities.resx">
       <DependentUpon>Patient Activities.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient Complaint.resx">
+      <DependentUpon>Patient Complaint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient History 3.resx">
       <DependentUpon>Patient History 3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient History 2.resx">
       <DependentUpon>Patient History 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient History NEW.resx">
+      <DependentUpon>Patient History NEW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient History.resx">
       <DependentUpon>Patient History.cs</DependentUpon>
@@ -304,6 +343,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Systems Admin.resx">
       <DependentUpon>Systems Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="X ray full body.resx">
+      <DependentUpon>X ray full body.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xray parts.resx">
+      <DependentUpon>Xray parts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="INB201DataSet.xsc">
       <DependentUpon>INB201DataSet.xsd</DependentUpon>
