@@ -99,6 +99,10 @@
     <Compile Include="Hospital Admin.designer.cs">
       <DependentUpon>Hospital Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="INB201DataSet.cs">
+      <DependentUpon>INB201DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="INB201DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

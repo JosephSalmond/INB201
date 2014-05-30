@@ -18,7 +18,7 @@ namespace Q_Medic_Hospital {
 
 
         //SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;"); // SQL server
-        SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\JEGO\\Documents\\QUT\\github\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
+        public SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\JEGO\\Documents\\QUT\\github\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
@@ -162,7 +162,7 @@ namespace Q_Medic_Hospital {
         }
 
         //opens connection
-        private void OpenConnection() {
+        public void OpenConnection() {
             try {
                 dbConnection.Open();
             }
@@ -172,7 +172,7 @@ namespace Q_Medic_Hospital {
         }
 
         //closes connection
-        private void CloseConnection() {
+        public void CloseConnection() {
             dbConnection.Close();
         }
 

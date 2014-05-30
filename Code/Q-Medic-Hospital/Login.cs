@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace Q_Medic_Hospital {
 
     public partial class Login : Form {
-        MiddleWare middle = new MiddleWare();
+        MiddleWare middle = new MiddleWare(); 
+
 
         public Login() {
 
@@ -39,7 +40,7 @@ namespace Q_Medic_Hospital {
                 } else if (theUser == userType.HOSPITALADMIN){
                     mainForm = new Q_Medic_Hospital.Hospital_Admin();
                 } else if (theUser == userType.MEDTECH) {
-                    textBox1.Text = "Welcome Med Tech";
+                    mainForm = new Q_Medic_Hospital.MedTech();
                 }else if (theUser == userType.LUSER) {
                     textBox1.Text = "Insufficiant Privilages";
                 }

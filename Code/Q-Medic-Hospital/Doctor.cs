@@ -13,6 +13,7 @@ namespace Q_Medic_Hospital
     public partial class Doctor : Form
     {
         MiddleWare middle = new MiddleWare();
+
         public Doctor()
         {
             InitializeComponent();
@@ -79,16 +80,17 @@ namespace Q_Medic_Hospital
         private void button1_Click(object sender, EventArgs e) {
             string searchPatientString = this.textBox1.Text;
             SqlCommand sqlCmd = new SqlCommand();
-            SqlDataReader reader = new SqlDataReader();
 
-
+            middle.OpenConnection();
             sqlCmd.CommandText = string.Format("select FirstName, LastName from Patients where PatientID = {0}", searchPatientString);
-            sqlCmd.ExecuteReader();
+            sqlCmd.Connection = middle.dbConnection;
+            SqlDataReader reader = sqlCmd.ExecuteReader();
 
             bool foundUser;
             if (reader.HasRows) {
                 // What the fck. How do I return the reader results into the table below ?? 
             }
+            middle.CloseConnection();
         }
     }
 }

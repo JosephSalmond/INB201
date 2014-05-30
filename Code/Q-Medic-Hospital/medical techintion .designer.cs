@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication2
+﻿namespace Q_Medic_Hospital
 {
     partial class MedTech
     {
