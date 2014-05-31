@@ -1,0 +1,23 @@
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe.config
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.exe
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Patients Rooms\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.pdb
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe.config
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.exe
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.pdb
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.pdb
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\FinancialFees.csprojResolveAssemblyReference.cache
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.Form1.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\Financial fees form\WindowsFormsApplication2\obj\Release\FinancialFees.csproj.GenerateResource.Cache
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe.config
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.exe
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.pdb
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.exe
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\bin\Release\WindowsFormsApplication2.pdb
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\FinancialFees.csprojResolveAssemblyReference.cache
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.Form1.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.X_ray_full_body.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\WindowsFormsApplication2.Xray.resources
+C:\Users\SA878\Documents\Visual Studio 2012\Projects\medical techintion form\WindowsFormsApplication2\obj\Release\FinancialFees.csproj.GenerateResource.Cache
