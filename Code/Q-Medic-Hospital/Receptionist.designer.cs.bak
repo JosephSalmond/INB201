@@ -656,6 +656,7 @@
             this.Controls.Add(this.EnterPatientFirstName);
             this.Controls.Add(this.EnterPatiendId);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.checkBox2);

@@ -78,7 +78,6 @@
             this.goBackToMedicalTechintionPageToolStripMenuItem.Name = "goBackToMedicalTechintionPageToolStripMenuItem";
             this.goBackToMedicalTechintionPageToolStripMenuItem.Size = new System.Drawing.Size(207, 20);
             this.goBackToMedicalTechintionPageToolStripMenuItem.Text = "Go back to medical techintion page";
-            this.goBackToMedicalTechintionPageToolStripMenuItem.Click += new System.EventHandler(this.goBackToMedicalTechintionPageToolStripMenuItem_Click);
             // 
             // X_ray_full_body
             // 

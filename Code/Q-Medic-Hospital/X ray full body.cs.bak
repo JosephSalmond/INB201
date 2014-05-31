@@ -19,12 +19,7 @@ namespace Q_Medic_Hospital
 
         private void cjeclAllPartsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Go to X ray parts form
-        }
 
-        private void goBackToMedicalTechintionPageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ///Go back to medical techintion page
         }
     }
 }

@@ -248,28 +248,6 @@
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // updataXRayToolStripMenuItem
-            // 
-            this.updataXRayToolStripMenuItem.Name = "updataXRayToolStripMenuItem";
-            this.updataXRayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.updataXRayToolStripMenuItem.Text = "Updata X ray";
-            this.updataXRayToolStripMenuItem.Click += new System.EventHandler(this.updataXRayToolStripMenuItem_Click);
-            // 
-            // goBackToFullBodyPageToolStripMenuItem
-            // 
-            this.goBackToFullBodyPageToolStripMenuItem.Name = "goBackToFullBodyPageToolStripMenuItem";
-            this.goBackToFullBodyPageToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
-            this.goBackToFullBodyPageToolStripMenuItem.Text = "Go back to full body page";
-            this.goBackToFullBodyPageToolStripMenuItem.Click += new System.EventHandler(this.goBackToFullBodyPageToolStripMenuItem_Click);
-            // 
-            // goBackToToolStripMenuItem
-            // 
-            this.goBackToToolStripMenuItem.Name = "goBackToToolStripMenuItem";
-            this.goBackToToolStripMenuItem.Size = new System.Drawing.Size(207, 20);
-            this.goBackToToolStripMenuItem.Text = "Go back to medical techintion page";
-            this.goBackToToolStripMenuItem.Click += new System.EventHandler(this.goBackToToolStripMenuItem_Click);
             // 
             // Shoulders
             // 
@@ -279,6 +257,25 @@
             this.Shoulders.Size = new System.Drawing.Size(258, 236);
             this.Shoulders.TabIndex = 230;
             this.Shoulders.TabStop = false;
+            // 
+            // updataXRayToolStripMenuItem
+            // 
+            this.updataXRayToolStripMenuItem.Name = "updataXRayToolStripMenuItem";
+            this.updataXRayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updataXRayToolStripMenuItem.Text = "Updata X ray";
+            // 
+            // goBackToToolStripMenuItem
+            // 
+            this.goBackToToolStripMenuItem.Name = "goBackToToolStripMenuItem";
+            this.goBackToToolStripMenuItem.Size = new System.Drawing.Size(207, 20);
+            this.goBackToToolStripMenuItem.Text = "Go back to medical techintion page";
+            this.goBackToToolStripMenuItem.Click += new System.EventHandler(this.goBackToToolStripMenuItem_Click);
+            // 
+            // goBackToFullBodyPageToolStripMenuItem
+            // 
+            this.goBackToFullBodyPageToolStripMenuItem.Name = "goBackToFullBodyPageToolStripMenuItem";
+            this.goBackToFullBodyPageToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.goBackToFullBodyPageToolStripMenuItem.Text = "Go back to full body page";
             // 
             // Xray
             // 

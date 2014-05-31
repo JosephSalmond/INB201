@@ -169,7 +169,7 @@
             // 
             // rectangleShape1
             // 
-            this.rectangleShape1.Location = new System.Drawing.Point(2, 456);
+            this.rectangleShape1.Location = new System.Drawing.Point(2, 453);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(615, 298);
             // 
@@ -179,7 +179,7 @@
             this.lineShape2.X1 = 430;
             this.lineShape2.X2 = 431;
             this.lineShape2.Y1 = -1;
-            this.lineShape2.Y2 = 455;
+            this.lineShape2.Y2 = 452;
             // 
             // lineShape1
             // 
@@ -217,12 +217,14 @@
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
             this.updateToolStripMenuItem.Text = "Add Financial fees";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // updateFinancialFeesToolStripMenuItem
             // 
             this.updateFinancialFeesToolStripMenuItem.Name = "updateFinancialFeesToolStripMenuItem";
             this.updateFinancialFeesToolStripMenuItem.Size = new System.Drawing.Size(131, 20);
             this.updateFinancialFeesToolStripMenuItem.Text = "Update Financial fees";
+            this.updateFinancialFeesToolStripMenuItem.Click += new System.EventHandler(this.updateFinancialFeesToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -297,7 +299,7 @@
             // Vip1photo
             // 
             this.Vip1photo.Image = ((System.Drawing.Image)(resources.GetObject("Vip1photo.Image")));
-            this.Vip1photo.Location = new System.Drawing.Point(456, 530);
+            this.Vip1photo.Location = new System.Drawing.Point(456, 540);
             this.Vip1photo.Name = "Vip1photo";
             this.Vip1photo.Size = new System.Drawing.Size(81, 88);
             this.Vip1photo.TabIndex = 95;
@@ -308,7 +310,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 530);
+            this.label7.Location = new System.Drawing.Point(15, 547);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 19);
             this.label7.TabIndex = 113;
@@ -319,7 +321,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 607);
+            this.label8.Location = new System.Drawing.Point(15, 648);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 19);
             this.label8.TabIndex = 112;
@@ -340,7 +342,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 570);
+            this.label10.Location = new System.Drawing.Point(15, 596);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 19);
             this.label10.TabIndex = 110;
@@ -359,21 +361,22 @@
             // 
             // PatientPhoneNumber
             // 
-            this.PatientPhoneNumber.Location = new System.Drawing.Point(231, 607);
+            this.PatientPhoneNumber.Location = new System.Drawing.Point(231, 648);
             this.PatientPhoneNumber.Name = "PatientPhoneNumber";
             this.PatientPhoneNumber.Size = new System.Drawing.Size(135, 22);
             this.PatientPhoneNumber.TabIndex = 108;
+            this.PatientPhoneNumber.TextChanged += new System.EventHandler(this.PatientPhoneNumber_TextChanged);
             // 
             // PatientProfileLastName
             // 
-            this.PatientProfileLastName.Location = new System.Drawing.Point(231, 570);
+            this.PatientProfileLastName.Location = new System.Drawing.Point(231, 596);
             this.PatientProfileLastName.Name = "PatientProfileLastName";
             this.PatientProfileLastName.Size = new System.Drawing.Size(135, 22);
             this.PatientProfileLastName.TabIndex = 107;
             // 
             // PatientProfileFirstName
             // 
-            this.PatientProfileFirstName.Location = new System.Drawing.Point(231, 527);
+            this.PatientProfileFirstName.Location = new System.Drawing.Point(231, 547);
             this.PatientProfileFirstName.Name = "PatientProfileFirstName";
             this.PatientProfileFirstName.Size = new System.Drawing.Size(135, 22);
             this.PatientProfileFirstName.TabIndex = 106;
@@ -464,6 +467,7 @@
             this.button4.TabIndex = 134;
             this.button4.Text = "Enter";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label12
             // 

@@ -39,23 +39,7 @@ namespace Q_Medic_Hospital
 
         private void goBackToToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /// Go back to Medical tech form
-            
-        }
 
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void updataXRayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Update x ray pictures 
-        }
-
-        private void goBackToFullBodyPageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ///Go back to x ray full body form
         }
     }
 }

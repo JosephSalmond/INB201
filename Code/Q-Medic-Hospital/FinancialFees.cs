@@ -177,8 +177,23 @@ namespace Q_Medic_Hospital
 
         }
 
-        private void textBox18_TextChanged(object sender, EventArgs e)
-        {
+        private void textBox18_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e) {
+            ///Enter to check Identity by multiple options
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e) {
+            //Add Fanicial fees
+        }
+
+        private void updateFinancialFeesToolStripMenuItem_Click(object sender, EventArgs e) {
+            //Update Fanicial fees
+        }
+
+        private void PatientPhoneNumber_TextChanged(object sender, EventArgs e) {
 
         }
     }

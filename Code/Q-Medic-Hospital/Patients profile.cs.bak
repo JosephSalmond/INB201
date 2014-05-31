@@ -36,25 +36,5 @@ namespace Q_Medic_Hospital
         {
 
         }
-
-        private void uPDATEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Update patient profile details
-        }
-
-        private void updateMyProfileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Update my profile
-        }
-
-        private void checkMyAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ///Check my appointment
-        }
-
-        private void loggOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ///Logout
-        }
     }
 }

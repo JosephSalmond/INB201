@@ -81,6 +81,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments.designer.cs">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,12 @@
     <Compile Include="My appointments.designer.cs">
       <DependentUpon>My appointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient profile check and view only.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient profile check and view only.designer.cs">
+      <DependentUpon>Patient profile check and view only.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients profile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +260,18 @@
     <Compile Include="Systems Admin.designer.cs">
       <DependentUpon>Systems Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View and edit stuff profiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View and edit stuff profiles.designer.cs">
+      <DependentUpon>View and edit stuff profiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vip room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vip room.designer.cs">
+      <DependentUpon>Vip room.cs</DependentUpon>
+    </Compile>
     <Compile Include="X ray full body.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,11 +284,15 @@
     <Compile Include="Xray parts.designer.cs">
       <DependentUpon>Xray parts.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Appointments.resx">
+      <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FinancialFees.resx">
       <DependentUpon>FinancialFees.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Hospital Admin.resx">
       <DependentUpon>Hospital Admin.cs</DependentUpon>
@@ -317,6 +345,9 @@
     <EmbeddedResource Include="My appointments.resx">
       <DependentUpon>My appointments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient profile check and view only.resx">
+      <DependentUpon>Patient profile check and view only.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patients profile.resx">
       <DependentUpon>Patients profile.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +378,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Systems Admin.resx">
       <DependentUpon>Systems Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View and edit stuff profiles.resx">
+      <DependentUpon>View and edit stuff profiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vip room.resx">
+      <DependentUpon>Vip room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="X ray full body.resx">
       <DependentUpon>X ray full body.cs</DependentUpon>
