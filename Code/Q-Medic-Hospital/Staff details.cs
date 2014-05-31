@@ -15,6 +15,7 @@ namespace Q_Medic_Hospital
         public Staff_details()
         {
             InitializeComponent();
+            StaffIDText.Text = MiddleWare.middle.userid + "";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,7 +70,19 @@ namespace Q_Medic_Hospital
 
         private void loggOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Logout from the system
+            Application.Exit();
+        }
+
+        private void FirstName_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e) {
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+        }
+
+        private void StaffIDText_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }

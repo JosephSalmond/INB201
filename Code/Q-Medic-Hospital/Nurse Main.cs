@@ -12,7 +12,6 @@ namespace Q_Medic_Hospital
 {
     public partial class NurseMainPage : Form
     {
-        Form NextForm;
         public NurseMainPage()
         {
             ControlBox = false;
@@ -35,21 +34,23 @@ namespace Q_Medic_Hospital
         }
 
         private void Observations_Click(object sender, EventArgs e) {
-            NextForm = new Q_Medic_Hospital.Observations(this);
-            this.Hide();
-            NextForm.Show();
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.Observation);
         }
 
         private void HospitalBedAllocation_Click(object sender, EventArgs e) {
-            NextForm = new Q_Medic_Hospital.PatientRooms(this);
-            this.Hide();
-            NextForm.Show();
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.BedAllocation);
         }
 
         private void PatientActivites_Click(object sender, EventArgs e) {
-            NextForm = new Q_Medic_Hospital.Patient_Activities(this);
-            this.Hide();
-            NextForm.Show();
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.PatientActivity);
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void MainProfile_Click(object sender, EventArgs e) {
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.StaffProfile);
         }
     }
 }

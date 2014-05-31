@@ -51,6 +51,7 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.Enabled = false;
             this.monthCalendar1.Location = new System.Drawing.Point(20, 33);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
@@ -163,14 +164,16 @@
             // MainProfile
             // 
             this.MainProfile.Name = "MainProfile";
-            this.MainProfile.Size = new System.Drawing.Size(86, 20);
-            this.MainProfile.Text = "Main Profile ";
+            this.MainProfile.Size = new System.Drawing.Size(80, 20);
+            this.MainProfile.Text = "Staff Profile";
+            this.MainProfile.Click += new System.EventHandler(this.MainProfile_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.logOutToolStripMenuItem.Text = "Exit";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // NurseMainPage
             // 

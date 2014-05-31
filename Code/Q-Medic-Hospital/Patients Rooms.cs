@@ -12,10 +12,9 @@ namespace Q_Medic_Hospital
 {
     public partial class PatientRooms : Form
     {
-        Form main;
-        public PatientRooms(Form main)
+
+        public PatientRooms()
         {
-            this.main = main;
             InitializeComponent();
             
         }
@@ -111,8 +110,19 @@ namespace Q_Medic_Hospital
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e) {
-            main.Show();
-            this.Close();
+            // inseerts into database updated information
+        }
+
+        private void updateTheRoomInformationsToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e) {
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }

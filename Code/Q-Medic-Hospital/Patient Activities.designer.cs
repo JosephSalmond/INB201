@@ -60,6 +60,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.addUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nurseProfileToolStripMenuItem,
+            this.addUpdateToolStripMenuItem,
             this.logOffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -115,15 +117,16 @@
             // nurseProfileToolStripMenuItem
             // 
             this.nurseProfileToolStripMenuItem.Name = "nurseProfileToolStripMenuItem";
-            this.nurseProfileToolStripMenuItem.Size = new System.Drawing.Size(150, 20);
-            this.nurseProfileToolStripMenuItem.Text = "Nurse and patient Profile";
+            this.nurseProfileToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.nurseProfileToolStripMenuItem.Text = "Back";
             this.nurseProfileToolStripMenuItem.Click += new System.EventHandler(this.nurseProfileToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.logOffToolStripMenuItem.Text = "Log Off";
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.logOffToolStripMenuItem.Text = "Exit";
+            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // PatientName
             // 
@@ -343,6 +346,13 @@
             this.textBox6.Size = new System.Drawing.Size(81, 20);
             this.textBox6.TabIndex = 26;
             // 
+            // addUpdateToolStripMenuItem
+            // 
+            this.addUpdateToolStripMenuItem.Name = "addUpdateToolStripMenuItem";
+            this.addUpdateToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
+            this.addUpdateToolStripMenuItem.Text = "Add/Update";
+            this.addUpdateToolStripMenuItem.Click += new System.EventHandler(this.addUpdateToolStripMenuItem_Click);
+            // 
             // Patient_Activities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,5 +430,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ToolStripMenuItem addUpdateToolStripMenuItem;
     }
 }

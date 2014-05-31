@@ -391,6 +391,7 @@
     <EmbeddedResource Include="Xray parts.resx">
       <DependentUpon>Xray parts.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="INB201DataSet.xsc">
       <DependentUpon>INB201DataSet.xsd</DependentUpon>
     </None>

@@ -11,8 +11,10 @@ namespace Q_Medic_Hospital {
     public enum userType { LUSER = 0, SYSADMIN, DOCTOR, NURSE, RECEPTIONIST, HOSPITALADMIN, MEDTECH }
     
     public class MiddleWare {
+        public static MiddleWare middle;
         public string[] stringUser = { "Luser", "SysAdmin", "Doctor", "Nurse", "Receptionist", "HospitalAdmin", "MedTech" };
         enum querieType { LOGIN, DERP, AUTH };
+        public int userid;
         bool debugging = false;
 
 
@@ -23,6 +25,7 @@ namespace Q_Medic_Hospital {
         SqlDataReader reader;
 
         static void Main() {
+            middle = new MiddleWare(); 
             Form login = new Q_Medic_Hospital.Login();
             //Form login = new Q_Medic_Hospital.Registry();
             //Form login = new Q_Medic_Hospital.NurseMaster();
@@ -44,12 +47,13 @@ namespace Q_Medic_Hospital {
             Console.WriteLine("Debugging:");
             soHigh(username, ref password);
 
-            sqlCmd.CommandText = string.Format("select StaffName, Password, StaffTypeID from Staff WHERE StaffName='{0}' AND Password='{1}';", username, password);
+            sqlCmd.CommandText = string.Format("select StaffName, Password, StaffTypeID, StaffID from Staff WHERE StaffName='{0}' AND Password='{1}';", username, password);
             sqlCmd.Connection = dbConnection;
             reader = sqlCmd.ExecuteReader();
             if (reader.HasRows) {
                 reader.Read();
                 if ((username == reader.GetString(0)) && (password == reader.GetString(1))) {
+                    userid = reader.GetInt32(3);
                     theUser = (userType)reader.GetInt32(2);
                     autorised = true;
 

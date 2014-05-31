@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace Q_Medic_Hospital {
 
     public partial class Login : Form {
-        MiddleWare middle = new MiddleWare(); 
+        
 
 
         public Login() {
@@ -27,7 +27,7 @@ namespace Q_Medic_Hospital {
             bool authorised = false;
             Form mainForm = null;
 
-            authorised = middle.AuthTest(username, password, ref theUser);
+            authorised = MiddleWare.middle.AuthTest(username, password, ref theUser);
             if (authorised) {
                 if (theUser == userType.DOCTOR) {
                     mainForm = new Q_Medic_Hospital.Doctor();

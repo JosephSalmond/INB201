@@ -12,10 +12,8 @@ namespace Q_Medic_Hospital
 {
     public partial class Patient_Activities : Form
     {
-        Form main;
-        public Patient_Activities(Form main)
+        public Patient_Activities()
         {
-            this.main = main;
             ControlBox = false;
             InitializeComponent();
             
@@ -33,8 +31,15 @@ namespace Q_Medic_Hospital
 
         private void nurseProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            main.Show();
-            this.Close();
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+        }
+
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void addUpdateToolStripMenuItem_Click(object sender, EventArgs e) {
+            // updates the database
         }
     }
 }

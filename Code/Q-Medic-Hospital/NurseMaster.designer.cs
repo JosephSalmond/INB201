@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.IsMdiContainer = true;
             this.Name = "NurseMaster";
+            this.Load += new System.EventHandler(this.NurseMaster_Load);
             this.ResumeLayout(false);
 
         }

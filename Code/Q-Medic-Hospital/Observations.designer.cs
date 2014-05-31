@@ -55,6 +55,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.addUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +64,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.observationPageToolStripMenuItem,
+            this.addUpdateToolStripMenuItem,
             this.logOffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -74,16 +76,17 @@
             // 
             this.observationPageToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.observationPageToolStripMenuItem.Name = "observationPageToolStripMenuItem";
-            this.observationPageToolStripMenuItem.Size = new System.Drawing.Size(129, 23);
-            this.observationPageToolStripMenuItem.Text = "Observation Page";
+            this.observationPageToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
+            this.observationPageToolStripMenuItem.Text = "Return";
             this.observationPageToolStripMenuItem.Click += new System.EventHandler(this.observationPageToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(69, 23);
-            this.logOffToolStripMenuItem.Text = "Log Off";
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.logOffToolStripMenuItem.Text = "Exit";
+            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // DateAndTime
             // 
@@ -283,6 +286,13 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // addUpdateToolStripMenuItem
+            // 
+            this.addUpdateToolStripMenuItem.Name = "addUpdateToolStripMenuItem";
+            this.addUpdateToolStripMenuItem.Size = new System.Drawing.Size(84, 23);
+            this.addUpdateToolStripMenuItem.Text = "Add/Update";
+            this.addUpdateToolStripMenuItem.Click += new System.EventHandler(this.addUpdateToolStripMenuItem_Click);
+            // 
             // Observations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,5 +363,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem addUpdateToolStripMenuItem;
     }
 }

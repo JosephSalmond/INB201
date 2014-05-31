@@ -72,6 +72,8 @@
             this.FirstName = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StaffIDText = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -113,6 +115,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToolStripMenuItem,
             this.uPDATEToolStripMenuItem,
             this.loggOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -140,8 +143,8 @@
             // loggOutToolStripMenuItem
             // 
             this.loggOutToolStripMenuItem.Name = "loggOutToolStripMenuItem";
-            this.loggOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.loggOutToolStripMenuItem.Text = "Log out";
+            this.loggOutToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.loggOutToolStripMenuItem.Text = "Exit";
             this.loggOutToolStripMenuItem.Click += new System.EventHandler(this.loggOutToolStripMenuItem_Click);
             // 
             // pictureBox1
@@ -432,6 +435,7 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(100, 20);
             this.FirstName.TabIndex = 126;
+            this.FirstName.TextChanged += new System.EventHandler(this.FirstName_TextChanged);
             // 
             // label23
             // 
@@ -458,12 +462,30 @@
             this.listBox1.Size = new System.Drawing.Size(56, 49);
             this.listBox1.TabIndex = 124;
             // 
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
+            // 
+            // StaffIDText
+            // 
+            this.StaffIDText.Enabled = false;
+            this.StaffIDText.Location = new System.Drawing.Point(843, 222);
+            this.StaffIDText.Name = "StaffIDText";
+            this.StaffIDText.ReadOnly = true;
+            this.StaffIDText.Size = new System.Drawing.Size(100, 20);
+            this.StaffIDText.TabIndex = 153;
+            this.StaffIDText.TextChanged += new System.EventHandler(this.StaffIDText_TextChanged);
+            // 
             // Staff_details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1008, 682);
+            this.Controls.Add(this.StaffIDText);
             this.Controls.Add(this.IDNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EmailAddress);
@@ -561,5 +583,7 @@
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
+        private System.Windows.Forms.TextBox StaffIDText;
     }
 }

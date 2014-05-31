@@ -55,7 +55,6 @@
             this.FirstPatientName = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateTheRoomInformationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.FourthPatientPhoto = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -111,6 +110,8 @@
             this.Vip1RoomNumber = new System.Windows.Forms.TextBox();
             this.vip1RoomIdText = new System.Windows.Forms.TextBox();
             this.Vip2Photo = new System.Windows.Forms.PictureBox();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FourthPatientPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vip3Photo)).BeginInit();
@@ -324,7 +325,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem});
+            this.backToolStripMenuItem,
+            this.updateToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -333,18 +336,10 @@
             // 
             // updateToolStripMenuItem
             // 
-            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateTheRoomInformationsToolStripMenuItem});
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.updateToolStripMenuItem.Text = "Update ";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // updateTheRoomInformationsToolStripMenuItem
-            // 
-            this.updateTheRoomInformationsToolStripMenuItem.Name = "updateTheRoomInformationsToolStripMenuItem";
-            this.updateTheRoomInformationsToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
-            this.updateTheRoomInformationsToolStripMenuItem.Text = "Update the room informations";
             // 
             // label6
             // 
@@ -860,6 +855,20 @@
             this.Vip2Photo.TabIndex = 114;
             this.Vip2Photo.TabStop = false;
             // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.backToolStripMenuItem.Text = "Back";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // PatientRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -985,7 +994,6 @@
         private System.Windows.Forms.TextBox FirstPatientName;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateTheRoomInformationsToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape3;
@@ -1044,6 +1052,8 @@
         private System.Windows.Forms.TextBox Vip1RoomNumber;
         private System.Windows.Forms.TextBox vip1RoomIdText;
         private System.Windows.Forms.PictureBox Vip2Photo;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

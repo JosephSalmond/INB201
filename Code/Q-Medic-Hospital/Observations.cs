@@ -12,10 +12,8 @@ namespace Q_Medic_Hospital
 {
     public partial class Observations : Form
     {
-        Form main;
-        public Observations(Form main)
+        public Observations()
         {
-            this.main = main;
             ControlBox = false;
             InitializeComponent();
         }
@@ -31,8 +29,15 @@ namespace Q_Medic_Hospital
         }
 
         private void observationPageToolStripMenuItem_Click(object sender, EventArgs e) {
-            main.Show();
-            this.Close();
+            ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+        }
+
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void addUpdateToolStripMenuItem_Click(object sender, EventArgs e) {
+            // updates the nurses observation
         }
     }
 }
