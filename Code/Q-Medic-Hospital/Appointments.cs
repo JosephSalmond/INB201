@@ -8,103 +8,78 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hospitals
+namespace Q_Medic_Hospital
 {
-    public partial class Patient_Appoitment : Form
+    public partial class Appointments : Form
     {
-        public Patient_Appoitment()
+        public Appointments()
         {
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label15_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox14_TextChanged(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox15_TextChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox16_TextChanged(object sender, EventArgs e)
+        private void doctorsAppointmentsBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox17_TextChanged(object sender, EventArgs e)
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
         }
 
-        private void textBox18_TextChanged(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void myProfileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Go back to the previous page
+            /// Search for Patient appointments By patient Id
         }
     }
 }

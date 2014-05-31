@@ -42,15 +42,15 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.doctorsAppointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iNB201DataSet = new Q_Medic_Hospital.INB201DataSet();
-            this.doctorsAppointmentsTableAdapter = new Q_Medic_Hospital.INB201DataSetTableAdapters.DoctorsAppointmentsTableAdapter();
             this.treatmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorsAppointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNB201DataSet = new Q_Medic_Hospital.INB201DataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.doctorsAppointmentsTableAdapter = new Q_Medic_Hospital.INB201DataSetTableAdapters.DoctorsAppointmentsTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorsAppointmentsBindingSource)).BeginInit();
@@ -181,29 +181,6 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(150, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "GO";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // doctorsAppointmentsBindingSource
-            // 
-            this.doctorsAppointmentsBindingSource.DataMember = "DoctorsAppointments";
-            this.doctorsAppointmentsBindingSource.DataSource = this.iNB201DataSet;
-            // 
-            // iNB201DataSet
-            // 
-            this.iNB201DataSet.DataSetName = "INB201DataSet";
-            this.iNB201DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // doctorsAppointmentsTableAdapter
-            // 
-            this.doctorsAppointmentsTableAdapter.ClearBeforeFill = true;
-            // 
             // treatmentIDDataGridViewTextBoxColumn
             // 
             this.treatmentIDDataGridViewTextBoxColumn.DataPropertyName = "TreatmentID";
@@ -234,6 +211,29 @@
             this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
             this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
             this.staffIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // doctorsAppointmentsBindingSource
+            // 
+            this.doctorsAppointmentsBindingSource.DataMember = "DoctorsAppointments";
+            this.doctorsAppointmentsBindingSource.DataSource = this.iNB201DataSet;
+            // 
+            // iNB201DataSet
+            // 
+            this.iNB201DataSet.DataSetName = "INB201DataSet";
+            this.iNB201DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(150, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(44, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // doctorsAppointmentsTableAdapter
+            // 
+            this.doctorsAppointmentsTableAdapter.ClearBeforeFill = true;
             // 
             // Doctor
             // 
