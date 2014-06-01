@@ -7,15 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Q_Medic_Hospital
 {
     public partial class NurseMainPage : Form
     {
+        SqlConnection dbConnection = new SqlConnection();
+        SqlCommand sqlCmd = new SqlCommand();
+        SqlDataReader reader;
+
+
         public NurseMainPage()
         {
             ControlBox = false;
             InitializeComponent();
+
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,6 +43,16 @@ namespace Q_Medic_Hospital
 
         private void Observations_Click(object sender, EventArgs e) {
             ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.Observation);
+
+            MiddleWare.middle.OpenConnection();
+            Console.WriteLine("Debugging yo.");
+
+            sqlCmd.CommandText = string.Format("SELECT NurseObservations FROM Treatment");
+            sqlCmd.Connection = dbConnection;
+
+            reader = sqlCmd.ExecuteReader();
+
+            MiddleWare.middle.CloseConnection();
         }
 
         private void HospitalBedAllocation_Click(object sender, EventArgs e) {

@@ -84,3 +84,54 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Hospitals.Pat
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Hospitals.View_and_edit_stuff_profiles.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patient_rooms.Vip_room.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Appointments.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\INB201.mdf
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\INB201_log.ldf
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.exe
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.pdb
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.DocumentObjectModel-WPF.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.Rendering-WPF.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\MigraDoc.RtfRendering-WPF.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\PdfSharp-WPF.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\PdfSharp.Charting-WPF.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.DocumentObjectModel-WPF.resources.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.Rendering-WPF.resources.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\MigraDoc.RtfRendering-WPF.resources.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp-WPF.resources.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\bin\Debug\de\PdfSharp.Charting-WPF.resources.dll
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csprojResolveAssemblyReference.cache
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Appointments.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Doctor.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Form1.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Hospital_Admin.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Insurance_Information.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Main_Page_Patient_record.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Medical_Information.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.MedTech.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.NurseMainPage.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.NurseMaster.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Observations.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_Activities.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_Complaint.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys3.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys2.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_History_NEW.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistoryMain.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys1.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Login.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Staff_form.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Hospitals.Patient_profile.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PaitentProfile.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientRooms.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.PersonName.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Properties.Resources.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Receptionist.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Registry.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Staff_details.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Systems_Admin.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Hospitals.View_and_edit_stuff_profiles.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Patient_rooms.Vip_room.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.X_ray_full_body.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Xray.resources
+C:\Users\SA878\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic-Hospital.csproj.GenerateResource.Cache
