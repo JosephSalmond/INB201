@@ -13,8 +13,7 @@ namespace Q_Medic_Hospital
 {
     public partial class NurseMainPage : Form
     {
-        SqlConnection dbConnection = new SqlConnection();
-        SqlCommand sqlCmd = new SqlCommand();
+        SqlCommand sqlCmd;
         SqlDataReader reader;
 
 
@@ -47,8 +46,8 @@ namespace Q_Medic_Hospital
             MiddleWare.middle.OpenConnection();
             Console.WriteLine("Debugging yo.");
 
-            sqlCmd.CommandText = string.Format("SELECT NurseObservations FROM Treatment");
-            sqlCmd.Connection = dbConnection;
+            sqlCmd = new SqlCommand(string.Format("SELECT NurseObservations FROM Treatment"), MiddleWare.middle.dbConnection);
+            
 
             reader = sqlCmd.ExecuteReader();
 
