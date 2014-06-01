@@ -61,5 +61,9 @@ namespace Q_Medic_Hospital
         private void Xray_Load(object sender, EventArgs e) {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }

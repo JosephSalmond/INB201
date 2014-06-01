@@ -26,5 +26,9 @@ namespace Q_Medic_Hospital
         {
             ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.MedTech);
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }

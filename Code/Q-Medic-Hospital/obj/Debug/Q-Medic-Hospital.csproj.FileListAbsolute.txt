@@ -85,3 +85,5 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Hospitals.Vie
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patient_rooms.Vip_room.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Appointments.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.MedTechMaster.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.exe.config
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.DoctorMaster.resources

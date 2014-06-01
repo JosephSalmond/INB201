@@ -33,6 +33,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.goBackToMedicalTechintionPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cjeclAllPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.goBackToMedicalTechintionPageToolStripMenuItem,
-            this.cjeclAllPartsToolStripMenuItem});
+            this.cjeclAllPartsToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
@@ -70,6 +72,13 @@
             this.cjeclAllPartsToolStripMenuItem.Size = new System.Drawing.Size(147, 20);
             this.cjeclAllPartsToolStripMenuItem.Text = "Go to X ray human parts";
             this.cjeclAllPartsToolStripMenuItem.Click += new System.EventHandler(this.cjeclAllPartsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // X_ray_full_body
             // 
@@ -96,5 +105,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cjeclAllPartsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToMedicalTechintionPageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

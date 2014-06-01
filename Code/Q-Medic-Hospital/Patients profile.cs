@@ -54,7 +54,20 @@ namespace Q_Medic_Hospital
 
         private void loggOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ///Logout
+            Application.Exit();
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (this.MdiParent is DoctorMaster) {
+                ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.DoctorMain);
+            }
+        }
+        private int getID(){
+            if (this.MdiParent is DoctorMaster) {
+                return ((DoctorMaster)this.MdiParent).PaitentID;
+            }
+
+            return -1;
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientHistorys1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaitentProfile));
             this.label19 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
@@ -72,7 +72,6 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.uPDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkMyAppointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -81,6 +80,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
+            this.returnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -270,8 +270,8 @@
             // loggOutToolStripMenuItem
             // 
             this.loggOutToolStripMenuItem.Name = "loggOutToolStripMenuItem";
-            this.loggOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.loggOutToolStripMenuItem.Text = "Log out";
+            this.loggOutToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.loggOutToolStripMenuItem.Text = "Exit";
             this.loggOutToolStripMenuItem.Click += new System.EventHandler(this.loggOutToolStripMenuItem_Click);
             // 
             // textBox8
@@ -451,8 +451,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToolStripMenuItem,
             this.uPDATEToolStripMenuItem,
-            this.checkMyAppointmentToolStripMenuItem,
             this.loggOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -468,13 +468,6 @@
             this.uPDATEToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.uPDATEToolStripMenuItem.Text = "UPDATE";
             this.uPDATEToolStripMenuItem.Click += new System.EventHandler(this.uPDATEToolStripMenuItem_Click);
-            // 
-            // checkMyAppointmentToolStripMenuItem
-            // 
-            this.checkMyAppointmentToolStripMenuItem.Name = "checkMyAppointmentToolStripMenuItem";
-            this.checkMyAppointmentToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
-            this.checkMyAppointmentToolStripMenuItem.Text = "Check appointments";
-            this.checkMyAppointmentToolStripMenuItem.Click += new System.EventHandler(this.checkMyAppointmentToolStripMenuItem_Click);
             // 
             // label20
             // 
@@ -545,7 +538,14 @@
             this.textBox19.Size = new System.Drawing.Size(121, 20);
             this.textBox19.TabIndex = 87;
             // 
-            // PatientPrfileForPatient
+            // returnToolStripMenuItem
+            // 
+            this.returnToolStripMenuItem.Name = "returnToolStripMenuItem";
+            this.returnToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.returnToolStripMenuItem.Text = "Return";
+            this.returnToolStripMenuItem.Click += new System.EventHandler(this.returnToolStripMenuItem_Click);
+            // 
+            // PaitentProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -655,7 +655,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem uPDATEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkMyAppointmentToolStripMenuItem;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label21;
@@ -664,5 +663,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem;
     }
 }
