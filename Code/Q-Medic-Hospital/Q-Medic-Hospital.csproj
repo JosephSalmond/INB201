@@ -99,6 +99,12 @@
     <Compile Include="FinancialFees.designer.cs">
       <DependentUpon>FinancialFees.cs</DependentUpon>
     </Compile>
+    <Compile Include="MedTechMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedTechMaster.Designer.cs">
+      <DependentUpon>MedTechMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hospital Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,9 @@
     <EmbeddedResource Include="FinancialFees.resx">
       <DependentUpon>FinancialFees.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedTechMaster.resx">
+      <DependentUpon>MedTechMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hospital Admin.resx">
       <DependentUpon>Hospital Admin.cs</DependentUpon>

@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(X_ray_full_body));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cjeclAllPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goToAllPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToMedicalTechintionPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cjeclAllPartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,28 +49,13 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cjeclAllPartsToolStripMenuItem,
-            this.goBackToMedicalTechintionPageToolStripMenuItem});
+            this.goBackToMedicalTechintionPageToolStripMenuItem,
+            this.cjeclAllPartsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cjeclAllPartsToolStripMenuItem
-            // 
-            this.cjeclAllPartsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.goToAllPartsToolStripMenuItem});
-            this.cjeclAllPartsToolStripMenuItem.Name = "cjeclAllPartsToolStripMenuItem";
-            this.cjeclAllPartsToolStripMenuItem.Size = new System.Drawing.Size(147, 20);
-            this.cjeclAllPartsToolStripMenuItem.Text = "Go to X ray human parts";
-            this.cjeclAllPartsToolStripMenuItem.Click += new System.EventHandler(this.cjeclAllPartsToolStripMenuItem_Click);
-            // 
-            // goToAllPartsToolStripMenuItem
-            // 
-            this.goToAllPartsToolStripMenuItem.Name = "goToAllPartsToolStripMenuItem";
-            this.goToAllPartsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.goToAllPartsToolStripMenuItem.Text = "Go to all parts";
             // 
             // goBackToMedicalTechintionPageToolStripMenuItem
             // 
@@ -79,6 +63,13 @@
             this.goBackToMedicalTechintionPageToolStripMenuItem.Size = new System.Drawing.Size(207, 20);
             this.goBackToMedicalTechintionPageToolStripMenuItem.Text = "Go back to medical techintion page";
             this.goBackToMedicalTechintionPageToolStripMenuItem.Click += new System.EventHandler(this.goBackToMedicalTechintionPageToolStripMenuItem_Click);
+            // 
+            // cjeclAllPartsToolStripMenuItem
+            // 
+            this.cjeclAllPartsToolStripMenuItem.Name = "cjeclAllPartsToolStripMenuItem";
+            this.cjeclAllPartsToolStripMenuItem.Size = new System.Drawing.Size(147, 20);
+            this.cjeclAllPartsToolStripMenuItem.Text = "Go to X ray human parts";
+            this.cjeclAllPartsToolStripMenuItem.Click += new System.EventHandler(this.cjeclAllPartsToolStripMenuItem_Click);
             // 
             // X_ray_full_body
             // 
@@ -104,7 +95,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cjeclAllPartsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem goToAllPartsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToMedicalTechintionPageToolStripMenuItem;
     }
 }

@@ -32,6 +32,7 @@
             this.EnterPatientFirstName = new System.Windows.Forms.TextBox();
             this.EnterpatientLastName = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.Wrist = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape3 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape2 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.rectangleShape1 = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
@@ -92,7 +93,6 @@
             this.First = new System.Windows.Forms.TextBox();
             this.BloodType = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.Wrist = new Microsoft.VisualBasic.PowerPacks.RectangleShape();
             this.label11 = new System.Windows.Forms.Label();
             this.Hand = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -159,6 +159,13 @@
             this.shapeContainer1.Size = new System.Drawing.Size(1008, 682);
             this.shapeContainer1.TabIndex = 12;
             this.shapeContainer1.TabStop = false;
+            // 
+            // Wrist
+            // 
+            this.Wrist.Location = new System.Drawing.Point(434, 340);
+            this.Wrist.Name = "Wrist";
+            this.Wrist.Size = new System.Drawing.Size(572, 341);
+            this.Wrist.Click += new System.EventHandler(this.rectangleShape4_Click);
             // 
             // rectangleShape3
             // 
@@ -696,13 +703,6 @@
             this.label33.TabIndex = 141;
             this.label33.Text = "Type of illness";
             // 
-            // Wrist
-            // 
-            this.Wrist.Location = new System.Drawing.Point(434, 340);
-            this.Wrist.Name = "Wrist";
-            this.Wrist.Size = new System.Drawing.Size(572, 341);
-            this.Wrist.Click += new System.EventHandler(this.rectangleShape4_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -886,6 +886,7 @@
             this.CheckXrayfullBody.TabIndex = 212;
             this.CheckXrayfullBody.Text = "Check X ray in full body";
             this.CheckXrayfullBody.UseVisualStyleBackColor = true;
+            this.CheckXrayfullBody.Click += new System.EventHandler(this.CheckXrayfullBody_Click);
             // 
             // textBox10
             // 
@@ -916,16 +917,16 @@
             // generalResultsToolStripMenuItem
             // 
             this.generalResultsToolStripMenuItem.Name = "generalResultsToolStripMenuItem";
-            this.generalResultsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generalResultsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.generalResultsToolStripMenuItem.Text = "General results";
             // 
             // xRayResultsToolStripMenuItem
             // 
             this.xRayResultsToolStripMenuItem.Name = "xRayResultsToolStripMenuItem";
-            this.xRayResultsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xRayResultsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.xRayResultsToolStripMenuItem.Text = "X ray results";
             // 
-            // Form1
+            // MedTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1014,7 +1015,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.shapeContainer1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "MedTech";
             this.Text = "Medical techintion ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

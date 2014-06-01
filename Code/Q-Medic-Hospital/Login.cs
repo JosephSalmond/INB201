@@ -40,7 +40,7 @@ namespace Q_Medic_Hospital {
                 } else if (theUser == userType.HOSPITALADMIN){
                     mainForm = new Q_Medic_Hospital.Hospital_Admin();
                 } else if (theUser == userType.MEDTECH) {
-                    mainForm = new Q_Medic_Hospital.MedTech();
+                    mainForm = new Q_Medic_Hospital.MedTechMaster();
                 }else if (theUser == userType.LUSER) {
                     textBox1.Text = "Insufficiant Privilages";
                 }

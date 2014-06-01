@@ -39,7 +39,7 @@ namespace Q_Medic_Hospital
 
         private void goBackToToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /// Go back to Medical tech form
+            ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.MedTech);
             
         }
 
@@ -55,7 +55,11 @@ namespace Q_Medic_Hospital
 
         private void goBackToFullBodyPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ///Go back to x ray full body form
+            ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.XrayFull);
+        }
+
+        private void Xray_Load(object sender, EventArgs e) {
+
         }
     }
 }
