@@ -78,7 +78,11 @@ namespace Q_Medic_Hospital
         }
 
         private void returnToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (this.MdiParent is NurseMaster){
             ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+            } else if (this.MdiParent is DoctorMaster) {
+            ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.DoctorMain);
+            }
         }
 
         private void StaffIDText_TextChanged(object sender, EventArgs e) {

@@ -33,8 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPatientFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,28 +132,6 @@
             this.button3.Text = "Go to Patient financial fees";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(0, 468);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(67, 23);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Online";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(102, 456);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(68, 23);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "Offline";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -570,7 +546,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 497);
+            this.button5.Location = new System.Drawing.Point(0, 455);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(234, 44);
             this.button5.TabIndex = 179;
@@ -581,7 +557,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 545);
+            this.button6.Location = new System.Drawing.Point(0, 518);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(234, 46);
             this.button6.TabIndex = 180;
@@ -592,7 +568,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(0, 597);
+            this.button7.Location = new System.Drawing.Point(0, 583);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(234, 43);
             this.button7.TabIndex = 181;
@@ -658,8 +634,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -684,8 +658,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewMyProfileToolStripMenuItem;

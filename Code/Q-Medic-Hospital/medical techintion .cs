@@ -226,5 +226,13 @@ namespace Q_Medic_Hospital
         {
 
         }
+
+        private void CheckXrayfullBody_Click(object sender, EventArgs e) {
+            ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.XrayFull);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }

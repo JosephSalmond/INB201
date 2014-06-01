@@ -19,12 +19,16 @@ namespace Q_Medic_Hospital
 
         private void cjeclAllPartsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Go to X ray parts form
+            ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.XrayParts);
         }
 
         private void goBackToMedicalTechintionPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ///Go back to medical techintion page
+            ((MedTechMaster)this.MdiParent).changeForm((int)MedTechMaster.forms.MedTech);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
         }
     }
 }

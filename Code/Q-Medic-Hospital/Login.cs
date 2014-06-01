@@ -30,7 +30,7 @@ namespace Q_Medic_Hospital {
             authorised = MiddleWare.middle.AuthTest(username, password, ref theUser);
             if (authorised) {
                 if (theUser == userType.DOCTOR) {
-                    mainForm = new Q_Medic_Hospital.Doctor();
+                    mainForm = new Q_Medic_Hospital.DoctorMaster();
                 }else if (theUser == userType.NURSE){
                     mainForm = new Q_Medic_Hospital.NurseMaster();
                 } else if (theUser == userType.SYSADMIN) {
@@ -40,7 +40,7 @@ namespace Q_Medic_Hospital {
                 } else if (theUser == userType.HOSPITALADMIN){
                     mainForm = new Q_Medic_Hospital.Hospital_Admin();
                 } else if (theUser == userType.MEDTECH) {
-                    mainForm = new Q_Medic_Hospital.MedTech();
+                    mainForm = new Q_Medic_Hospital.MedTechMaster();
                 }else if (theUser == userType.LUSER) {
                     textBox1.Text = "Insufficiant Privilages";
                 }

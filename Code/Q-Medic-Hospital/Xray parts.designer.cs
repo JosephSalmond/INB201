@@ -47,11 +47,10 @@
             this.Chest = new System.Windows.Forms.PictureBox();
             this.Knee = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updataXRayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goBackToFullBodyPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToFullBodyPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Shoulders = new System.Windows.Forms.PictureBox();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Head)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Feet)).BeginInit();
@@ -232,37 +231,14 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updateToolStripMenuItem,
+            this.goBackToToolStripMenuItem,
             this.goBackToFullBodyPageToolStripMenuItem,
-            this.goBackToToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 229;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.updataXRayToolStripMenuItem});
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.updateToolStripMenuItem.Text = "Update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
-            // 
-            // updataXRayToolStripMenuItem
-            // 
-            this.updataXRayToolStripMenuItem.Name = "updataXRayToolStripMenuItem";
-            this.updataXRayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.updataXRayToolStripMenuItem.Text = "Updata X ray";
-            this.updataXRayToolStripMenuItem.Click += new System.EventHandler(this.updataXRayToolStripMenuItem_Click);
-            // 
-            // goBackToFullBodyPageToolStripMenuItem
-            // 
-            this.goBackToFullBodyPageToolStripMenuItem.Name = "goBackToFullBodyPageToolStripMenuItem";
-            this.goBackToFullBodyPageToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
-            this.goBackToFullBodyPageToolStripMenuItem.Text = "Go back to full body page";
-            this.goBackToFullBodyPageToolStripMenuItem.Click += new System.EventHandler(this.goBackToFullBodyPageToolStripMenuItem_Click);
             // 
             // goBackToToolStripMenuItem
             // 
@@ -270,6 +246,13 @@
             this.goBackToToolStripMenuItem.Size = new System.Drawing.Size(207, 20);
             this.goBackToToolStripMenuItem.Text = "Go back to medical techintion page";
             this.goBackToToolStripMenuItem.Click += new System.EventHandler(this.goBackToToolStripMenuItem_Click);
+            // 
+            // goBackToFullBodyPageToolStripMenuItem
+            // 
+            this.goBackToFullBodyPageToolStripMenuItem.Name = "goBackToFullBodyPageToolStripMenuItem";
+            this.goBackToFullBodyPageToolStripMenuItem.Size = new System.Drawing.Size(155, 20);
+            this.goBackToFullBodyPageToolStripMenuItem.Text = "Go back to full body page";
+            this.goBackToFullBodyPageToolStripMenuItem.Click += new System.EventHandler(this.goBackToFullBodyPageToolStripMenuItem_Click);
             // 
             // Shoulders
             // 
@@ -279,6 +262,13 @@
             this.Shoulders.Size = new System.Drawing.Size(258, 236);
             this.Shoulders.TabIndex = 230;
             this.Shoulders.TabStop = false;
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Xray
             // 
@@ -308,6 +298,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Xray";
             this.Text = "Xray";
+            this.Load += new System.EventHandler(this.Xray_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Head)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Feet)).EndInit();
@@ -344,11 +335,10 @@
         private System.Windows.Forms.PictureBox Chest;
         private System.Windows.Forms.PictureBox Knee;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.PictureBox Shoulders;
-        private System.Windows.Forms.ToolStripMenuItem updataXRayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToFullBodyPageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 
     }
 }

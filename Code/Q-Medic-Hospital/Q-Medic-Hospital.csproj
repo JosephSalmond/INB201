@@ -93,11 +93,23 @@
     <Compile Include="Doctor.Designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorMaster.Designer.cs">
+      <DependentUpon>DoctorMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="FinancialFees.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FinancialFees.designer.cs">
       <DependentUpon>FinancialFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedTechMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedTechMaster.Designer.cs">
+      <DependentUpon>MedTechMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="Hospital Admin.cs">
       <SubType>Form</SubType>
@@ -290,9 +302,15 @@
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoctorMaster.resx">
+      <DependentUpon>DoctorMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinancialFees.resx">
       <DependentUpon>FinancialFees.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedTechMaster.resx">
+      <DependentUpon>MedTechMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hospital Admin.resx">
       <DependentUpon>Hospital Admin.cs</DependentUpon>
@@ -391,6 +409,7 @@
     <EmbeddedResource Include="Xray parts.resx">
       <DependentUpon>Xray parts.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="INB201DataSet.xsc">
       <DependentUpon>INB201DataSet.xsd</DependentUpon>

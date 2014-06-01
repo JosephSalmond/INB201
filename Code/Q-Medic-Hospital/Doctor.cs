@@ -12,7 +12,6 @@ namespace Q_Medic_Hospital
 {
     public partial class Doctor : Form
     {
-        MiddleWare middle = new MiddleWare();
 
         public Doctor()
         {
@@ -23,9 +22,6 @@ namespace Q_Medic_Hospital
         {
             // TODO: This line of code loads data into the 'iNB201DataSet.DoctorsAppointments' table. You can move, or remove it, as needed.
             this.doctorsAppointmentsTableAdapter.Fill(this.iNB201DataSet.DoctorsAppointments);
-
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,22 +71,45 @@ namespace Q_Medic_Hospital
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            // paitent id
         }
         private void button1_Click(object sender, EventArgs e) {
             string searchPatientString = this.textBox1.Text;
             SqlCommand sqlCmd = new SqlCommand();
 
-            middle.OpenConnection();
+            MiddleWare.middle.OpenConnection();
             sqlCmd.CommandText = string.Format("select FirstName, LastName from Patients where PatientID = {0}", searchPatientString);
-            sqlCmd.Connection = middle.dbConnection;
+            sqlCmd.Connection = MiddleWare.middle.dbConnection;
             SqlDataReader reader = sqlCmd.ExecuteReader();
 
             bool foundUser;
             if (reader.HasRows) {
                 // What the fck. How do I return the reader results into the table below ?? 
             }
-            middle.CloseConnection();
+            MiddleWare.middle.CloseConnection();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e) {
+           ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.StaffProfile);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e) {
+            try {
+                ((DoctorMaster)this.MdiParent).PaitentID = Convert.ToInt32(textBox1.Text);
+                ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.PaitentProfile);
+            }
+            catch {
+                textBox1.Text = "Number Reqired";
+            }
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            MessageBox.Show("Abandon All Hope He Who Dares To Tread These Forms", "Warning", MessageBoxButtons.OK);
         }
     }
 }
