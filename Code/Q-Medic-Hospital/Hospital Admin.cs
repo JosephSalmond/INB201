@@ -11,6 +11,7 @@ namespace Q_Medic_Hospital
 {
     public partial class Hospital_Admin : Form
     {
+        
         public Hospital_Admin()
         {
             InitializeComponent();
@@ -33,6 +34,36 @@ namespace Q_Medic_Hospital
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void staffProfileToolStripMenuItem_Click(object sender, EventArgs e) {
+            ((HospitalAdminMaster)this.MdiParent).changeForm((int)HospitalAdminMaster.forms.StaffProfile);
+        }
+
+        private void label4_Click(object sender, EventArgs e) {
+
+        }
+
+        private void PatientViewBTN_Click(object sender, EventArgs e) {
+            try {
+                ((HospitalAdminMaster)this.MdiParent).PaitentID = Convert.ToInt32(PatientBox.Text);
+                ((HospitalAdminMaster)this.MdiParent).changeForm((int)HospitalAdminMaster.forms.PatientProfile);
+            }
+            catch {
+                PatientBox.Text = "Number Reqired";
+            }
+        }
+
+        private void PatientBox_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
 
         }
     }

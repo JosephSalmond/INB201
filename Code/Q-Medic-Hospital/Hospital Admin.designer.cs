@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hospital_Admin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,33 +56,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PatientBox = new System.Windows.Forms.TextBox();
+            this.PatientID = new System.Windows.Forms.Label();
+            this.PatientViewBTN = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
+            this.staffProfileToolStripMenuItem,
             this.recordsToolStripMenuItem,
             this.billingToolStripMenuItem,
-            this.salaryToolStripMenuItem});
+            this.salaryToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(664, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
             // 
             // recordsToolStripMenuItem
             // 
@@ -99,25 +96,25 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(98, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem2.Text = "2013";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(98, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem3.Text = "2012";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(98, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem4.Text = "2011";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(98, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem5.Text = "2010";
             // 
             // billingToolStripMenuItem
@@ -170,31 +167,31 @@
             // doctorsToolStripMenuItem
             // 
             this.doctorsToolStripMenuItem.Name = "doctorsToolStripMenuItem";
-            this.doctorsToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.doctorsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.doctorsToolStripMenuItem.Text = "Doctors";
             // 
             // nursesToolStripMenuItem
             // 
             this.nursesToolStripMenuItem.Name = "nursesToolStripMenuItem";
-            this.nursesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.nursesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nursesToolStripMenuItem.Text = "Nurses";
             // 
             // receptionistToolStripMenuItem
             // 
             this.receptionistToolStripMenuItem.Name = "receptionistToolStripMenuItem";
-            this.receptionistToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.receptionistToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.receptionistToolStripMenuItem.Text = "Receptionist";
             // 
             // clerksToolStripMenuItem
             // 
             this.clerksToolStripMenuItem.Name = "clerksToolStripMenuItem";
-            this.clerksToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.clerksToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clerksToolStripMenuItem.Text = "Clerks";
             // 
             // otherStaffToolStripMenuItem
             // 
             this.otherStaffToolStripMenuItem.Name = "otherStaffToolStripMenuItem";
-            this.otherStaffToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.otherStaffToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.otherStaffToolStripMenuItem.Text = "Other staff";
             // 
             // label1
@@ -282,6 +279,49 @@
             this.pictureBox1.Size = new System.Drawing.Size(265, 191);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // staffProfileToolStripMenuItem
+            // 
+            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
+            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
+            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
+            // 
+            // PatientBox
+            // 
+            this.PatientBox.Location = new System.Drawing.Point(357, 37);
+            this.PatientBox.Name = "PatientBox";
+            this.PatientBox.Size = new System.Drawing.Size(100, 20);
+            this.PatientBox.TabIndex = 7;
+            this.PatientBox.TextChanged += new System.EventHandler(this.PatientBox_TextChanged);
+            // 
+            // PatientID
+            // 
+            this.PatientID.AutoSize = true;
+            this.PatientID.Location = new System.Drawing.Point(300, 40);
+            this.PatientID.Name = "PatientID";
+            this.PatientID.Size = new System.Drawing.Size(51, 13);
+            this.PatientID.TabIndex = 8;
+            this.PatientID.Text = "PatientID";
+            this.PatientID.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // PatientViewBTN
+            // 
+            this.PatientViewBTN.Location = new System.Drawing.Point(454, 37);
+            this.PatientViewBTN.Name = "PatientViewBTN";
+            this.PatientViewBTN.Size = new System.Drawing.Size(75, 20);
+            this.PatientViewBTN.TabIndex = 9;
+            this.PatientViewBTN.Text = "View";
+            this.PatientViewBTN.UseVisualStyleBackColor = true;
+            this.PatientViewBTN.Click += new System.EventHandler(this.PatientViewBTN_Click);
             // 
             // Hospital_Admin
             // 
@@ -289,6 +329,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(664, 381);
+            this.Controls.Add(this.PatientViewBTN);
+            this.Controls.Add(this.PatientID);
+            this.Controls.Add(this.PatientBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
@@ -305,7 +348,6 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -318,7 +360,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recordsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -341,7 +382,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Diagnostics.PerformanceCounter performanceCounter1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffProfileToolStripMenuItem;
+        private System.Windows.Forms.TextBox PatientBox;
+        private System.Windows.Forms.Label PatientID;
+        private System.Windows.Forms.Button PatientViewBTN;
     }
 }

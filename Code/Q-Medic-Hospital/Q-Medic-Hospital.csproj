@@ -68,8 +68,10 @@
       <HintPath>packages\PDFsharp-MigraDoc-WPF.1.32.2608.0\lib\net20\PdfSharp.Charting-WPF.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -86,6 +88,12 @@
     </Compile>
     <Compile Include="Appointments.designer.cs">
       <DependentUpon>Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalAdminMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HospitalAdminMaster.designer.cs">
+      <DependentUpon>HospitalAdminMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctor.cs">
       <SubType>Form</SubType>
@@ -247,6 +255,12 @@
     <Compile Include="Personal Information.designer.cs">
       <DependentUpon>Personal Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receptionist.cs">
       <SubType>Form</SubType>
@@ -298,6 +312,9 @@
     </Compile>
     <EmbeddedResource Include="Appointments.resx">
       <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HospitalAdminMaster.resx">
+      <DependentUpon>HospitalAdminMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
@@ -375,6 +392,9 @@
     <EmbeddedResource Include="Personal Information.resx">
       <DependentUpon>Personal Information.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -410,7 +430,6 @@
       <DependentUpon>Xray parts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="INB201DataSet.xsc">
       <DependentUpon>INB201DataSet.xsd</DependentUpon>
     </None>

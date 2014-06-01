@@ -60,13 +60,16 @@ namespace Q_Medic_Hospital
         private void returnToolStripMenuItem_Click(object sender, EventArgs e) {
             if (this.MdiParent is DoctorMaster) {
                 ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.DoctorMain);
+            } if (this.MdiParent is HospitalAdminMaster) {
+                ((HospitalAdminMaster)this.MdiParent).changeForm((int)HospitalAdminMaster.forms.HospitalAdminMain);
             }
         }
         private int getID(){
             if (this.MdiParent is DoctorMaster) {
                 return ((DoctorMaster)this.MdiParent).PaitentID;
+            } else if (this.MdiParent is HospitalAdminMaster) {
+                return ((HospitalAdminMaster)this.MdiParent).PaitentID;
             }
-
             return -1;
         }
     }
