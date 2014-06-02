@@ -17,7 +17,7 @@ namespace Q_Medic_Hospital {
 
             InitializeComponent();
             this.AcceptButton = loginButton;
-            MiddleWare.middle.popualteDatabase(); //resets and rebuilds staff patients treatment and fees
+            //MiddleWare.middle.popualteDatabase(); //resets and rebuilds staff patients treatment and fees
         }
 
 

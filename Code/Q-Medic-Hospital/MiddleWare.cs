@@ -16,8 +16,8 @@ namespace Q_Medic_Hospital {
         enum querieType { LOGIN, DERP, AUTH };
         public int userid;
         bool debugging = false;
-        int numPaitents = 20;
-        int numTreatments = 200;
+        int numPaitents = 200;
+        int numTreatments = 2000;
 
 
 
@@ -244,8 +244,9 @@ namespace Q_Medic_Hospital {
                 int Postcode = random.Next(0, 10000);
                 int PhoneNumber = random.Next(0, 10000000);
                 int MobileNumber = random.Next(0, 10000000);
-                register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email, StreetNo, StreetAddress, Suburb, PostCode, PhoneNumber, MobileNumber)" +
-                    "Values('{0}','{1}','{2}','{3}','Saddress', 'suburb', '{4}', '{5}','{6}')", FirtNameline, LastNameline, email, StreetNumber, Postcode, PhoneNumber, MobileNumber), dbConnection);
+                String DOB = RandomDay().ToString("dd/mm/yyyy");
+                register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email, StreetNo, StreetAddress, Suburb, PostCode, PhoneNumber, MobileNumber, DateOfBirth)" +
+                    "Values('{0}','{1}','{2}','{3}','Saddress', 'suburb', '{4}', '{5}','{6}', '{7}')", FirtNameline, LastNameline, email, StreetNumber, Postcode, PhoneNumber, MobileNumber, DOB), dbConnection);
 
                 register.ExecuteNonQuery();
             }
@@ -263,7 +264,7 @@ namespace Q_Medic_Hospital {
             for (int i = 0; i < numTreatments; i++) {
                 int der = rand.Next(2, 7);
                 int pid = rand.Next(1, numPaitents);
-                float cost = (float)rand.Next(rand.Next(10, 1000),rand.Next(1000, 100000));
+                float cost = (float)rand.Next(rand.Next(10, 100),rand.Next(1000, 10000));
                 String dateString = DateTime.Now.ToString("dd/mm/yyyy");
                 String timeString = DateTime.Now.ToString("HH:mm:ss");
 
@@ -277,6 +278,13 @@ namespace Q_Medic_Hospital {
 
             }
             CloseConnection();
+        }
+        DateTime RandomDay() {
+            DateTime start = new DateTime(1950, 1, 1);
+            Random gen = new Random();
+
+            int range = (DateTime.Today - start).Days;
+            return start.AddDays(gen.Next(range));
         }
     }
 }

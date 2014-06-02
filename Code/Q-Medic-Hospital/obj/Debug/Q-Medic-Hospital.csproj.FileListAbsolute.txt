@@ -86,3 +86,8 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.e
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.exe
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.pdb
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\INB201_log.ldf
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.exe.manifest
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.application
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe.manifest
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.application

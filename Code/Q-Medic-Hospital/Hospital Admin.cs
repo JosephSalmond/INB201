@@ -402,11 +402,8 @@ namespace Q_Medic_Hospital
                     int yPoint = 220;
 
                     PDFGraphics.DrawString("Treatment ID", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
-
                     PDFGraphics.DrawString("Staff", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(180, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
-
                     PDFGraphics.DrawString("Treatment Date", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(300, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
-
                     PDFGraphics.DrawString("Treatment Time", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
 
                     yPoint = 250;
@@ -424,7 +421,7 @@ namespace Q_Medic_Hospital
                         yPoint = yPoint + 20;
                     }
 
-                    String filename = PID + "_PaitentTreatment.pdf";
+                    String filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\HospitalExport\\" + PID + "_PaitentTreatment.pdf";
                     PDFDocument.Save(filename);
                 }
             }
