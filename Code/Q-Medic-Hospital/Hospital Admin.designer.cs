@@ -349,7 +349,6 @@
             // 
             // ToDaysFinances
             // 
-            this.ToDaysFinances.Enabled = false;
             this.ToDaysFinances.Location = new System.Drawing.Point(498, 90);
             this.ToDaysFinances.Name = "ToDaysFinances";
             this.ToDaysFinances.Size = new System.Drawing.Size(128, 23);

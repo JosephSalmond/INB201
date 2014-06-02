@@ -150,7 +150,92 @@ namespace Q_Medic_Hospital
         }
 
         private void ToDaysFinances_Click(object sender, EventArgs e) {
-    
+           
+                    MiddleWare.middle.OpenConnection();
+                    SqlCommand GetData = new SqlCommand(string.Format("select FeeID, GrossCost, TotalCost, comments from Fees;"), MiddleWare.middle.dbConnection);
+                    String feeID = "";
+                    String grossCost = "";
+                    String DiscountedCost = "";
+                    String comments = "";
+                    int totalCost = 0;
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataSet ds = new DataSet();
+                    adapter.SelectCommand = GetData;
+                    adapter.Fill(ds);
+
+                    MiddleWare.middle.CloseConnection();
+
+                    string printString;
+                    PdfSharp.Pdf.PdfDocument PDFDocument = new PdfSharp.Pdf.PdfDocument();
+                    PDFDocument.Info.Title = "Patient Details";
+                    PdfSharp.Pdf.PdfPage PDFPage = PDFDocument.AddPage();
+                    PdfSharp.Drawing.XGraphics PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
+                    PdfSharp.Drawing.XFont font = new PdfSharp.Drawing.XFont("Verdana", 12, PdfSharp.Drawing.XFontStyle.Bold);
+                    PdfSharp.Drawing.XRect rec = new PdfSharp.Drawing.XRect((PDFPage.Width / 8), 110, PDFPage.Width, PDFPage.Height);
+                    // 0 - 90 banner       
+                    PDFGraphics.DrawString("Q Medic Hospital Banner Goes Here", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect((PDFPage.Width / 4), 50, PDFPage.Width, PDFPage.Height), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+
+                    printString = "Q Medic Financials";
+                    rec.Y = 150;
+                    PDFGraphics.DrawString(printString, font, PdfSharp.Drawing.XBrushes.Black, rec, PdfSharp.Drawing.XStringFormats.TopLeft);
+                    int yPoint = 220;
+
+                    PDFGraphics.DrawString("Invoice No", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Gross Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(120, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Discounted Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(220, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("TotalCost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(360, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Comments", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(500, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    yPoint = 250;
+                    for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++) {
+                        if (yPoint > 820){
+                            yPoint = 50;
+                            PDFPage = PDFDocument.AddPage();
+                            PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
+                            PDFGraphics.DrawString("Invoice No", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                            PDFGraphics.DrawString("Gross Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(120, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                            PDFGraphics.DrawString("Discounted Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(220, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                            PDFGraphics.DrawString("TotalCost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(360, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                            PDFGraphics.DrawString("Comments", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(500, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                            yPoint = 70;
+                        }
+                        feeID = ds.Tables[0].Rows[i].ItemArray[0].ToString();
+                        grossCost = ds.Tables[0].Rows[i].ItemArray[1].ToString();
+                        DiscountedCost = ds.Tables[0].Rows[i].ItemArray[2].ToString();
+                        comments = ds.Tables[0].Rows[i].ItemArray[3].ToString();
+
+                        PDFGraphics.DrawString(feeID, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        PDFGraphics.DrawString("$" + grossCost + ".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(120, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        PDFGraphics.DrawString("$" + DiscountedCost + ".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(220, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        try {
+                            totalCost += Convert.ToInt32(DiscountedCost);
+                            PDFGraphics.DrawString("$" + totalCost + ".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(360, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        }
+                        catch {
+                            PDFGraphics.DrawString("NaN", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(500, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        }
+                        PDFGraphics.DrawString(comments, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(500, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        yPoint = yPoint + 20;
+                    }
+                    yPoint += 40;
+                    PDFGraphics.DrawString("Grand Total: ", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(320, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                    PDFGraphics.DrawString("$" + totalCost + ".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    String filename = "Hospital_Takings.pdf";
+                    PDFDocument.Save(filename);
+                
+            
             // tabel of all the treatments
         }
 

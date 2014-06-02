@@ -193,7 +193,6 @@
             this.AdditionalComments.Name = "AdditionalComments";
             this.AdditionalComments.Size = new System.Drawing.Size(416, 199);
             this.AdditionalComments.TabIndex = 11;
-            this.AdditionalComments.SelectedIndexChanged += new System.EventHandler(this.AdditionalComments_SelectedIndexChanged);
             // 
             // label6
             // 

@@ -69,9 +69,7 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\INB201_log.ld
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Insurance_Information.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Main_Page_Patient_record.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Medical_Information.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.PersonName.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_Complaint.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_History_NEW.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.X_ray_full_body.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Xray.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.MedTech.resources
@@ -87,3 +85,5 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospi
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.SysAdminMaster.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.ReceptionistMaster.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.FinancialFees.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Patient_History.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Employer.resources
