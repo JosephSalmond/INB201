@@ -10,10 +10,6 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.p
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PaitentProfile.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistoryMain.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys3.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys2.resources
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.PatientHistorys1.resources
 C:\Users\qweqwe\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.exe
 C:\Users\qweqwe\Documents\INB201\Code\Q-Medic-Hospital\obj\Debug\Q-Medic GUI.pdb
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Registry.resources
@@ -89,3 +85,4 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\Q-Medic GUI.e
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.DoctorMaster.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.HospitalAdminMaster.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.ProjectInstaller.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.SysAdminMaster.resources
