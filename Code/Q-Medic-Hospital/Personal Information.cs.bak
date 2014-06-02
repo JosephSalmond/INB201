@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Patients_Record_Forms
 {
-    public partial class Employer : Form
+    public partial class PersonName : Form
     {
-        public Employer()
+        public PersonName()
         {
             InitializeComponent();
         }

@@ -43,8 +43,8 @@
             this.Comments = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AdditionalComments = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,31 +171,29 @@
             this.listBox1.Size = new System.Drawing.Size(351, 43);
             this.listBox1.TabIndex = 18;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(422, 256);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 19;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(479, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(422, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(517, 315);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(227, 172);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
-            // 
-            // AdditionalComments
-            // 
-            this.AdditionalComments.FormattingEnabled = true;
-            this.AdditionalComments.Location = new System.Drawing.Point(16, 450);
-            this.AdditionalComments.Name = "AdditionalComments";
-            this.AdditionalComments.Size = new System.Drawing.Size(567, 199);
-            this.AdditionalComments.TabIndex = 53;
             // 
             // Medical_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 685);
-            this.Controls.Add(this.AdditionalComments);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(651, 424);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Comments);
@@ -234,7 +232,7 @@
         private System.Windows.Forms.ListBox Comments;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox AdditionalComments;
     }
 }

@@ -354,7 +354,7 @@
             this.ToDaysFinances.Name = "ToDaysFinances";
             this.ToDaysFinances.Size = new System.Drawing.Size(128, 23);
             this.ToDaysFinances.TabIndex = 12;
-            this.ToDaysFinances.Text = "Finances For Today";
+            this.ToDaysFinances.Text = "Export Finances";
             this.ToDaysFinances.UseVisualStyleBackColor = true;
             this.ToDaysFinances.Click += new System.EventHandler(this.ToDaysFinances_Click);
             // 
@@ -370,7 +370,6 @@
             // 
             // PaitentTreatments
             // 
-            this.PaitentTreatments.Enabled = false;
             this.PaitentTreatments.Location = new System.Drawing.Point(498, 119);
             this.PaitentTreatments.Name = "PaitentTreatments";
             this.PaitentTreatments.Size = new System.Drawing.Size(128, 23);

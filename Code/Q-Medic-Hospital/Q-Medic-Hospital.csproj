@@ -201,11 +201,11 @@
     <Compile Include="Patient Complaint.designer.cs">
       <DependentUpon>Patient Complaint.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient History NEW.cs">
+    <Compile Include="Patient History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient History NEW.designer.cs">
-      <DependentUpon>Patient History NEW.cs</DependentUpon>
+    <Compile Include="Patient History.designer.cs">
+      <DependentUpon>Patient History.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -354,8 +354,8 @@
     <EmbeddedResource Include="Patient Complaint.resx">
       <DependentUpon>Patient Complaint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient History NEW.resx">
-      <DependentUpon>Patient History NEW.cs</DependentUpon>
+    <EmbeddedResource Include="Patient History.resx">
+      <DependentUpon>Patient History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

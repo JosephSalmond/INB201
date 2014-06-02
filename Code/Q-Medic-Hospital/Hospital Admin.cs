@@ -151,7 +151,7 @@ namespace Q_Medic_Hospital
 
         private void ToDaysFinances_Click(object sender, EventArgs e) {
     
-            // todayes finances
+            // tabel of all the treatments
         }
 
         private void PaitentFinances_Click(object sender, EventArgs e) {
@@ -249,7 +249,7 @@ namespace Q_Medic_Hospital
         }
 
         private void PaitentTreatments_Click(object sender, EventArgs e) {
-            
+            // return table of all treatments
             // treatment for patients
         }
     }
