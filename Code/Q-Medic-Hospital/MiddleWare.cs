@@ -16,6 +16,8 @@ namespace Q_Medic_Hospital {
         enum querieType { LOGIN, DERP, AUTH };
         public int userid;
         bool debugging = false;
+        int numPaitents = 20;
+        int numTreatments = 200;
 
 
 
@@ -230,7 +232,7 @@ namespace Q_Medic_Hospital {
             IEnumerable<string> LastName = File.ReadLines("LastName.txt");
 
             OpenConnection();
-            for (int i = 0; i < 200; i++) {
+            for (int i = 0; i < numPaitents; i++) {
                 SqlCommand register = null;
                 var FirtNameToRead = rand.Next(1, FirtName.Count());
                 var LastNameToRead = rand.Next(1, LastName.Count());
@@ -258,9 +260,9 @@ namespace Q_Medic_Hospital {
             Random rand = new Random();
 
             OpenConnection();
-            for (int i = 0; i < 2000; i++) {
+            for (int i = 0; i < numTreatments; i++) {
                 int der = rand.Next(2, 7);
-                int pid = rand.Next(1, 199);
+                int pid = rand.Next(1, numPaitents);
                 float cost = (float)rand.Next(rand.Next(10, 1000),rand.Next(1000, 100000));
                 String dateString = DateTime.Now.ToString("dd/mm/yyyy");
                 String timeString = DateTime.Now.ToString("HH:mm:ss");

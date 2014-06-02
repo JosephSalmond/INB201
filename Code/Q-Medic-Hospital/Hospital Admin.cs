@@ -167,7 +167,7 @@ namespace Q_Medic_Hospital
 
                     string printString;
                     PdfSharp.Pdf.PdfDocument PDFDocument = new PdfSharp.Pdf.PdfDocument();
-                    PDFDocument.Info.Title = "Patient Details";
+                    PDFDocument.Info.Title = "Financial History";
                     PdfSharp.Pdf.PdfPage PDFPage = PDFDocument.AddPage();
                     PdfSharp.Drawing.XGraphics PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
                     PdfSharp.Drawing.XFont font = new PdfSharp.Drawing.XFont("Verdana", 12, PdfSharp.Drawing.XFontStyle.Bold);
@@ -275,7 +275,7 @@ namespace Q_Medic_Hospital
 
                     string printString;
                     PdfSharp.Pdf.PdfDocument PDFDocument = new PdfSharp.Pdf.PdfDocument();
-                    PDFDocument.Info.Title = "Patient Details";
+                    PDFDocument.Info.Title = "Patient Invoice";
                     PdfSharp.Pdf.PdfPage PDFPage = PDFDocument.AddPage();
                     PdfSharp.Drawing.XGraphics PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
                     PdfSharp.Drawing.XFont font = new PdfSharp.Drawing.XFont("Verdana", 12, PdfSharp.Drawing.XFontStyle.Bold);
@@ -303,6 +303,20 @@ namespace Q_Medic_Hospital
                     yPoint = 250;
                     for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
                 {
+                    if (yPoint > 820) {
+                        yPoint = 50;
+                        PDFPage = PDFDocument.AddPage();
+                        PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
+
+                        PDFGraphics.DrawString("Invoice Number", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        PDFGraphics.DrawString("Gross Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(180, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        PDFGraphics.DrawString("Discounted Cost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(300, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        PDFGraphics.DrawString("TotalCost", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        yPoint = 70;
+                    }
                     feeID = ds.Tables[0].Rows[i].ItemArray[1].ToString ();
                     grossCost = ds.Tables[0].Rows[i].ItemArray[2].ToString();
                     DiscountedCost = ds.Tables[0].Rows[i].ItemArray[3].ToString();
@@ -334,7 +348,86 @@ namespace Q_Medic_Hospital
         }
 
         private void PaitentTreatments_Click(object sender, EventArgs e) {
-            // return table of all treatments
+            int PID;
+            try {
+                PID = Convert.ToInt32(PatientBox.Text);
+            }
+            catch {
+                PID = -1;
+                PatientBox.Text = "Number Reqired";
+            }
+
+
+            if (PID > -1) {
+                MiddleWare.middle.OpenConnection();
+
+                SqlCommand GetData = new SqlCommand(string.Format("select FirstName, LastName from Patients WHERE PatientID='{0}';", PID), MiddleWare.middle.dbConnection);
+                SqlDataReader dataReader = GetData.ExecuteReader();
+                if (dataReader.HasRows) {
+                    dataReader.Read();
+                    String name = dataReader.GetString(0) + " " + dataReader.GetString(1);
+                    MiddleWare.middle.CloseConnection();
+
+                    MiddleWare.middle.OpenConnection();
+                    String TreatmentID = "";
+                    String staffName = "";
+                    String TreatmentDate = "";
+                    String TreatmentTime = "";
+                    int totalCost = 0;
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataSet ds = new DataSet();
+                    GetData = new SqlCommand(string.Format("SELECT Treatment.TreatmentID, Staff.StaffID, StaffType.StaffTypeName, Staff.FirstName, Staff.LastName, Treatment.PatientID, Treatment.TreatmentDate, Treatment.TreatmentTime FROM Treatment INNER JOIN Staff ON Treatment.StaffID = Staff.StaffID INNER JOIN StaffType ON Staff.StaffTypeID = StaffType.StaffTypeID WHERE (Treatment.PatientID = '{0}')", PID), MiddleWare.middle.dbConnection);
+                    adapter.SelectCommand = GetData;
+                    adapter.Fill(ds);
+
+                    MiddleWare.middle.CloseConnection();
+
+                    string printString;
+                    PdfSharp.Pdf.PdfDocument PDFDocument = new PdfSharp.Pdf.PdfDocument();
+                    PDFDocument.Info.Title = "Patient Treatments";
+                    PdfSharp.Pdf.PdfPage PDFPage = PDFDocument.AddPage();
+                    PdfSharp.Drawing.XGraphics PDFGraphics = PdfSharp.Drawing.XGraphics.FromPdfPage(PDFPage);
+                    PdfSharp.Drawing.XFont font = new PdfSharp.Drawing.XFont("Verdana", 12, PdfSharp.Drawing.XFontStyle.Bold);
+                    PdfSharp.Drawing.XRect rec = new PdfSharp.Drawing.XRect((PDFPage.Width / 8), 110, PDFPage.Width, PDFPage.Height);
+                    // 0 - 90 banner       
+                    PDFGraphics.DrawString("Q Medic Hospital Banner Goes Here", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect((PDFPage.Width / 4), 50, PDFPage.Width, PDFPage.Height), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    printString = "Patient ID: " + PID;
+                    PDFGraphics.DrawString(printString, font, PdfSharp.Drawing.XBrushes.Black, rec, PdfSharp.Drawing.XStringFormats.TopLeft);
+                    rec.X = (PDFPage.Width / 8) + 20;
+
+                    printString = "Name: " + name;
+                    rec.Y = 150;
+                    PDFGraphics.DrawString(printString, font, PdfSharp.Drawing.XBrushes.Black, rec, PdfSharp.Drawing.XStringFormats.TopLeft);
+                    int yPoint = 220;
+
+                    PDFGraphics.DrawString("Treatment ID", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Staff", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(180, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Treatment Date", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(300, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    PDFGraphics.DrawString("Treatment Time", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                    yPoint = 250;
+                    for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++) {
+                        TreatmentID = ds.Tables[0].Rows[i].ItemArray[0].ToString();
+                        staffName = ds.Tables[0].Rows[i].ItemArray[3].ToString() + " " + ds.Tables[0].Rows[i].ItemArray[4].ToString();
+                        TreatmentDate = ds.Tables[0].Rows[i].ItemArray[6].ToString();
+                        TreatmentTime = ds.Tables[0].Rows[i].ItemArray[7].ToString();
+
+                        PDFGraphics.DrawString(TreatmentID, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(40, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        PDFGraphics.DrawString(staffName, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(180, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                        PDFGraphics.DrawString(TreatmentDate, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(300, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                       PDFGraphics.DrawString(TreatmentTime, font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+
+                        yPoint = yPoint + 20;
+                    }
+
+                    String filename = PID + "_PaitentTreatment.pdf";
+                    PDFDocument.Save(filename);
+                }
+            }
             // treatment for patients
         }
     }
