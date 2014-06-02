@@ -237,6 +237,9 @@ namespace Q_Medic_Hospital
                     }
                         yPoint = yPoint + 20;
                 }
+                    yPoint += 40;
+                    PDFGraphics.DrawString("Grand Total: ", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(320, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
+                    PDFGraphics.DrawString("$" + totalCost+".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
 
                     String filename = PID + "_PaitentStatement.pdf";
                     PDFDocument.Save(filename);
