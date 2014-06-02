@@ -81,5 +81,23 @@ namespace Q_Medic_Hospital
         {
             /// Search for Patient appointments By patient Id
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (this.MdiParent is NurseMaster) {
+                ((NurseMaster)this.MdiParent).changeForm((int)NurseMaster.forms.NurseMain);
+            } else if (this.MdiParent is DoctorMaster) {
+                ((DoctorMaster)this.MdiParent).changeForm((int)DoctorMaster.forms.DoctorMain);
+            } else if (this.MdiParent is HospitalAdminMaster) {
+                ((HospitalAdminMaster)this.MdiParent).changeForm((int)HospitalAdminMaster.forms.HospitalAdminMain);
+            } else if (this.MdiParent is SysAdminMaster) {
+                ((SysAdminMaster)this.MdiParent).changeForm((int)SysAdminMaster.forms.SysAdminMain);
+            } else if (this.MdiParent is ReceptionistMaster) {
+                ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.ReceptionistMain);
+            }
+        }
     }
 }

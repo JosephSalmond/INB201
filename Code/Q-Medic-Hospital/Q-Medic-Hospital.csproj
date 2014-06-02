@@ -89,6 +89,12 @@
     <Compile Include="Appointments.designer.cs">
       <DependentUpon>Appointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReceptionistMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceptionistMaster.designer.cs">
+      <DependentUpon>ReceptionistMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="SysAdminMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </Compile>
     <EmbeddedResource Include="Appointments.resx">
       <DependentUpon>Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceptionistMaster.resx">
+      <DependentUpon>ReceptionistMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysAdminMaster.resx">
       <DependentUpon>SysAdminMaster.cs</DependentUpon>

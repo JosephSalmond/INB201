@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Q_Medic_Hospital
 {
-    public partial class Form1 : Form
+    public partial class FinancialFees : Form
     {
-        public Form1()
+        public FinancialFees()
         {
             InitializeComponent();
         }
@@ -195,6 +195,16 @@ namespace Q_Medic_Hospital
 
         private void PatientPhoneNumber_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void returnToolStripMenuItem_Click(object sender, EventArgs e) {
+            if (this.MdiParent is ReceptionistMaster) {
+                ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.ReceptionistMain);
+            }
         }
     }
 }

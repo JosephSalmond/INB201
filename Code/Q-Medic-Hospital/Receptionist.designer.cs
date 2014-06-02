@@ -36,9 +36,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPatientFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.myProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMyProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
@@ -84,6 +81,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -136,14 +135,15 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.staffProfileToolStripMenuItem,
             this.addNewFileToolStripMenuItem,
-            this.myProfileToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // addNewFileToolStripMenuItem
             // 
@@ -158,26 +158,6 @@
             this.addNewPatientFileToolStripMenuItem.Name = "addNewPatientFileToolStripMenuItem";
             this.addNewPatientFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewPatientFileToolStripMenuItem.Text = "Add new patient file";
-            // 
-            // myProfileToolStripMenuItem
-            // 
-            this.myProfileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewMyProfileToolStripMenuItem});
-            this.myProfileToolStripMenuItem.Name = "myProfileToolStripMenuItem";
-            this.myProfileToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.myProfileToolStripMenuItem.Text = "My profile";
-            // 
-            // viewMyProfileToolStripMenuItem
-            // 
-            this.viewMyProfileToolStripMenuItem.Name = "viewMyProfileToolStripMenuItem";
-            this.viewMyProfileToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.viewMyProfileToolStripMenuItem.Text = "View my profile";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.logOutToolStripMenuItem.Text = "Log out";
             // 
             // button4
             // 
@@ -587,6 +567,20 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // staffProfileToolStripMenuItem
+            // 
+            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
+            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
+            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
+            // 
             // Receptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,14 +653,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem myProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewMyProfileToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.ToolStripMenuItem addNewFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPatientFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button EnterCheckId;
         private System.Windows.Forms.Label label46;
@@ -709,6 +700,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staffProfileToolStripMenuItem;
     }
 }
 

@@ -36,7 +36,7 @@ namespace Q_Medic_Hospital {
                 } else if (theUser == userType.SYSADMIN) {
                     mainForm = new Q_Medic_Hospital.SysAdminMaster();
                 } else if (theUser == userType.RECEPTIONIST) {
-                    mainForm = new Q_Medic_Hospital.Receptionist();
+                    mainForm = new Q_Medic_Hospital.ReceptionistMaster();
                 } else if (theUser == userType.HOSPITALADMIN){
                     mainForm = new Q_Medic_Hospital.HospitalAdminMaster();
                 } else if (theUser == userType.MEDTECH) {

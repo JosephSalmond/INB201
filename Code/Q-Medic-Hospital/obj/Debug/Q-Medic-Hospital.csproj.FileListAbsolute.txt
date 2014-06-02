@@ -66,7 +66,6 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospi
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Systems_Admin.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\INB201.mdf
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\bin\Debug\INB201_log.ldf
-C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.Form1.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Insurance_Information.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Main_Page_Patient_record.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Patients_Record_Forms.Medical_Information.resources
@@ -86,3 +85,5 @@ C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospi
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.HospitalAdminMaster.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.ProjectInstaller.resources
 C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.SysAdminMaster.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.ReceptionistMaster.resources
+C:\Users\JEGO\Documents\QUT\github\Code\Q-Medic-Hospital\obj\Debug\Q_Medic_Hospital.FinancialFees.resources

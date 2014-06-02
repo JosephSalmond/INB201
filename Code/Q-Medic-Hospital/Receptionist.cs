@@ -72,21 +72,37 @@ namespace Q_Medic_Hospital
         private void button5_Click(object sender, EventArgs e)
         {
             /// Go to the patient Room form
+            ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.PaitentRooms);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             /// Go to Patient appointment form (Not My appointment form)
+            ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.PatientAppointments);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             /// Go to the form Patient profile check and view only
+            ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.PatientProfile);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             ///Go to fanicial fees form
+            ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.FinancialFees);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void staffProfileToolStripMenuItem_Click(object sender, EventArgs e) {
+            // staff profile
         }
     }
 }

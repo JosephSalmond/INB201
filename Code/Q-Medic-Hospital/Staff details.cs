@@ -86,6 +86,8 @@ namespace Q_Medic_Hospital
                 ((HospitalAdminMaster)this.MdiParent).changeForm((int)HospitalAdminMaster.forms.HospitalAdminMain);
             } else if (this.MdiParent is SysAdminMaster) {
                 ((SysAdminMaster)this.MdiParent).changeForm((int)SysAdminMaster.forms.SysAdminMain);
+            } else if (this.MdiParent is ReceptionistMaster) {
+                ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.ReceptionistMain);
             }
         }
 
