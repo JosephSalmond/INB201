@@ -19,9 +19,9 @@ namespace Q_Medic_Hospital {
 
 
 
-        //SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;"); // SQL server
-        public SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\SA878\\Documents\\INB201\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
-        //public SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\JEGO\\Documents\\QUT\\github\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
+        //public SqlConnection dbConnection = new SqlConnection("server =localhost; Trusted_Connection=yes; database=INB201; connection timeout=60;"); // SQL server
+        //public SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\SA878\\Documents\\INB201\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
+        public SqlConnection dbConnection = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\JEGO\\Documents\\QUT\\github\\Code\\Q-Medic-Hospital\\INB201.mdf;Integrated Security=True");  // MDF file
         SqlCommand sqlCmd = new SqlCommand();
         SqlDataReader reader;
 
@@ -34,7 +34,7 @@ namespace Q_Medic_Hospital {
             login.Show();
             Application.Run();
 
-
+            
         }
 
 
@@ -194,6 +194,23 @@ namespace Q_Medic_Hospital {
         }
         // populates database
         public void popualteDatabase() {
+            OpenConnection();
+            SqlCommand PurgeTableStaff = new SqlCommand("DELETE from Staff",dbConnection);
+            SqlCommand PurgeTablePatients = new SqlCommand("DELETE from Patients", dbConnection);
+            SqlCommand PurgeTableTreatment = new SqlCommand("DELETE from Treatment", dbConnection);
+            SqlCommand PurgeTableFees = new SqlCommand("DELETE from Fees", dbConnection);
+            PurgeTableTreatment.ExecuteNonQuery();
+            PurgeTableFees.ExecuteNonQuery();
+            PurgeTablePatients.ExecuteNonQuery();
+            PurgeTableStaff.ExecuteNonQuery();
+            SqlCommand PurgeTableStaff2 = new SqlCommand("DBCC CHECKIDENT('Staff', RESEED, 0)", dbConnection);
+            SqlCommand PurgeTablePatients2 = new SqlCommand("DBCC CHECKIDENT('Patients', RESEED, 0)", dbConnection);
+            SqlCommand PurgeTableTreatment2 = new SqlCommand("DBCC CHECKIDENT('Treatment', RESEED, 0)", dbConnection);
+            PurgeTableTreatment2.ExecuteNonQuery();
+            PurgeTablePatients2.ExecuteNonQuery();
+            PurgeTableStaff2.ExecuteNonQuery();
+
+            CloseConnection();
             createStaff();
             createPatients();
             CreateTreatments();
@@ -220,9 +237,13 @@ namespace Q_Medic_Hospital {
                 String FirtNameline = FirtName.Skip(FirtNameToRead - 1).First();
                 String LastNameline = LastName.Skip(LastNameToRead - 1).First();
                 String email = FirtNameline + LastNameline + "@herp.com";
-
-                register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email)" +
-                    "Values('{0}','{1}','{2}')", FirtNameline, LastNameline, email), dbConnection);
+                Random random = new Random();
+                int StreetNumber = random.Next(0, 1000);
+                int Postcode = random.Next(0, 10000);
+                int PhoneNumber = random.Next(0, 10000000);
+                int MobileNumber = random.Next(0, 10000000);
+                register = new SqlCommand(string.Format("INSERT Patients (LastName, FirstName, Email, StreetNo, StreetAddress, Suburb, PostCode, PhoneNumber, MobileNumber)" +
+                    "Values('{0}','{1}','{2}','{3}','Saddress', 'suburb', '{4}', '{5}','{6}')", FirtNameline, LastNameline, email, StreetNumber, Postcode, PhoneNumber, MobileNumber), dbConnection);
 
                 register.ExecuteNonQuery();
             }
@@ -237,19 +258,17 @@ namespace Q_Medic_Hospital {
             Random rand = new Random();
 
             OpenConnection();
-            for (int i = 0; i < 200; i++) {
-                int der = rand.Next(2, 4);
+            for (int i = 0; i < 2000; i++) {
+                int der = rand.Next(2, 7);
                 int pid = rand.Next(1, 199);
-                int room = rand.Next(1, 200);
-                int bed = rand.Next(1, 4);
-                float cost = (float)rand.Next(10, 10000);
+                float cost = (float)rand.Next(rand.Next(10, 1000),rand.Next(1000, 100000));
                 String dateString = DateTime.Now.ToString("dd/mm/yyyy");
                 String timeString = DateTime.Now.ToString("HH:mm:ss");
 
-                treatMe = new SqlCommand(string.Format("INSERT Treatment (PatientID, StaffID, FeeID, RoomNo, DoctorsNotes, NurseObservations, TreatmentDate, TreatmentTime, Admitted, BedNo)" +
-    "VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", pid, der, i, room, "Dobs", "Nobs", dateString, timeString, true, bed), dbConnection);
-                billMe = new SqlCommand(string.Format("INSERT Fees(FeeID, FeeCost, FeePaidDate,Comments)" +
-                    "VALUES('{0}','{1}','{2}','{3}')", i, cost, null, "Unpaid"), dbConnection);
+                treatMe = new SqlCommand(string.Format("INSERT Treatment (PatientID, StaffID, FeeID, DoctorsNotes, NurseObservations, TreatmentDate, TreatmentTime, Admitted)" +
+    "VALUES('{0}','{1}','{3}','{4}','{5}','{6}','{7}','{8}')", pid, der, 0, i, "Dobs", "Nobs", dateString, timeString, true), dbConnection);
+                billMe = new SqlCommand(string.Format("INSERT Fees(FeeID, GrossCost, FeePaidDate,Comments, TotalCost)" +
+                    "VALUES('{0}','{1}','{2}','{3}','{4}')", i, cost, null, "Unpaid", cost), dbConnection);
                 billMe.ExecuteNonQuery();
                 treatMe.ExecuteNonQuery();
 
