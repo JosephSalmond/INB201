@@ -31,5 +31,17 @@ namespace Q_Medic_Hospital
         private void Systems_Admin_Load(object sender, EventArgs e) {
             
         }
+
+        private void complaintsToolStripMenuItem_Click(object sender, EventArgs e) {
+            //complaints
+        }
+
+        private void configureToolStripMenuItem_Click(object sender, EventArgs e) {
+            // no idea 
+        }
+
+        private void userProfilesToolStripMenuItem_Click(object sender, EventArgs e) {
+            // ??
+        }
     }
 }

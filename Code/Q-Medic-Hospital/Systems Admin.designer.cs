@@ -36,8 +36,10 @@
             this.otherStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.complaintsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,8 +69,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -96,6 +96,7 @@
             this.userProfilesToolStripMenuItem.Name = "userProfilesToolStripMenuItem";
             this.userProfilesToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.userProfilesToolStripMenuItem.Text = "Users";
+            this.userProfilesToolStripMenuItem.Click += new System.EventHandler(this.userProfilesToolStripMenuItem_Click);
             // 
             // doctorsToolStripMenuItem
             // 
@@ -141,17 +142,33 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // staffProfileToolStripMenuItem
+            // 
+            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
+            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
+            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
+            // 
             // configureToolStripMenuItem
             // 
             this.configureToolStripMenuItem.Name = "configureToolStripMenuItem";
             this.configureToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.configureToolStripMenuItem.Text = "Configure";
+            this.configureToolStripMenuItem.Click += new System.EventHandler(this.configureToolStripMenuItem_Click);
             // 
             // complaintsToolStripMenuItem
             // 
             this.complaintsToolStripMenuItem.Name = "complaintsToolStripMenuItem";
             this.complaintsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.complaintsToolStripMenuItem.Text = "Complaints";
+            this.complaintsToolStripMenuItem.Click += new System.EventHandler(this.complaintsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // textBox1
             // 
@@ -400,20 +417,6 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Done";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // staffProfileToolStripMenuItem
-            // 
-            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
-            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
-            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
             // 
             // Systems_Admin
             // 
