@@ -84,7 +84,16 @@ namespace Q_Medic_Hospital
         private void button7_Click(object sender, EventArgs e)
         {
             /// Go to the form Patient profile check and view only
-            ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.PatientProfile);
+            try
+            {
+                ((ReceptionistMaster)this.MdiParent).PaitentID = Convert.ToInt32(EnterPatiendId.Text);
+                ((ReceptionistMaster)this.MdiParent).changeForm((int)ReceptionistMaster.forms.PatientProfile);
+            }
+            catch
+            {
+                EnterPatiendId.Text = "Number Required";
+            }
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -103,6 +112,11 @@ namespace Q_Medic_Hospital
 
         private void staffProfileToolStripMenuItem_Click(object sender, EventArgs e) {
             // staff profile
+        }
+
+        private void EnterPatiendId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,8 +34,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPatientFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
@@ -81,8 +83,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staffProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -145,6 +145,13 @@
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
+            // staffProfileToolStripMenuItem
+            // 
+            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
+            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
+            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
+            // 
             // addNewFileToolStripMenuItem
             // 
             this.addNewFileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -158,6 +165,13 @@
             this.addNewPatientFileToolStripMenuItem.Name = "addNewPatientFileToolStripMenuItem";
             this.addNewPatientFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewPatientFileToolStripMenuItem.Text = "Add new patient file";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // button4
             // 
@@ -347,6 +361,7 @@
             this.EnterPatiendId.Name = "EnterPatiendId";
             this.EnterPatiendId.Size = new System.Drawing.Size(135, 20);
             this.EnterPatiendId.TabIndex = 135;
+            this.EnterPatiendId.TextChanged += new System.EventHandler(this.EnterPatiendId_TextChanged);
             // 
             // shapeContainer1
             // 
@@ -566,20 +581,6 @@
             this.button8.Text = "Go to financial fees";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // staffProfileToolStripMenuItem
-            // 
-            this.staffProfileToolStripMenuItem.Name = "staffProfileToolStripMenuItem";
-            this.staffProfileToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.staffProfileToolStripMenuItem.Text = "Staff Profile";
-            this.staffProfileToolStripMenuItem.Click += new System.EventHandler(this.staffProfileToolStripMenuItem_Click);
             // 
             // Receptionist
             // 

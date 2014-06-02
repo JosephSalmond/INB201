@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Q_Medic_Hospital
 {
@@ -76,6 +77,40 @@ namespace Q_Medic_Hospital
                 return ((ReceptionistMaster)this.MdiParent).PaitentID;
             }
             return -1;
+        }
+
+        private void fillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+int patientID = getID();
+            MiddleWare.middle.OpenConnection();
+            SqlCommand sqlCmd = new SqlCommand(string.Format("select Firstname, Lastname, StreetAddress, Suburb, PostCode, MobileNumber, Email, PatientID from Patients WHERE PatientID = '{0}'", patientID), MiddleWare.middle.dbConnection);
+            
+           
+            SqlDataReader reader;
+            reader = sqlCmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Read();
+                textBox1.Text = reader.GetString(0);
+                textBox2.Text = reader.GetString(1);
+                textBox4.Text = "13";
+                textBox6.Text = reader.GetString(2);
+                textBox7.Text = reader.GetString(3);
+                textBox8.Text = reader.GetString(4);
+                textBox10.Text = reader.GetString(5);
+                textBox11.Text = reader.GetString(6);
+            }
+            MiddleWare.middle.CloseConnection();
         }
     }
 }
