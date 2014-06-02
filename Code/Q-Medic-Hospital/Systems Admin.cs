@@ -43,5 +43,14 @@ namespace Q_Medic_Hospital
         private void userProfilesToolStripMenuItem_Click(object sender, EventArgs e) {
             // ??
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            Form registry = new Q_Medic_Hospital.Registry();
+            registry.Show();
+        }
     }
 }

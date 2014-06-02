@@ -167,14 +167,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Q-Medic GUI.exe" size="2100224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Q-Medic GUI.exe" size="2101760">
       <assemblyIdentity name="Q-Medic GUI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>KJ1EkakMSsKvlzL0RVknuNXiF9o=</dsig:DigestValue>
+        <dsig:DigestValue>cgf2PZLQwMPOisP3GGG8RMw+Ud4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -184,7 +184,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>eOVq7HOTYcGJLP0X1nWhEGzulqg=</dsig:DigestValue>
+      <dsig:DigestValue>f+sVP/vsk0cw9bAzGjoczpHhhGA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="INB201_log.ldf" size="1835008" writeableType="applicationData">
@@ -193,7 +193,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/hYqoPzASvHBeaBLmgqS3Unhsxk=</dsig:DigestValue>
+      <dsig:DigestValue>C0chqaHgtbyi3MvYq3S2CczQ+c0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Q-Medic GUI.exe.config" size="77">

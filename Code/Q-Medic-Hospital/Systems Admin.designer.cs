@@ -69,6 +69,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Registerhak = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -417,6 +418,17 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Done";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Registerhak
+            // 
+            this.Registerhak.Location = new System.Drawing.Point(347, 305);
+            this.Registerhak.Name = "Registerhak";
+            this.Registerhak.Size = new System.Drawing.Size(75, 23);
+            this.Registerhak.TabIndex = 11;
+            this.Registerhak.Text = "Register";
+            this.Registerhak.UseVisualStyleBackColor = true;
+            this.Registerhak.Click += new System.EventHandler(this.button2_Click);
             // 
             // Systems_Admin
             // 
@@ -424,6 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(674, 381);
+            this.Controls.Add(this.Registerhak);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label11);
@@ -495,6 +508,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staffProfileToolStripMenuItem;
+        private System.Windows.Forms.Button Registerhak;
 
     }
 }

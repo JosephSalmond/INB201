@@ -111,5 +111,15 @@ namespace Q_Medic_Hospital
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             MessageBox.Show("Abandon All Hope He Who Dares To Tread These Forms", "Warning", MessageBoxButtons.OK);
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e) {
+            try {
+                this.doctorsAppointmentsTableAdapter.FillBy(this.iNB201DataSet.DoctorsAppointments);
+            }
+            catch (System.Exception ex) {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

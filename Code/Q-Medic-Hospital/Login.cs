@@ -20,7 +20,6 @@ namespace Q_Medic_Hospital {
             //MiddleWare.middle.popualteDatabase(); //resets and rebuilds staff patients treatment and fees
         }
 
-
         private void button1_Click(object sender, EventArgs e) {
             string username = this.textBox1.Text;
             string password = this.textBox2.Text;
