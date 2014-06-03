@@ -42,6 +42,7 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PaitentProfileButton = new System.Windows.Forms.Button();
             this.treatmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +50,6 @@
             this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctorsAppointmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iNB201DataSet = new Q_Medic_Hospital.INB201DataSet();
-            this.PaitentProfileButton = new System.Windows.Forms.Button();
             this.doctorsAppointmentsTableAdapter = new Q_Medic_Hospital.INB201DataSetTableAdapters.DoctorsAppointmentsTableAdapter();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -178,6 +178,16 @@
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // PaitentProfileButton
+            // 
+            this.PaitentProfileButton.Location = new System.Drawing.Point(150, 59);
+            this.PaitentProfileButton.Name = "PaitentProfileButton";
+            this.PaitentProfileButton.Size = new System.Drawing.Size(44, 23);
+            this.PaitentProfileButton.TabIndex = 17;
+            this.PaitentProfileButton.Text = "GO";
+            this.PaitentProfileButton.UseVisualStyleBackColor = true;
+            this.PaitentProfileButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // treatmentIDDataGridViewTextBoxColumn
             // 
             this.treatmentIDDataGridViewTextBoxColumn.DataPropertyName = "TreatmentID";
@@ -218,16 +228,6 @@
             // 
             this.iNB201DataSet.DataSetName = "INB201DataSet";
             this.iNB201DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // PaitentProfileButton
-            // 
-            this.PaitentProfileButton.Location = new System.Drawing.Point(150, 59);
-            this.PaitentProfileButton.Name = "PaitentProfileButton";
-            this.PaitentProfileButton.Size = new System.Drawing.Size(44, 23);
-            this.PaitentProfileButton.TabIndex = 17;
-            this.PaitentProfileButton.Text = "GO";
-            this.PaitentProfileButton.UseVisualStyleBackColor = true;
-            this.PaitentProfileButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // doctorsAppointmentsTableAdapter
             // 

@@ -143,7 +143,7 @@ namespace Q_Medic_Hospital
                     rec.Y = 270;
                     PDFGraphics.DrawString(printString, font, PdfSharp.Drawing.XBrushes.Black, rec, PdfSharp.Drawing.XStringFormats.TopLeft);
 
-                    String filename = PID + "_PaitentDetails.pdf";
+                    String filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\HospitalExport\\" +  PID + "_PaitentDetails.pdf";
                     PDFDocument.Save(filename);
                 }
             }
@@ -232,7 +232,7 @@ namespace Q_Medic_Hospital
                     PDFGraphics.DrawString("Grand Total: ", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(320, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
                     PDFGraphics.DrawString("$" + totalCost + ".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
 
-                    String filename = "Hospital_Takings.pdf";
+                    String filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\HospitalExport\\" +  "Hospital_Takings.pdf";
                     PDFDocument.Save(filename);
                 
             
@@ -340,7 +340,7 @@ namespace Q_Medic_Hospital
                     PDFGraphics.DrawString("Grand Total: ", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(320, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
                     PDFGraphics.DrawString("$" + totalCost+".00", font, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, yPoint, PDFPage.Width.Point, PDFPage.Height.Point), PdfSharp.Drawing.XStringFormats.TopLeft);
 
-                    String filename = PID + "_PaitentStatement.pdf";
+                    String filename = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\HospitalExport\\" +  PID + "_PaitentStatement.pdf";
                     PDFDocument.Save(filename);
                 }
             }

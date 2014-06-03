@@ -2,5 +2,7 @@
     
     
     public partial class INB201DataSet {
+        partial class DoctorsAppointmentsDataTable {
+        }
     }
 }

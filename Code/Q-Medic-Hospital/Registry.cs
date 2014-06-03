@@ -40,6 +40,7 @@ namespace Q_Medic_Hospital
 
         private void loginButton_Click(object sender, EventArgs e) {
            middle.Register( (userType)Array.IndexOf(middle.stringUser, userTypeSelector.Text), UsernameText.Text, PasswordText.Text, FirstNameText.Text, LastNameText.Text, EmailText.Text);
+           this.Close();
         }
 
         private void UsernameText_TextChanged(object sender, EventArgs e) {
