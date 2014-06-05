@@ -1,0 +1,635 @@
+commit d2e38246f104bffdce11ccf00ee6c780b25e8bd0
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu Jun 5 14:12:32 2014 +1000
+
+    updated doco
+
+commit 2ddaf2a40e5127661d2ac91b86202b84c1efed0c
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Wed Jun 4 18:55:55 2014 +1000
+
+    Documentation draft
+
+commit a9ec7652aad57b9b0ed48838caf1e63a3fb534cc
+Merge: 3f2b601 1cfe238
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Tue Jun 3 00:41:25 2014 +1000
+
+    Merge branch 'master' of https://github.com/JosephSalmond/INB201
+    
+    Conflicts:
+    	Code/Q-Medic-Hospital/INB201.mdf
+    	Code/Q-Medic-Hospital/INB201_log.ldf
+    	Code/Q-Medic-Hospital/Q-Medic-Hospital.v11.suo
+
+commit 1cfe23876d436711b904cfdc1ba9305b3222c4d7
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue Jun 3 10:20:45 2014 +1000
+
+    All the things
+    Sanity check 2/20
+
+commit 631f8b5205291307adb369b272c7332ee33a33e2
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue Jun 3 09:31:12 2014 +1000
+
+    UPDATE
+
+commit 3f2b601cf6f3a5a2bb4f9e43e5f80fc43a6f6b1b
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Tue Jun 3 00:40:13 2014 +1000
+
+    Receptionist
+
+commit f51a37ebd8fdec424a0fc01096b7b392abd3ef27
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 22:04:09 2014 +1000
+
+    REDRUM:: added moar forms
+
+commit 104baeb3c1fd1a474d61010317bf4030f4259ac3
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 21:16:46 2014 +1000
+
+    Added Total Takings
+
+commit 29cc89b8935227760913dd06c7b52883b7ae9367
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 20:52:56 2014 +1000
+
+    Merged Saud's changes
+
+commit a18ab926b030a785293dc530c933b35b67551851
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 20:02:48 2014 +1000
+
+    added grand total to pdf
+
+commit 5b78d78f5a04d1e2095dfa41ac1200c17ba117e5
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 19:57:16 2014 +1000
+
+    Added 2 PDF's
+
+commit 6fe2bf962df06484e0767933caca0481f891359e
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 16:03:58 2014 +1000
+
+    Updated sys admin
+
+commit 797e3e16ef6e7f0e9afbd82d213fc301fca2ba2d
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 13:27:44 2014 +1000
+
+    Receptionist Updated sidebar connected
+
+commit 2dda6eed8a5242d1c4fb2b7b6c160bb8911cf4b2
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 10:52:47 2014 +1000
+
+    Sys Admin Updated
+
+commit 6bd07c35f581bcdb1a3f44a4a2b53695ef98151d
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon Jun 2 09:48:17 2014 +1000
+
+    Hospital admin
+
+commit b5a61bb2bb31b5af167e504134fd4e742facf301
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun Jun 1 20:34:07 2014 +1000
+
+    Nurse > observations . now doesn't cause exception
+
+commit 7c0ee27968fb5023b27c098bb0e79a6a992bd104
+Merge: c37ef90 53a5af7
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Sun Jun 1 20:22:48 2014 +1000
+
+    Merge branch 'master' of https://github.com/JosephSalmond/INB201
+    
+    Conflicts:
+    	Code/Q-Medic-Hospital/Q-Medic-Hospital.v11.suo
+    	Code/Q-Medic-Hospital/bin/Debug/Q-Medic GUI.exe
+    	Code/Q-Medic-Hospital/bin/Debug/Q-Medic GUI.pdb
+    	Code/Q-Medic-Hospital/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+    	Code/Q-Medic-Hospital/obj/Debug/Q-Medic GUI.exe
+    	Code/Q-Medic-Hospital/obj/Debug/Q-Medic GUI.pdb
+    	Code/Q-Medic-Hospital/obj/Debug/Q-Medic-Hospital.csproj.FileListAbsolute.txt
+    	Code/Q-Medic-Hospital/obj/Debug/Q-Medic-Hospital.csproj.GenerateResource.Cache
+
+commit c37ef90a0fde2ce8f35b48c016960c020466c956
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Sun Jun 1 19:37:00 2014 +1000
+
+    Kaan works !
+
+commit 53a5af7fea4c5bc7874c5ddfc7b2eecd38a6cd68
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun Jun 1 17:46:38 2014 +1000
+
+    Wibbly, Wobbly, Timey, Wimey… stuff, linkedup
+
+commit f6a5e85a7f38f2da4b035192d4dba00d8a9cf711
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun Jun 1 15:18:45 2014 +1000
+
+    MEDTECH
+
+commit 958eb75ba1afcbc780eafd98b6e6a4d9ba5ac79a
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sat May 31 22:27:20 2014 +1000
+
+    Nurse now working
+
+commit 395b5c0229f4f48ad172ab0f9c4e662b253bf87a
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Sat May 31 20:13:14 2014 +1000
+
+    Update
+
+commit e87a9ec42046d7103688c8398136b788fe8773b5
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sat May 31 19:57:06 2014 +1000
+
+    Things
+
+commit 2c03c2a1a1f030bdac3ee4cbe71d241d9553319b
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sat May 31 19:12:01 2014 +1000
+
+    Merged changes
+
+commit bfc5d150d570c18fdeb8e15346e13c10d916de74
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 30 10:34:00 2014 +1000
+
+    Sprint burndown final
+
+commit b06d659f2eb25b9a9041f9e1dbf1dfd5431369ee
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 30 08:59:08 2014 +1000
+
+    Saud && Abdulla updated burndown chart
+
+commit 724a65507d38b7e78a87e2e41ddc96a76074fe9a
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 29 18:37:11 2014 +1000
+
+    ++burndown chart update
+
+commit 36e0990643a606f781059eb6e3c1c01ccdc105aa
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 29 14:28:11 2014 +1000
+
+    added forms added doctorstuff
+
+commit 6f81fc4777c172baf829d74802a802c15c215bbb
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 27 23:19:12 2014 +1000
+
+    added things
+
+commit 42943e126fb14a3ab6d42f8629f7a9948be5a494
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 23 14:28:00 2014 +1000
+
+    minor Db update
+
+commit ae306f140213bffe2027123fcd5a24021ac69e28
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 23 10:37:10 2014 +1000
+
+    few tweaks to business layer
+
+commit fba24efec5809865918a57fae414d22aafb4d096
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 22 19:46:46 2014 +1000
+
+    adding things/ Code Cleanup
+
+commit b48e4d2a5640b3449694ed00f8e5397e2ef3adcf
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Wed May 21 21:34:01 2014 +1000
+
+    Database Populated with test data by methods in middleware
+
+commit a60067de173188a3b8bbec93018789cbb051e2eb
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Wed May 21 20:46:20 2014 +1000
+
+    Rebuilt Database ..
+
+commit 121e8c41c94a2364a7789f5c656582925a29ee5e
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 20 12:14:46 2014 +1000
+
+    Sys/Hospital Admin
+
+commit 0ac40809019831e50b121fb47d01b5d6f592e4eb
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Tue May 20 12:08:45 2014 +1000
+
+    doc updated
+
+commit f2ac94a1e6fc34f282c1eb2fb4183f665b7ee8bc
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 20 10:43:08 2014 +1000
+
+    hospital
+
+commit 44aa7168324ae7f6e8488ae753a0770d3d6ddeea
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 20 10:33:29 2014 +1000
+
+    Hospital.mdf
+
+commit c6999f764f730e6b9d0bcfedcddb51e0babb9217
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 20 10:22:32 2014 +1000
+
+    Pdf and stuff
+
+commit a47c9825304a1cca6d55203cffc79fbfbb564305
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Mon May 19 10:04:45 2014 +1000
+
+    Sprint 4 other code things
+
+commit c79858fe2a072dbd4b2318d300d7c14f142d4748
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 16 10:01:03 2014 +1000
+
+    Fixed register/ updated Database
+
+commit 2c7fb0dd174993ab2242620a6e559fd67a0cb06c
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 15 20:42:22 2014 +1000
+
+    added fixed lined and done things
+
+commit 7227e623139b915cdd8b08be7daab3c80b09ff68
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 15 15:03:19 2014 +1000
+
+    Added new forms
+
+commit 44c850a750005ed3b1925648af479b48f21d01a8
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 13 12:48:47 2014 +1000
+
+    Code All The Things
+
+commit ec36a36cb3a570047c107769517b1db96903f175
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Tue May 13 02:08:19 2014 +1000
+
+    Paitent rooms
+
+commit 1d0b7a85ca2a89425b4aec40598372aaa0ead6e1
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 13 11:34:02 2014 +1000
+
+    REGISTER & HASHING
+
+commit f0d806ce5c0d86ec6b37fa688e879384d9b7419b
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 13 09:45:55 2014 +1000
+
+    Tweaks
+
+commit 718409a8fcf1b8227ff6a2f38bcd08ff8894c2bd
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 13 09:35:21 2014 +1000
+
+    Merged branches
+
+commit 77d32b18bab13044cfc16b35a65b0c0850b71b9a
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 13 09:31:45 2014 +1000
+
+    Revert "Register Form"
+    
+    This reverts commit 8600b3429a4add9d30c19a63bf0a126656215ebf.
+
+commit 8600b3429a4add9d30c19a63bf0a126656215ebf
+Author: kaanos <kaan.osmanagaoglu@connect.qut.ed.au>
+Date:   Mon May 12 14:01:40 2014 +1000
+
+    Register Form
+    Amended
+
+commit e7577eb6e6e8d874e834bd6f99f34d63d35a9e0a
+Author: kaanos <kaan.osmanagaoglu@connect.qut.ed.au>
+Date:   Mon May 12 14:01:40 2014 +1000
+
+    Register Form
+
+commit 18fb4f8a85922d786fbde1ab4716f8febcac69fb
+Author: kaanos <kaan.osmanagaoglu@connect.qut.ed.au>
+Date:   Mon May 12 12:22:41 2014 +1000
+
+    Register sysadmin without GUI
+
+commit bd61cf7891fef92ef32e7f5a8ee14e4be8358cce
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 9 11:25:57 2014 +1000
+
+    Update to various parts of Code and UI
+
+commit e2fe72779c3412f86e812bd1c65cbe056f473d0c
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Tue May 6 11:58:42 2014 +1000
+
+    Merge stage Final
+    finished layout of "Nurse" AKA Patient history
+
+commit db8f4a61aced216b3537f0aa63725124a45718df
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun May 4 17:45:42 2014 +1000
+
+    Merge stage 4
+
+commit 809c2f992d329dea7cefc66978388deb74df6076
+Merge: 448fd86 8f4e9fa
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun May 4 17:45:11 2014 +1000
+
+    Merge Stage 3
+
+commit 448fd861bbddbd2e4731f11cfa6bde0bb3145c79
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun May 4 17:38:32 2014 +1000
+
+    Merging Stage 2
+
+commit f56b2bf60158c6abb4719aa30a294a6d76ece25b
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun May 4 17:26:17 2014 +1000
+
+    Merging Stage 1
+
+commit 5e72e23d326c7e4720ff339763d764127833564c
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Sun May 4 11:03:28 2014 +1000
+
+    RUN RUN RUN SPRINT 3
+
+commit fae11c3a5266c2c3d26509ac0daebf4b3bedf994
+Author: Abdullah <Alghunaim.878@hotmail.com>
+Date:   Fri May 2 11:29:02 2014 +1000
+
+    Hospital
+
+commit a820896a8c0528923bc532fd0a2898cb96596f3e
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 2 10:24:23 2014 +1000
+
+    Z code man Z code
+
+commit 198364576b87a239323aa63d9a51041ee1cecad2
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 2 09:50:14 2014 +1000
+
+    Database Update
+
+commit 1a2ec672e6b7d9aff9c12721ca69b7958e11e767
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Fri May 2 09:43:44 2014 +1000
+
+    whoop
+
+commit 8f4e9fa0e57e7b23bc082b762c249720114f74bc
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Fri May 2 09:15:36 2014 +1000
+
+    MENU BAR
+
+commit 6309d1b89c99703aa084bbed4cdd8545f0903ef4
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Fri May 2 07:37:07 2014 +1000
+
+    DOC
+
+commit df081c4efa00621540b079663bd810efc0a9f3c4
+Author: Joseph <joseph.salmond@student.qut.edu.au>
+Date:   Thu May 1 21:47:15 2014 +1000
+
+    Woot Kinda Working Prototype
+
+commit 8fd23c0b545a76cacd2c2fa6cefb0ef02e0ca6a9
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Tue Apr 29 12:02:49 2014 +1000
+
+    GUI Update
+
+commit 4c4c8dcab4207d7084e811670d9b41a1da34bf27
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Tue Apr 29 11:58:35 2014 +1000
+
+    derrr
+
+commit 2a240e4d912a144fbc81c6d7e52c96cd2b7c47c9
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Tue Apr 29 11:57:51 2014 +1000
+
+    derr
+
+commit f4df1b2a6220354ab4bfb89ed3bc969926a35700
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Tue Apr 29 11:44:30 2014 +1000
+
+    UPDATE
+
+commit 5c7e8815d4064e284c58edc809fc0c858fb9cc09
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Tue Apr 29 11:37:09 2014 +1000
+
+    GUI
+
+commit d6276ae0be9464829800c3ec7773022ee550cebc
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Tue Apr 29 10:39:39 2014 +1000
+
+    Commit all the things
+
+commit 76573aa5534f8ef33540cac40da79dcee45dfac4
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Mon Apr 28 18:49:44 2014 +1000
+
+    URGH
+
+commit 2680841e9a06c0b2b1665876e98b37ac29847c81
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Mon Apr 14 15:16:03 2014 +1000
+
+    DABASA
+
+commit ecbcb72355bfd521d49eac7e987450fafbcc70c7
+Author: Kaanos <kaan.osmanagaoglu@connect.qut.edu.au>
+Date:   Sat Apr 12 09:35:07 2014 +1000
+
+    forms with errors
+
+commit 636e37e408015d7999f886d341cc53ed7b8c5ce9
+Author: Kaanos <kaan.osmanagaoglu@connect.qut.edu.au>
+Date:   Sat Apr 12 09:02:32 2014 +1000
+
+    Staff inserts
+
+commit c25382c634b46fb8ac6c231620dc90cdc09d4fbc
+Author: Kaanos <kaan.osmanagaoglu@connect.qut.edu.au>
+Date:   Sat Apr 12 08:42:41 2014 +1000
+
+    warmup
+
+commit 06370227238bc0685861f8d34157358027f2af70
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Fri Apr 11 10:05:03 2014 +1000
+
+    GUI
+
+commit 711849d6661ea476da209d0154bdecceb85b501e
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Fri Apr 11 09:55:48 2014 +1000
+
+    stick gui
+
+commit 3a5d29d2c5467a04d6aea6e7cde7a39c1fe9b487
+Author: mohdalyy <mohdalyy@hotmail.com>
+Date:   Fri Apr 11 09:45:37 2014 +1000
+
+    ...
+
+commit ece687a624a7225d51bdc3bb9eb8af40f71f22c2
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Fri Apr 11 09:28:04 2014 +1000
+
+    all the things
+
+commit a9d60c64726bb422b2a15d1c6e86cb517df6c3b9
+Author: Joseph Salmond <joseph.salmond@student.qut.edu.au>
+Date:   Fri Apr 11 08:48:00 2014 +1000
+
+    burndown 1 used doge
+
+commit 992a483c16ee0d54b45b8afed00e59b46d9c32fd
+Author: Joseph Salmond <joseph.salmond@student.edu.au>
+Date:   Fri Apr 11 08:47:10 2014 +1000
+
+    Burn down all the things
+
+commit e4bca504d3fdc8646b76623e45a05b86d0a72581
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Thu Apr 10 15:53:25 2014 +1000
+
+    burndown
+
+commit c0f5a3438d2dd01ee25997f6745103a21da8e4ce
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 8 12:42:30 2014 +1000
+
+    commit all the things
+
+commit c1eb5babc566e4630242af6748c3bca8922e93ec
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 8 11:22:08 2014 +1000
+
+    i didn't do it
+
+commit 7b98f908ac9313595552f742dca50635e45b4bdc
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 8 11:10:00 2014 +1000
+
+    i didn't do it
+
+commit 187a9a6a3f6f2c066ed886a01854aababea9d4bf
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 8 10:34:30 2014 +1000
+
+    burndown
+
+commit e50f28e17babff8a9056212d868f49cac4cdf6cd
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Apr 4 09:58:23 2014 +1000
+
+    updated some codez
+
+commit 40f5dd9ab45b7a00a0c289f77d322886de99cfbd
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Apr 4 09:17:46 2014 +1000
+
+    no message
+
+commit 44140b1c50498fb4445bbc2cc752b696788def89
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Apr 4 09:12:41 2014 +1000
+
+    The code man the code
+
+commit 1abbae0327df540bf785699563ac8af7b586c745
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Apr 4 09:09:50 2014 +1000
+
+    EXERMINATE
+
+commit b0186efa86816b5764c9bd0935423bbe038ab7f7
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Thu Apr 3 13:00:43 2014 +1000
+
+    Burn update
+
+commit 96e6d4a22747704a0d9545a9304b86e96e1f295f
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 1 11:05:46 2014 +1000
+
+    BURNDOWN
+
+commit 9c50d4cfbb5b34cfdd4b544cec7d39df76c018b2
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Tue Apr 1 10:42:46 2014 +1000
+
+    WOOP WOOP
+
+commit fa8adc980c18dc313f5e2f8beeda36199839a36e
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Mar 28 14:17:41 2014 +1000
+
+    Added the starter projects for the codeing
+
+commit b80af25c32862a6111eb4b9504663343d45ddfb6
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Mar 28 14:07:33 2014 +1000
+
+    no message
+
+commit 36565274148007844b5ee30f5d7d9c05a465946f
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Mar 28 10:13:34 2014 +1000
+
+    C# visual  studio
+    added
+
+commit 2c753097a0d352ed8b0c54b5353b532fbb335d23
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Mar 28 09:38:57 2014 +1000
+
+    update filenames
+
+commit 7a224d111e7795ea9dabe9356feb5ddfee1e0db2
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Fri Mar 28 09:23:44 2014 +1000
+
+    Update Before tut
+
+commit 86277d5c63f8674748ea8ea85797ab6e56b3f1dc
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Wed Mar 26 11:28:40 2014 +1000
+
+    Documentation
+
+commit 642ed41e3d13e18e99304260834c99d8a5debedc
+Author: Joseph Salmond <josephsalmond@hotmail.com>
+Date:   Wed Mar 26 11:14:35 2014 +1000
+
+    first commit
